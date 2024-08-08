@@ -25,7 +25,6 @@
     <link href="{% static 'lib/animate/animate.min.css ' %}" rel="stylesheet">
     <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -34,24 +33,15 @@
 </head>
 
 <body>
-
-
     {% include '_fragments/spinner.html' %}
-
-
-
-
-
 
     {% block content %}{% endblock %}
 
     {% include '_fragments/footer.html' %}
     {% include '_fragments/copyright.html' %}
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -61,7 +51,6 @@
     <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
     <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
