@@ -1,0 +1,14 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% include '_fragments/navbar_hero.html' %}
+{% include '_fragments/header.html' %}
+
+<h1>Ви вийшли з системи</h1>
+<p>Ви успішно вийшли з вашого облікового запису.</p>
+<a href="{% url 'accounts:login' %}">Увійти знову</a>
+
+{% endblock content %}
