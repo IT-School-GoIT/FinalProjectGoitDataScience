@@ -28,7 +28,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['distinct-rozalin-antonbabenko-72e10d6e.koyeb.app']
 
 # ALLOWED_HOSTS = ["*"]  # Тільки для розробки
 # DEBUG = True  # Тільки для розробки
