@@ -55,3 +55,12 @@ Cognition Creators - це веб-сервіс для класифікації з
 - Release 1.1 - implement feature 10
 - Release 1.2 - implement feature 11-13
 - Release 2.0 - implement user iteraction interface (replace terminal commands iteraction)
+
+
+## Branch naming
+Use feature / release flow style Example: branch name to work on feature feature/Ticket## branch name for releale releale/release-1.0 major branch always main
+
+1. Keep main always in working condition (No errors,failures allowed) , merge into main releale branches only after PR approves from team members , merged branch should be green .
+2. Never!!!!! rename main branch
+3. To start work on new feature ticket , create new branch from upcoming release branch . When work on feature done , create Pull Request into release branch , add reviewers into your PR. After work on PR comments and final approves from team merge feature branch into release branch.
+4. Do not temper to add comments into your code . Team members will appreciate your work.
