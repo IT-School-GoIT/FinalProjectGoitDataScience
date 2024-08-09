@@ -47,3 +47,11 @@ Cognition Creators - це веб-сервіс для класифікації з
 6. Запустити сервер розробки:
    ```bash
    python manage.py runserver
+
+
+## Release plan
+- Release 0.1 - Start
+- Release 1.0 - implement features from 1 to 9
+- Release 1.1 - implement feature 10
+- Release 1.2 - implement feature 11-13
+- Release 2.0 - implement user iteraction interface (replace terminal commands iteraction)
