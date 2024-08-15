@@ -27,11 +27,11 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
-ALLOWED_HOSTS = ['distinct-rozalin-antonbabenko-72e10d6e.koyeb.app']
+# DEBUG = env('DEBUG')
+# ALLOWED_HOSTS = ['distinct-rozalin-antonbabenko-72e10d6e.koyeb.app']
 
-# ALLOWED_HOSTS = ["*"]  # Тільки для розробки
-# DEBUG = True  # Тільки для розробки
+ALLOWED_HOSTS = ["*"]  # Тільки для розробки
+DEBUG = True  # Тільки для розробки
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'accounts',
+    'face_id',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -149,3 +152,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGOUT_REDIRECT_URL = '/'

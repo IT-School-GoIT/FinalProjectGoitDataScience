@@ -14,9 +14,11 @@
                 <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="{% url 'home:team' %}" class="nav-item nav-link">Team</a>
                 <a href="{% url 'home:cognition' %}" class="nav-item nav-link">Cognition</a>
-                <a href="{% url 'accounts:logout' %}" class="nav-item nav-link">Logout</a>
-                <a href="{% url 'accounts:signup' %}" class="nav-item nav-link">SignUp</a>
-                <a href="{% url 'accounts:login' %}" class="nav-item nav-link">Login</a>
+                <!-- <a href="{% url 'accounts:logout' %}" class="nav-item nav-link">Logout</a> -->
+                <a href="{% url 'face_id:logout' %}" class="nav-item nav-link">Logout</a>
+                <a href="{% url 'face_id:register' %}" class="nav-item nav-link">SignUp</a>
+                <!-- <a href="{% url 'accounts:login' %}" class="nav-item nav-link">Login</a> -->
+                <a href="{% url 'face_id:face_login' %}" class="nav-item nav-link">Login</a>
             </div>
             <a href="https://github.com/IT-School-GoIT/final_data_science_goit"
                 class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4" target="_blank">GitHub</a>
