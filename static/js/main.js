@@ -9,7 +9,7 @@
             }
         }, 1);
     };
-    spinner(0);
+    spinner();
     
     
     // Initiate the wowjs
