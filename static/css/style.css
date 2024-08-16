@@ -900,3 +900,69 @@
 /*** copyright end ***/
 
 
+
+
+
+
+
+
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;  /* Центрування блоку на сторінці */
+    margin-top: 50px; /* Відступ зверху */
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /* Висота чату */
+    justify-content: space-between;
+}
+
+#messages {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-bottom: 10px;
+}
+
+#messages div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#messages .user-message {
+    background-color: #e1ffc7;
+    align-self: flex-end;
+}
+
+#messages .bot-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+input[type="text"] {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    width: 50px;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
