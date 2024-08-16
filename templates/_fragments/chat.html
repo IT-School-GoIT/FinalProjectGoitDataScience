@@ -1,0 +1,63 @@
+{% load static %}
+
+
+
+<div class="chat-container">
+    <div id="chatbox">
+        <div id="messages"></div>
+        <div>
+            <input type="text" id="userInput" placeholder="Введіть повідомлення" onkeypress="handleKeyPress(event)" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function sendMessage() {
+        const userInput = document.getElementById('userInput').value;
+
+        if (!userInput.trim()) {
+            return; // Не відправляти порожні повідомлення
+        }
+
+        fetch("{% url 'chat' %}", {  // Маршрут Django для чату
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: `input=${encodeURIComponent(userInput)}`
+        })
+            .then(response => response.json())
+            .then(data => {
+                const messages = document.getElementById('messages');
+
+                // Відображення повідомлення користувача
+                const userMessage = document.createElement('div');
+                userMessage.textContent = userInput;
+                userMessage.className = 'user-message';
+                messages.appendChild(userMessage);
+
+                // Відображення повідомлення бота
+                const botMessage = document.createElement('div');
+                botMessage.textContent = data.response || 'No response from bot';
+                botMessage.className = 'bot-message';
+                messages.appendChild(botMessage);
+
+                // Очищення поля вводу
+                document.getElementById('userInput').value = '';
+
+                // Автоскрол до останнього повідомлення
+                messages.scrollTop = messages.scrollHeight;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Відправка повідомлення при натисканні Enter
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    }
+</script>
+
