@@ -1010,3 +1010,8 @@ button {
     max-width: 500px;
     margin: 0 auto;
 }
+
+
+body, h1, h2, h3, p, ul, li {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
