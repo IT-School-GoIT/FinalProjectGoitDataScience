@@ -27,7 +27,7 @@ Cognition Creators - це веб-сервіс для класифікації з
 1. Клонувати репозиторій:
    ```bash
    git clone https://github.com/IT-School-GoIT/final_data_science_goit.git
-   cd cognition-creators
+   cd final_data_science_goit
 2. Створити та активувати віртуальне середовище:
    ```bash
    python3 -m venv env
@@ -38,7 +38,8 @@ Cognition Creators - це веб-сервіс для класифікації з
    pip install -r requirements.txt
 
 4. Налаштувати базу даних:
-   Відредагуйте файл settings.py, щоб налаштувати підключення до PostgreSQL.
+   Створіть файл .env із своїми даними
+   Відредагуйте файл root/settings.py(якщо є така необхідність), щоб налаштувати підключення до PostgreSQL.
 
 5. Міграції бази даних:
    ```bash
