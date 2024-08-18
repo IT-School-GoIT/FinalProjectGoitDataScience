@@ -1,7 +1,13 @@
+import os
+
+# Вимкнення GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+from tensorflow.keras.models import load_model
+
 from django.shortcuts import render, redirect
 from .models import ImageForGame
 import random
-from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
 
