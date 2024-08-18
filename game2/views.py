@@ -1,6 +1,7 @@
 import os
 
 # Вимкнення GPU
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 from tensorflow.keras.models import load_model
