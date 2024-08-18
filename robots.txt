@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://distinct-rozalin-antonbabenko-72e10d6e.koyeb.app/sitemap.xml
