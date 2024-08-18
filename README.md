@@ -27,7 +27,7 @@ Cognition Creators - це веб-сервіс для класифікації з
 1. Клонувати репозиторій:
    ```bash
    git clone https://github.com/IT-School-GoIT/final_data_science_goit.git
-   cd cognition-creators
+   cd final_data_science_goit
 2. Створити та активувати віртуальне середовище:
    ```bash
    python3 -m venv env
