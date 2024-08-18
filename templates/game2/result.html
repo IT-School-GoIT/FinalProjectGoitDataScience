@@ -1,0 +1,39 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include '_fragments/navbar_hero.html' %}
+{% include '_fragments/header.html' %}
+<div class="container-fluid team pb-5">
+    <div class="container pb-5">
+        <div class="result-container">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+
+                <h4 class="text-uppercase text-primary">Game</h4>
+                <h2 class="display-3 text-capitalize mb-3">Результат Гри</h2>
+                <p>Зображення: {{ image.title }}</p>
+                <img src="{{ image.image.url }}" alt="Image" class="game-image">
+                <p>Ваш рахунок: {{ user_score }}</p>
+                <p>Рахунок моделі: {{ model_score }}</p>
+                <p>Клас від моделі: {{ predicted_class }} (Впевненість: {{ confidence }}%)</p>
+
+                {% if user_is_correct %}
+                <p>Вітаємо, ви вгадали!</p>
+                {% else %}
+                <p>На жаль, ви не вгадали. Спробуйте ще раз!</p>
+                {% endif %}
+
+                {% if model_is_correct %}
+                <p>Модель також вгадала!</p>
+                {% else %}
+                <p>Модель не вгадала.</p>
+                {% endif %}
+
+
+                <a href="{% url 'game2:play_game' %}" class="btn btn-primary">Victory by seven</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

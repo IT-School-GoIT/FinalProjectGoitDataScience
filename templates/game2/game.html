@@ -1,0 +1,39 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include '_fragments/navbar_hero.html' %}
+{% include '_fragments/header.html' %}
+
+<div class="container-fluid team pb-5">
+    <div class="container pb-5">
+        <div class="game-container">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+
+                <h4 class="text-uppercase text-primary mb-4">Game</h4>
+                <h2 class="display-3 text-capitalize mb-4">Виберіть клас зображення</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <img src="{{ image.image.url }}" alt="Image" class="game-image img-fluid">
+                    </div>
+                    <div class="mb-4">
+                        <input type="radio" name="class_guess" value="plane"> Літак<br>
+                        <input type="radio" name="class_guess" value="car"> Машина<br>
+                        <input type="radio" name="class_guess" value="bird"> Птах<br>
+                        <input type="radio" name="class_guess" value="cat"> Кішка<br>
+                        <input type="radio" name="class_guess" value="deer"> Олень<br>
+                        <input type="radio" name="class_guess" value="dog"> Собака<br>
+                        <input type="radio" name="class_guess" value="frog"> Жаба<br>
+                        <input type="radio" name="class_guess" value="horse"> Кінь<br>
+                        <input type="radio" name="class_guess" value="ship"> Корабель<br>
+                        <input type="radio" name="class_guess" value="truck"> Вантажівка
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Відправити відповідь</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
