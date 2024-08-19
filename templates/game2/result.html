@@ -1,5 +1,6 @@
 {% extends '_layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 {% include '_fragments/navbar_hero.html' %}
@@ -9,24 +10,24 @@
         <div class="result-container">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
 
-                <h4 class="text-uppercase text-primary">Game</h4>
-                <h2 class="display-3 text-capitalize mb-3">Результат Гри</h2>
-                <p>Зображення: {{ image.title }}</p>
+                <h4 class="text-uppercase text-primary">{% trans "Гра" %}</h4>
+                <h2 class="display-3 text-capitalize mb-3">{% trans "Результат Гри" %}</h2>
+                <p>{% trans "Зображення:" %} {{ image.title }}</p>
                 <img src="{{ image.image.url }}" alt="Image" class="game-image">
-                <p>Ваш рахунок: {{ user_score }}</p>
-                <p>Рахунок моделі: {{ model_score }}</p>
-                <p>Клас від моделі: {{ predicted_class }} (Впевненість: {{ confidence }}%)</p>
+                <p>{% trans "Ваш рахунок:" %} {{ user_score }}</p>
+                <p>{% trans "Рахунок моделі:" %} {{ model_score }}</p>
+                <p>{% trans "Клас від моделі:" %} {{ predicted_class }} ({% trans "Впевненість:" %}  {{ confidence }}%)</p>
 
                 {% if user_is_correct %}
-                <p>Вітаємо, ви вгадали!</p>
+                <p>{% trans "Вітаємо, ви вгадали!" %}</p>
                 {% else %}
-                <p>На жаль, ви не вгадали. Спробуйте ще раз!</p>
+                <p>{% trans "На жаль, ви не вгадали. Спробуйте ще раз!" %}</p>
                 {% endif %}
 
                 {% if model_is_correct %}
-                <p>Модель також вгадала!</p>
+                <p>{% trans "Модель вгадала!" %}</p>
                 {% else %}
-                <p>Модель не вгадала.</p>
+                <p>{% trans "Модель не вгадала." %}</p>
                 {% endif %}
 
 

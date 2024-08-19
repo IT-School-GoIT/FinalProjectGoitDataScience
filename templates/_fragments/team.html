@@ -1,15 +1,13 @@
 {% load static %}
+{% load i18n %}
 
 <!-- Team Start -->
 <div class="container-fluid team pb-5">
     <div class="container pb-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h4 class="text-uppercase text-primary"></h4>
-            <h4 class="text-uppercase text-primary">Team</h4>
+            <h4 class="text-uppercase text-primary">{% trans "Команда" %}</h4>
             <h1 class="display-3 text-capitalize mb-3">Cognition.Creators</h1>
-            <p class="mb-0">Кожен член команди активно взяв участь у процесі навчання нейронної
-                мережі. Було проведено розподіл даних, навчання моделі, та вибір оптимальної архітектури CNN, що
-                дозволило досягти високої точності класифікації зображень з CIFAR-10.</p>
+            <p class="mb-0">{% trans "Кожен член команди активно взяв участь у процесі навчання нейронної мережі. Було проведено розподіл даних, навчання моделі, та вибір оптимальної архітектури CNN, що дозволило досягти високої точності класифікації зображень з CIFAR-10." %}</p>
         </div>
         <div class="row g-4">
             <!-- Anton Babenko -->
@@ -18,7 +16,7 @@
                 <div class="team-item p-4">
                     <div class="team-inner rounded">
                         <div class="team-img">
-                            <img src="{% static 'img/team-1.jpg' %}" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="{% static 'img/team-1.jpg' %}" class="img-fluid rounded-top w-100" alt="{% trans 'Image' %}">
                             <div class="team-share">
                                 <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i
                                         class="fas fa-share-alt"></i></a>
@@ -33,12 +31,9 @@
                             </div>
                         </div>
                         <div class="bg-light rounded-bottom text-center py-4">
-                            <h4 class="mb-3">Babenko Anton</h4>
-                            <h6 class="mb-3">Team Lead</h6>
-                            <p class="mb-0">Антон є лідером команди, який керує розробкою проекту, приймає ключові
-                                технічні рішення та організовує роботу інших членів команди. Він займається архітектурою
-                                системи, налаштуванням баз даних і забезпечує, щоб всі етапи проекту відповідали високим
-                                стандартам якості.</p>
+                            <h4 class="mb-3">{% trans "Бабенко Антон" %}</h4>
+                            <h6 class="mb-3">{% trans "Керівник команди" %}</h6>
+                            <p class="mb-0">{% trans "Антон є лідером команди, який керує розробкою проекту, приймає ключові технічні рішення та організовує роботу інших членів команди. Він займається архітектурою системи, налаштуванням баз даних і забезпечує, щоб всі етапи проекту відповідали високим стандартам якості." %}</p>
                         </div>
                     </div>
                 </div>
@@ -49,7 +44,7 @@
                 <div class="team-item p-4">
                     <div class="team-inner rounded">
                         <div class="team-img">
-                            <img src="{% static 'img/team-3.jpg' %}" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="{% static 'img/team-3.jpg' %}" class="img-fluid rounded-top w-100" alt="{% trans 'Image' %}">
                             <div class="team-share">
                                 <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i
                                         class="fas fa-share-alt"></i></a>
@@ -61,12 +56,9 @@
                             </div>
                         </div>
                         <div class="bg-light rounded-bottom text-center py-4">
-                            <h4 class="mb-3">Danil Kazakov</h4>
-                            <h6 class="mb-3">Scrum Master</h6>
-                            <p class="mb-0">Данило відіграє роль Scrum Master, організовуючи робочі процеси за
-                                методологією Scrum. Він відповідає за координацію завдань команди, дотримання термінів
-                                та ефективне управління робочими сесіями. Також він допомагає в розробці системи
-                                авторизації, включаючи Face ID.</p>
+                            <h4 class="mb-3">{% trans "Даниїл Казаков" %}</h4>
+                            <h6 class="mb-3">{% trans "Scrum Master" %}</h6>
+                            <p class="mb-0">{% trans "Данило відіграє роль Scrum Master, організовуючи робочі процеси за методологією Scrum. Він відповідає за координацію завдань команди, дотримання термінів та ефективне управління робочими сесіями. Також він допомагає в розробці системи авторизації, включаючи Face ID." %}</p>
                         </div>
                     </div>
                 </div>
@@ -81,7 +73,7 @@
                 <div class="team-item p-4">
                     <div class="team-inner rounded">
                         <div class="team-img">
-                            <img src="{% static 'img/team-2.jpg' %}" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="{% static 'img/team-2.jpg' %}" class="img-fluid rounded-top w-100" alt="{% trans 'Image' %}">
                             <div class="team-share">
                                 <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i
                                         class="fas fa-share-alt"></i></a>
@@ -93,12 +85,9 @@
                             </div>
                         </div>
                         <div class="bg-light rounded-bottom text-center py-4">
-                            <h4 class="mb-3">Vitalii Bielimov</h4>
-                            <h6 class="mb-3">Data Science Developer</h6>
-                            <p class="mb-0">Віталій спеціалізується на обробці та аугментації зображень. Він відповідає
-                                за масштабування зображень, нормалізацію пікселів та їх підготовку для класифікації.
-                                Його робота також включає налаштування інтерфейсу для відображення результатів
-                                класифікації.</p>
+                            <h4 class="mb-3">{% trans "Віталій Бєлімов" %}</h4>
+                            <h6 class="mb-3">{% trans "Розробник Data Science" %}</h6>
+                            <p class="mb-0">{% trans "Віталій спеціалізується на обробці та аугментації зображень. Він відповідає за масштабування зображень, нормалізацію пікселів та їх підготовку для класифікації. Його робота також включає налаштування інтерфейсу для відображення результатів класифікації." %}</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +97,7 @@
                 <div class="team-item p-4">
                     <div class="team-inner rounded">
                         <div class="team-img">
-                            <img src="{% static 'img/team-4.jpg' %}" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="{% static 'img/team-4.jpg' %}" class="img-fluid rounded-top w-100" alt="{% trans 'Image' %}">
                             <div class="team-share">
                                 <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i
                                         class="fas fa-share-alt"></i></a>
@@ -120,11 +109,9 @@
                             </div>
                         </div>
                         <div class="bg-light rounded-bottom text-center py-4">
-                            <h4 class="mb-3">Valerii Yermak</h4>
-                            <h6 class="mb-3">Data Science Developer</h6>
-                            <p class="mb-0">Валерій відповідає за контейнеризацію проекту. Він створює Dockerfile та
-                                налаштовує Docker Compose для автоматизації розгортання проекту у хмарі, забезпечуючи
-                                надійність та зручність використання проекту.</p>
+                            <h4 class="mb-3">{% trans "Валерій Єрмак" %}</h4>
+                            <h6 class="mb-3">{% trans "Розробник Data Science" %}</h6>
+                            <p class="mb-0">{% trans "Валерій відповідає за контейнеризацію проекту. Він створює Dockerfile та налаштовує Docker Compose для автоматизації розгортання проекту у хмарі, забезпечуючи надійність та зручність використання проекту." %}</p>
                         </div>
                     </div>
                 </div>
@@ -134,8 +121,7 @@
                 <div class="team-item p-4">
                     <div class="team-inner rounded">
                         <div class="team-img">
-                            <img src="{% static 'img/team-5.jpg' %}" class="img-fluid rounded-top w-100"
-                                alt="Kateryna Baskina Image">
+                            <img src="{% static 'img/team-5.jpg' %}" class="img-fluid rounded-top w-100" alt="{% trans 'Kateryna Baskina Image' %}">
                             <div class="team-share">
                                 <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i
                                         class="fas fa-share-alt"></i></a>
@@ -147,12 +133,9 @@
                             </div>
                         </div>
                         <div class="bg-light rounded-bottom text-center py-4">
-                            <h4 class="mb-3">Kateryna Baskina</h4>
-                            <h6 class="mb-3">Data Science Developer</h6>
-                            <p class="mb-0">Катерина займається створенням та документуванням архітектури проекту,
-                                розробляючи аналітичні моделі для підвищення точності класифікації зображень. Вона також
-                                відповідає за розробку інтерфейсу для перегляду історії класифікацій та збереження
-                                персональних результатів користувачів.</p>
+                            <h4 class="mb-3">{% trans "Катерина Башкіна" %}</h4>
+                            <h6 class="mb-3">{% trans "Розробник Data Science" %}</h6>
+                            <p class="mb-0">{% trans "Катерина займається створенням та документуванням архітектури проекту, розробляючи аналітичні моделі для підвищення точності класифікації зображень. Вона також відповідає за розробку інтерфейсу для перегляду історії класифікацій та збереження персональних результатів користувачів." %}</p>
                         </div>
                     </div>
                 </div>

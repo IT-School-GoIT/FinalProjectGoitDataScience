@@ -1,22 +1,26 @@
 {% load static %}
+{% load i18n %}
+
 <div class="container-fluid team pb-5">
     <div class="container pb-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h4 class="text-uppercase text-primary">Chat</h4>
+            <h4 class="text-uppercase text-primary">{% trans "Чат" %}</h4>
             <h1 class="display-3 text-capitalize mb-3">gpt-4o-mini</h1>
 
             <div class="chat-container">
                 <div id="chatbox">
                     <div id="messages"></div>
                     <div>
-                        <input type="text" id="userInput" placeholder="Введіть повідомлення"
+                        <input type="text" id="userInput" placeholder="{% trans 'Введіть повідомлення' %}"
                             onkeypress="handleKeyPress(event)" />
-                        <button onclick="sendMessage()">Send</button>
+                        <button onclick="sendMessage()">{% trans "Надіслати" %}</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 
     <script>
         function sendMessage() {

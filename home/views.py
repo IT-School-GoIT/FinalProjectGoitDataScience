@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 
 
@@ -40,3 +41,4 @@ def presentation_of_the_project(request):
             "app": "home",
         },
     )
+
