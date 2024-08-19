@@ -1,3 +1,4 @@
+from django.utils.translation import gettext as _
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -31,7 +32,7 @@ def chat_page(request):
     HttpResponse: Відрендерена HTML сторінка для чату.
     """
     return render(request, 'gpt_response/chat.html',
-        {"title": "Чат Бот", "page": "chat_page", "app": "gpt_response"},)  # Рендеримо HTML-шаблон сторінки чату
+        {"title": _("Чат Бот"), "page": "chat_page", "app": "gpt_response"},)  # Рендеримо HTML-шаблон сторінки чату
 
 @csrf_exempt
 def chat_view(request):

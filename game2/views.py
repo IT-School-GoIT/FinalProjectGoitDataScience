@@ -1,3 +1,4 @@
+from django.utils.translation import gettext as _
 import os
 
 # Вимкнення GPU
@@ -46,8 +47,8 @@ def play_game(request):
     # Перевірка, чи хтось вже набрав 7 балів
     if request.session["user_score"] >= 7 or request.session["model_score"] >= 7:
         # Визначаємо переможця гри
-        winner = "Користувач" if request.session["user_score"] >= 7 else "Модель cifar10.keras"
-        return render(request, "game2/game_over.html", {"winner": winner, "title": "Гра завершена"})
+        winner = _("Користувач") if request.session["user_score"] >= 7 else _("Модель cifar10.keras")
+        return render(request, "game2/game_over.html", {"winner": winner, "title": _("Гра завершена")})
 
     # Вибір випадкового зображення для гри, якщо ще не було вибрано
     if "current_image_id" not in request.session:
@@ -99,7 +100,7 @@ def play_game(request):
             "model_is_correct": model_is_correct,  # Чи вірно вгадала модель
             "user_score": request.session["user_score"],  # Рахунок користувача
             "model_score": request.session["model_score"],  # Рахунок моделі
-            "title": "Результат",  # Заголовок сторінки
+            "title": _("Результат"),  # Заголовок сторінки
         }
 
         # Відображення результатів раунду
@@ -109,7 +110,7 @@ def play_game(request):
     return render(
         request,
         "game2/game.html",
-        {"image": random_image, "title": "Гра", "page": "play_game", "app": "game2"},
+        {"image": random_image, "title": _("Гра"), "page": "play_game", "app": "game2"},
     )
 
 

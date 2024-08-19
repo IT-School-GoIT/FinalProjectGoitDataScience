@@ -1,6 +1,6 @@
 {% extends '_layouts/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block content %}
 {% include '_fragments/navbar_hero.html' %}
 {% include '_fragments/header.html' %}
@@ -8,12 +8,12 @@
     <div class="container pb-5">
         <div class="game-over-container">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-uppercase text-primary">Гра завершена!</h4>
-                <p>Переможець: {{ winner }}</p>
-                <p>Натисніть кнопку нижче, щоб почати нову гру.</p>
+                <h4 class="text-uppercase text-primary">{% trans "Гра завершена!" %}</h4>
+                <p>{% trans "Переможець:" %} {{ winner }}</p>
+                <p>{% trans "Натисніть кнопку нижче, щоб почати нову гру." %}</p>
                 <form method="post" action="{% url 'game2:reset_game' %}">
                     {% csrf_token %}
-                    <button type="submit">Почати нову гру</button>
+                    <button type="submit">{% trans "Почати нову гру" %}</button>
                 </form>
             </div>
         </div>

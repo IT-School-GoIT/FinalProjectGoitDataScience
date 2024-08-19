@@ -1,24 +1,18 @@
 {% load static %}
-
+{% load i18n %}
 
 <!-- Copyright Start -->
 <div class="container-fluid copyright py-4">
     <div class="container">
         <div class="row g-4 align-items-center">
-
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="https://goit.global/ua/">GoiT</a>, Python_19_2024 Data Science -
-                Developer
-
+                &copy; <a class="border-bottom" href="https://goit.global/ua/">{% trans "GoiT" %}</a>, {% trans "Python_19_2024 Data Science - розробник" %}
             </div>
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-3">
-                <a class="border-bottom" href="{% url 'home:presentation_of_the_project' %}"
-                    style="margin-right: 20px;">Presentation of the project</a>
-                <a class="border-bottom" href="{% url 'home:privacy_policy' %}" style="margin-right: 20px;">Privacy
-                    Policy</a>
-                <a class="border-bottom" href="#" class="nav-item nav-link" target="_blank">Documentation</a>
+                <a class="border-bottom" href="{% url 'home:presentation_of_the_project' %}" style="margin-right: 20px;">{% trans "Презентація проекту" %}</a>
+                <a class="border-bottom" href="{% url 'home:privacy_policy' %}" style="margin-right: 20px;">{% trans "Політика конфіденційності" %}</a>
+                <a class="border-bottom" href="#" class="nav-item nav-link" target="_blank">{% trans "Документація" %}</a>
             </div>
-
         </div>
     </div>
 </div>
