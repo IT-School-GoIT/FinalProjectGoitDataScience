@@ -97,7 +97,7 @@ DATABASES = {
         "PASSWORD": env("DATABASE_PASSWORD"),
         "HOST": env("DATABASE_HOST"),
         # "PORT": env("PORT_DB"),
-        'OPTIONS': {'sslmode': 'require'},
+        'OPTIONS': {'sslmode': 'require'}, # Підключення до бази даних тільки для koyeb.com
     }
 
 

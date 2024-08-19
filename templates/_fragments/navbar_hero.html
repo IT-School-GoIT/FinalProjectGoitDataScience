@@ -11,15 +11,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="/" class="nav-item nav-link active">Home</a>
-                <a href="{% url 'home:team' %}" class="nav-item nav-link">Team</a>
-                <a href="{% url 'home:cognition' %}" class="nav-item nav-link">Cognition</a>
-                <a href="{% url 'chat_page' %}" class="nav-item nav-link">Chat</a>
-                <a href="{% url 'game2:play_game' %}" class="nav-item nav-link">Game</a>
-                <a href="{% url 'accounts:logout' %}" class="nav-item nav-link">Logout</a>
-                <a href="{% url 'accounts:signup' %}" class="nav-item nav-link">SignUp</a>
-                <a href="{% url 'accounts:login' %}" class="nav-item nav-link">Login</a>
+                <a href="/"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+                <a href="{% url 'home:team' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}">Team</a>
+                <a href="{% url 'home:cognition' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'cognition' %}active{% endif %}">Cognition</a>
+                <a href="{% url 'chat_page' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'chat_page' %}active{% endif %}">Chat</a>
+                <a href="{% url 'game2:play_game' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'play_game' %}active{% endif %}">Game</a>
+                <a href="{% url 'accounts:logout' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}">Logout</a>
+                <a href="{% url 'accounts:signup' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'signup' %}active{% endif %}">SignUp</a>
+                <a href="{% url 'accounts:login' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}">Login</a>
             </div>
+
             <a href="https://github.com/IT-School-GoIT/final_data_science_goit"
                 class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4" target="_blank">GitHub</a>
         </div>
