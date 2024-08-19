@@ -1,3 +1,8 @@
+
+
+
+<!DOCTYPE html>
+
 {% extends '_layouts/base.html' %}
 {% load static %}
 
@@ -7,10 +12,32 @@
 {% include '_fragments/navbar_hero.html' %}
 {% include '_fragments/header.html' %}
 
-<h1>Реєстрація</h1>
 
-    <button type="submit">Зареєструватися</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Web Login</title>
+    {% load static %}
+</head>
+<body>
+    <video id="video" width="440" height="280" autoplay></video>
+    <br>
 
-<p>Вже маєте акаунт? <a href="">Увійти</a></p>
+    <button onclick="capture()">Take snapshot</button>
+    <br>
+
+    <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
+    <br>
+    <h3>REGISTER ACCOUNT</h3>
+    <label for="name">Your name:</label>
+    <input type="text" id="name" required>
+    <br>
+    <button onclick="register()">REGISTER</button>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
 
 {% endblock content %}
+
