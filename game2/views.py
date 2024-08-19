@@ -46,8 +46,8 @@ def play_game(request):
     # Перевірка, чи хтось вже набрав 7 балів
     if request.session["user_score"] >= 7 or request.session["model_score"] >= 7:
         # Визначаємо переможця гри
-        winner = "Користувач" if request.session["user_score"] >= 7 else "Модель"
-        return render(request, "game2/game_over.html", {"winner": winner})
+        winner = "Користувач" if request.session["user_score"] >= 7 else "Модель cifar10.keras"
+        return render(request, "game2/game_over.html", {"winner": winner, "title": "Гра завершена"})
 
     # Вибір випадкового зображення для гри, якщо ще не було вибрано
     if "current_image_id" not in request.session:
@@ -99,6 +99,7 @@ def play_game(request):
             "model_is_correct": model_is_correct,  # Чи вірно вгадала модель
             "user_score": request.session["user_score"],  # Рахунок користувача
             "model_score": request.session["model_score"],  # Рахунок моделі
+            "title": "Результат",  # Заголовок сторінки
         }
 
         # Відображення результатів раунду

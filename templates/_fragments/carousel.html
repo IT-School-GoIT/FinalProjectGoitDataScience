@@ -13,22 +13,18 @@
                 <img src="{% static 'img/carousel-11.jpg' %}" class="img-fluid w-100" alt="Image">
                 <div class="carousel-caption-1">
                     <div class="carousel-caption-1-content" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase fw-bold mb-4 fadeInLeft animated"
-                            data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;"
-                            style="letter-spacing: 3px;">Cognition</h4>
-                        <h1 class="display-2 text-capitalize text-white mb-4 fadeInLeft animated"
-                            data-animation="fadeInLeft" data-delay="1.3s" style="animation-delay: 1.3s;">Перевірка
-                            згорткової нейронної мережі</h1>
-                        <p class="mb-5 fs-5 text-white fadeInLeft animated" data-animation="fadeInLeft"
-                            data-delay="1.5s" style="animation-delay: 1.5s;">Щоб перевірити роботу нашої згорткової
-                            нейронної мережі, вам потрібно завантажити зображення.
-                        </p>
-                        <div class="carousel-caption-1-content-btn fadeInLeft animated" data-animation="fadeInLeft"
-                            data-delay="1.7s" style="animation-delay: 1.7s;">
-                            <!-- <a class="btn btn-primary rounded-pill flex-shrink-0 py-3 px-5 me-2" href="#">Order
-                                Now</a> -->
-                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2"
-                                href="{% url 'home:cognition' %}">Network test</a>
+                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 1s;">Перевірка згорткової нейронної мережі</h2>
+                        <div class="carousel-caption-1-content-btn fadeInUp" style="animation-delay: 1.3s;">
+                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" style="margin-bottom: 30px;" href="{% url 'home:cognition' %}">Тест мережі</a>
+                        </div>
+                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 1.5s;">Чат на базі GPT-4o-mini</h2>
+                        <div class="carousel-caption-2-content-btn fadeInUp" style="animation-delay: 1.7s;">
+                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" style="margin-bottom: 30px;" href="{% url 'chat_page' %}">Спробувати чат</a>
+                        </div>
+
+                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 2s;">Гра з нейронною мережею</h2>
+                        <div class="carousel-caption-2-content-btn fadeInUp" style="animation-delay: 2.2s;">
+                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" href="{% url 'game2:play_game' %}">Грати зараз</a>
                         </div>
                     </div>
                 </div>
@@ -37,37 +33,33 @@
                 <img src="{% static 'img/carousel-22.jpg' %}" class="img-fluid w-100" alt="Image">
                 <div class="carousel-caption-2">
                     <div class="carousel-caption-2-content" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase fw-bold mb-4 fadeInRight animated"
-                            data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;"
-                            style="letter-spacing: 3px;">Cognition</h4>
-                        <h1 class="display-2 text-capitalize text-white mb-4 fadeInRight animated"
-                            data-animation="fadeInRight" data-delay="1.3s" style="animation-delay: 1.3s;">Перевірка
-                            згорткової нейронної мережі</h1>
-                        <p class="mb-5 fs-5 text-white fadeInRight animated" data-animation="fadeInRight"
-                            data-delay="1.5s" style="animation-delay: 1.5s;">Щоб перевірити роботу нашої згорткової
-                            нейронної мережі, вам потрібно завантажити зображення.
-                        </p>
-                        <div class="carousel-caption-2-content-btn fadeInRight animated" data-animation="fadeInRight"
-                            data-delay="1.7s" style="animation-delay: 1.7s;">
-                            <!-- <a class="btn btn-primary rounded-pill flex-shrink-0 py-3 px-5 me-2" href="#">Order
-                                Now</a> -->
-                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2"
-                                href="{% url 'home:cognition' %}">Network test</a>
+                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 1s;">Перевірка згорткової нейронної мережі</h2>
+                        <div class="carousel-caption-1-content-btn fadeInUp" style="animation-delay: 1.3s;">
+                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" style="margin-bottom: 30px;" href="{% url 'home:cognition' %}">Тест мережі</a>
+                        </div>
+                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 1.5s;">Чат на базі GPT-4o-mini</h2>
+                        <div class="carousel-caption-2-content-btn fadeInUp" style="animation-delay: 1.7s;">
+                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" style="margin-bottom: 30px;" href="{% url 'chat_page' %}">Спробувати чат</a>
+                        </div>
+
+                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 2s;">Гра з нейронною мережею</h2>
+                        <div class="carousel-caption-2-content-btn fadeInUp" style="animation-delay: 2.2s;">
+                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" href="{% url 'game2:play_game' %}">Грати зараз</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon btn btn-primary fadeInLeft animated" aria-hidden="true"
-                data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"> <i
-                    class="fa fa-angle-left fa-3x"></i></span>
+            <span class="carousel-control-prev-icon btn btn-primary fadeInUp" style="animation-delay: 1.3s;"> 
+                <i class="fa fa-angle-left fa-3x"></i>
+            </span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-            <span class="carousel-control-next-icon btn btn-primary fadeInRight animated" aria-hidden="true"
-                data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"><i
-                    class="fa fa-angle-right fa-3x"></i></span>
+            <span class="carousel-control-next-icon btn btn-primary fadeInUp" style="animation-delay: 1.3s;">
+                <i class="fa fa-angle-right fa-3x"></i>
+            </span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>

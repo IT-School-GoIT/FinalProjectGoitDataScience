@@ -11,8 +11,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="/"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+                <a href="/" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
                 <a href="{% url 'home:team' %}"
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}">Team</a>
                 <a href="{% url 'home:cognition' %}"
