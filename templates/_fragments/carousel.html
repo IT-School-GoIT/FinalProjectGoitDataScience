@@ -11,7 +11,9 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src="{% static 'img/carousel-11.jpg' %}" class="img-fluid w-100" alt="{% trans 'Image' %}">
+                <div class="background-opacity-dark">
+                    <img src="{% static 'img/carousel-11.jpg' %}" class="img-fluid w-100" alt="{% trans 'Image' %}">
+                </div>
                 <div class="carousel-caption-1">
                     <div class="carousel-caption-1-content" style="max-width: 900px;">
                         <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 1s;">{% trans "Перевірка згорткової нейронної мережі" %}</h2>
@@ -29,26 +31,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'img/carousel-22.jpg' %}" class="img-fluid w-100" alt="{% trans 'Image' %}">
-                <div class="carousel-caption-2">
-                    <div class="carousel-caption-2-content" style="max-width: 900px;">
-                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 1s;">{% trans "Перевірка згорткової нейронної мережі" %}</h2>
-                        <div class="carousel-caption-1-content-btn fadeInUp" style="animation-delay: 1.3s;">
-                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" style="margin-bottom: 30px;" href="{% url 'home:cognition' %}">{% trans "Тест мережі" %}</a>
-                        </div>
-                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 1.5s;">{% trans "Чат на базі GPT-4o-mini" %}</h2>
-                        <div class="carousel-caption-2-content-btn fadeInUp" style="animation-delay: 1.7s;">
-                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" style="margin-bottom: 30px;" href="{% url 'chat_page' %}">{% trans "Спробувати чат" %}</a>
-                        </div>
 
-                        <h2 class="text-white text-uppercase fw-bold mb-4 fadeInUp" style="animation-delay: 2s;">{% trans "Гра з нейронною мережею" %}</h2>
-                        <div class="carousel-caption-2-content-btn fadeInUp" style="animation-delay: 2.2s;">
-                            <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" href="{% url 'game2:play_game' %}">{% trans "Грати зараз" %}</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">

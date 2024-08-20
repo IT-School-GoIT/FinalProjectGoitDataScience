@@ -32,7 +32,7 @@
                 <form action="{% url 'home:set_language' %}" method="post">
                     {% csrf_token %}
                     <input name="next" type="hidden" value="{{ request.path }}">
-                    <select name="language">
+                    <select name="language" onchange="this.form.submit()">
                         <option value="uk" {% if LANGUAGE_CODE == 'uk' %}selected{% endif %}>{% trans "УКР" %}</option>
                         <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>{% trans "АНГ" %}</option>
                     </select>

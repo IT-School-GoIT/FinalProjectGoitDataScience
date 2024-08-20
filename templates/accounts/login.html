@@ -7,14 +7,27 @@
 {% include '_fragments/navbar_hero.html' %}
 {% include '_fragments/header.html' %}
 
-<h1>Login Page</h1>
-<form method="post">
-    {% csrf_token %}
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br>
-    <button type="submit">Login</button>
-</form>
+
+
+<div class="site-section bg-light pt-5 pb-5">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+                <h2 class="text-black py-3">Login Page</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <input type="text" id="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" id="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary rounded-pill py-3 px-5 mt-3 mb-2">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content %}
