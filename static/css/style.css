@@ -1,3 +1,27 @@
+/*Глобальні стилі*/
+
+/* Контейнер для всього контенту між хедером і футером */
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    overflow: hidden;
+    /* Запобігає виходу за межі */
+}
+
+body, h1, h2, h3, p, ul, li {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+input[type="text"],
+button {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
 /*custom styles*/
 .background-opacity-dark {
     width: 100%;
