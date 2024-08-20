@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-20 02:16+0300\n"
+"POT-Creation-Date: 2024-08-21 00:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,6 +42,27 @@ msgstr "Game"
 #: .\gpt_response\views.py:35
 msgid "Чат Бот"
 msgstr "Chat Bot"
+
+#: .\home\views.py:8
+msgid "Головна"
+msgstr "Home"
+
+#: .\home\views.py:16 .\templates\_fragments\navbar_hero.html:19
+msgid "Пізнання"
+msgstr "Cognition"
+
+#: .\home\views.py:22 .\templates\_fragments\navbar_hero.html:17
+#: .\templates\_fragments\team.html:8
+msgid "Команда"
+msgstr "Team"
+
+#: .\home\views.py:30 .\templates\_fragments\copyright.html:13
+msgid "Політика конфіденційності"
+msgstr "Privacy Policy"
+
+#: .\home\views.py:39
+msgid "Презентація проєкту"
+msgstr "Presentation of the project"
 
 #: .\myenv_ds\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
@@ -467,8 +488,7 @@ msgid "File"
 msgstr ""
 
 #: .\myenv_ds\Lib\site-packages\django\db\models\fields\files.py:420
-#: .\templates\_fragments\carousel.html:14
-#: .\templates\_fragments\carousel.html:34 .\templates\_fragments\team.html:19
+#: .\templates\_fragments\carousel.html:15 .\templates\_fragments\team.html:19
 #: .\templates\_fragments\team.html:47 .\templates\_fragments\team.html:76
 #: .\templates\_fragments\team.html:100
 msgid "Image"
@@ -1271,43 +1291,29 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: .\templates\_fragments\carousel.html:17
-#: .\templates\_fragments\carousel.html:37
+#: .\templates\_fragments\carousel.html:19
 msgid "Перевірка згорткової нейронної мережі"
 msgstr "Validation of a convolutional neural network"
 
-#: .\templates\_fragments\carousel.html:19
-#: .\templates\_fragments\carousel.html:39
+#: .\templates\_fragments\carousel.html:21
 msgid "Тест мережі"
 msgstr "Network test"
 
-#: .\templates\_fragments\carousel.html:21
-#: .\templates\_fragments\carousel.html:41
+#: .\templates\_fragments\carousel.html:23
 msgid "Чат на базі GPT-4o-mini"
 msgstr "Chat based on GPT-4o-mini"
 
-#: .\templates\_fragments\carousel.html:23
-#: .\templates\_fragments\carousel.html:43
+#: .\templates\_fragments\carousel.html:25
 msgid "Спробувати чат"
 msgstr "Try chat"
 
-#: .\templates\_fragments\carousel.html:26
-#: .\templates\_fragments\carousel.html:46
+#: .\templates\_fragments\carousel.html:28
 msgid "Гра з нейронною мережею"
 msgstr "A game with a neural network"
 
-#: .\templates\_fragments\carousel.html:28
-#: .\templates\_fragments\carousel.html:48
+#: .\templates\_fragments\carousel.html:30
 msgid "Грати зараз"
 msgstr "Play now"
-
-#: .\templates\_fragments\carousel.html:58
-msgid "Previous"
-msgstr ""
-
-#: .\templates\_fragments\carousel.html:64
-msgid "Next"
-msgstr ""
 
 #: .\templates\_fragments\chat.html:7
 #: .\templates\_fragments\navbar_hero.html:21
@@ -1336,10 +1342,6 @@ msgstr "Python_19_2024 Data Science - Developer"
 msgid "Презентація проекту"
 msgstr "Presentation of the project"
 
-#: .\templates\_fragments\copyright.html:13
-msgid "Політика конфіденційності"
-msgstr "Privacy Policy"
-
 #: .\templates\_fragments\copyright.html:14
 msgid "Документація"
 msgstr "Documentation"
@@ -1348,15 +1350,6 @@ msgstr "Documentation"
 #: .\templates\_fragments\navbar_hero.html:15
 msgid "Початок"
 msgstr "Home"
-
-#: .\templates\_fragments\navbar_hero.html:17
-#: .\templates\_fragments\team.html:8
-msgid "Команда"
-msgstr "Team"
-
-#: .\templates\_fragments\navbar_hero.html:19
-msgid "Пізнання"
-msgstr "Cognition"
 
 #: .\templates\_fragments\navbar_hero.html:25
 msgid "Вийти"
