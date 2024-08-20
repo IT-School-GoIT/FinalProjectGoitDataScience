@@ -7,8 +7,17 @@
 {% include '_fragments/navbar_hero.html' %}
 {% include '_fragments/header.html' %}
 
-<h1>Ви вийшли з системи</h1>
-<p>Ви успішно вийшли з вашого облікового запису.</p>
-<a href="{% url 'accounts:login' %}">Увійти знову</a>
+
+<div class="site-section bg-light pt-5 pb-5">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+                <h2 class="text-black py-3">Ви вийшли з системи</h2>
+                <p class="mb-0 font-weight-bold">Ви успішно вийшли з вашого облікового запису <a href="{% url 'accounts:login' %}">...Увійти знову...</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
