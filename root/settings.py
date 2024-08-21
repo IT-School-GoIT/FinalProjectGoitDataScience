@@ -28,11 +28,11 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = env('DEBUG')
-# ALLOWED_HOSTS = ['distinct-rozalin-antonbabenko-72e10d6e.koyeb.app']
+DEBUG = env('DEBUG')
+ALLOWED_HOSTS = ['distinct-rozalin-antonbabenko-72e10d6e.koyeb.app']
 
-ALLOWED_HOSTS = ["*"]  # Тільки для розробки
-DEBUG = True  # Тільки для розробки
+# ALLOWED_HOSTS = ["*"]  # Тільки для розробки
+# DEBUG = True  # Тільки для розробки
 
 
 # Application definition

@@ -37,7 +37,7 @@ urlpatterns = [
 #     path('gpt_response/', include('gpt_response.urls')),
 #     path('game2/', include('game2.urls')),
 #     path('faceid/', include('faceid.urls')),
-#
+
 # )
 
 if settings.DEBUG:

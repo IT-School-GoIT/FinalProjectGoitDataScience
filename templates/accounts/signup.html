@@ -1,8 +1,3 @@
-
-
-
-<!DOCTYPE html>
-
 {% extends '_layouts/base.html' %}
 {% load static %}
 
@@ -16,7 +11,18 @@
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
                 <h2 class="text-black py-3">Реєстрація</h2>
-                <button type="submit" class="btn btn-outline-primary rounded-pill py-3 px-5 mt-3 mb-2 ">Зареєструватися</button>
+                <video id="video" width="440" height="280" autoplay></video>
+                <br>
+                <button onclick="capture()">Take snapshot</button>
+                <br>
+                <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
+                <br>
+                <input placeholder="Username" type="text" id="name" required>
+                <br>
+
+                <br>
+                <button onclick="register()"
+                    class="btn btn-outline-primary rounded-pill py-3 px-5 mt-3 mb-2">Зареєструватися</button>
                 <p class="mb-0 font-weight-bold">Вже маєте акаунт? <a href="" class="ml-3">...Увійти...</a></p>
             </div>
         </div>
@@ -25,27 +31,12 @@
 
 
 
+<script src="{% static 'js/script.js' %}"></script>
 
 
 
-    <video id="video" width="440" height="280" autoplay></video>
-    <br>
 
-    <button onclick="capture()">Take snapshot</button>
-    <br>
-
-    <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
-    <br>
-    <h3>REGISTER ACCOUNT</h3>
-    <label for="name">Your name:</label>
-    <input type="text" id="name" required>
-    <br>
-    <button onclick="register()">REGISTER</button>
-
-    <script src="{% static 'js/script.js' %}"></script>
 
 
 
 {% endblock content %}
-
-

@@ -9,29 +9,28 @@
 {% include '_fragments/header.html' %}
 
 
-
-    <video id="video" width="440" height="280" autoplay></video>
-    <br>
-
-    <button onclick="capture()">Take snapshot</button>
-    <br>
-
-    <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
-    <br>
-    <h3>LOGIN ACCOUNT</h3>
-    <br>
-    <button onclick="login()">LOGIN</button>
-  
-  
-  
-  
-  
-  <div class="site-section bg-light pt-5 pb-5">
+<div class="site-section bg-light pt-5 pb-5">
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
-                <h2 class="text-black py-3">Login Page</h2>
-                <form method="post">
+                <div class="site-section bg-light pt-5 pb-5">
+                    <div class="container">
+                        <div class="row mb-5 justify-content-center">
+                            <div class="col-md-7 text-center">
+                                <h2 class="text-black py-3">Сторінка входу</h2>
+                                <video id="video" width="440" height="280" autoplay></video>
+                                <br>
+                                <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
+                                <br>
+                                <button type="button" onclick="login()">Логін</button>
+                                <p id="message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <form method="post">
                     {% csrf_token %}
                     <div class="input-group mb-3">
                         <input type="text" id="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
@@ -40,17 +39,17 @@
                         <input type="text" id="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                     </div>
                     <button type="submit" class="btn btn-outline-primary rounded-pill py-3 px-5 mt-3 mb-2">Login</button>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
 </div>
-  
-  
-  
-  
 
-    <script src="{% static 'js/script.js' %}"></script>
+
+
+
+
+<script src="{% static 'js/script.js' %}"></script>
 
 
 
