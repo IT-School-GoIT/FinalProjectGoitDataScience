@@ -29,9 +29,6 @@ function register() {
     const name = nameInput.value;
     const photo = dataURItoBlob(canvas.toDataURL());
 
-    console.log("Name:", name);
-    console.log("Photo Blob:", photo);
-
     if (!name || !photo) {
         alert("Name and photo are required.");
         return;
@@ -41,12 +38,9 @@ function register() {
     formData.append("name", name);
     formData.append("photo", photo, `${name}.jpg`);
 
-    console.log("FormData prepared:", formData);
-
     fetch("/faceid/signup/", { method: "POST", body: formData })
         .then(response => response.json())
         .then(data => {
-            console.log("Server response:", data);
             if (data.success) {
                 alert("Registration successful.");
                 window.location.href = "/";
@@ -58,7 +52,6 @@ function register() {
             console.log("Error:", error);
         });
 }
-
 
 function login() {
     const context = canvas.getContext("2d");

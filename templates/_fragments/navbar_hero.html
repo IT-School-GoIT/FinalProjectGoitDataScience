@@ -12,25 +12,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="/" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">{% trans "Початок" %}</a>
+                <a href="/" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Початок" %}</a>
                 <a href="{% url 'home:team' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}">{% trans "Команда" %}</a>
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Команда" %}</a>
                 <a href="{% url 'home:cognition' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'cognition' %}active{% endif %}">{% trans "Пізнання" %}</a>
-                <a href="{% url 'chat_page' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'chat_page' %}active{% endif %}">{% trans "Чат" %}</a>
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'cognition' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Пізнання" %}</a>
+                
                 <a href="{% url 'game2:play_game' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'play_game' %}active{% endif %}">{% trans "Гра" %}</a>
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'play_game' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Гра" %}</a>
 
                 {% if request.user.is_authenticated %}
-                    <span class="nav-item nav-link">Привіт, {{ request.user.username }}</span>
-                    <a href="{% url 'accounts:logout' %}"
-                        class="nav-item nav-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}">{% trans "Вийти" %}</a>
+                <a href="{% url 'chat_page' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'chat_page' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Чат" %}</a>
+                <a href="{% url 'accounts:user_profile' request.user.username %}" class="nav-item nav-link"  style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{{ request.user.username }}</a>
+                    <form method="POST" action="{% url 'accounts:logout' %}" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Вийти" %}</button>
+                    </form>
+                    
                 {% else %}
-                    <a href="{% url 'accounts:signup' %}"
-                        class="nav-item nav-link {% if request.resolver_match.url_name == 'signup' %}active{% endif %}">{% trans "Реєстрація" %}</a>
-                    <a href="{% url 'accounts:login' %}"
-                        class="nav-item nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}">{% trans "Логін" %}</a>
+                    <a href="{% url 'accounts:signup' %}" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Реєстрація" %}</a>
+                    <a href="{% url 'accounts:login' %}" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Логін" %}</a>
                 {% endif %}
             </div>
 
