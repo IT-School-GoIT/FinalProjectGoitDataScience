@@ -1,6 +1,7 @@
+<!DOCTYPE html>
+
 {% extends '_layouts/base.html' %}
 {% load static %}
-
 
 {% block content %}
 
@@ -9,7 +10,23 @@
 
 
 
-<div class="site-section bg-light pt-5 pb-5">
+    <video id="video" width="440" height="280" autoplay></video>
+    <br>
+
+    <button onclick="capture()">Take snapshot</button>
+    <br>
+
+    <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
+    <br>
+    <h3>LOGIN ACCOUNT</h3>
+    <br>
+    <button onclick="login()">LOGIN</button>
+  
+  
+  
+  
+  
+  <div class="site-section bg-light pt-5 pb-5">
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
@@ -28,6 +45,13 @@
         </div>
     </div>
 </div>
+  
+  
+  
+  
+
+    <script src="{% static 'js/script.js' %}"></script>
+
 
 
 {% endblock content %}
