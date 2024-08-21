@@ -1104,3 +1104,26 @@ button:hover {
 [data-delay] {
     animation-delay: var(--delay, 0s);
 }
+
+
+
+
+
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item.nav-link {
+    padding: 10px;  /* Це вирівняє елементи по висоті */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-item.nav-link:hover {
+    background-color: #00aaff;
+    border-radius: 5px;
+}
+
+

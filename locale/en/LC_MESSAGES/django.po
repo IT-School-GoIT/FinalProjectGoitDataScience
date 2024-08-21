@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 00:05+0300\n"
+"POT-Creation-Date: 2024-08-22 01:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\accounts\views.py:10 .\templates\_fragments\navbar_hero.html:35
+#: .\templates\accounts\login.html:19
+msgid "Логін"
+msgstr "Login"
+
+#: .\accounts\views.py:15
+msgid "Вихід"
+msgstr ""
+
+#: .\accounts\views.py:20 .\templates\_fragments\navbar_hero.html:34
+#: .\templates\accounts\signup.html:13
+msgid "Реєстрація"
+msgstr "Registration"
+
+#: .\accounts\views.py:26
+msgid "Профіль"
+msgstr "Profile"
 
 #: .\game2\views.py:50
 msgid "Користувач"
@@ -34,7 +52,7 @@ msgstr "Game overм"
 msgid "Результат"
 msgstr "Result"
 
-#: .\game2\views.py:113 .\templates\_fragments\navbar_hero.html:23
+#: .\game2\views.py:113 .\templates\_fragments\navbar_hero.html:22
 #: .\templates\game2\game.html:14 .\templates\game2\result.html:13
 msgid "Гра"
 msgstr "Game"
@@ -43,26 +61,306 @@ msgstr "Game"
 msgid "Чат Бот"
 msgstr "Chat Bot"
 
-#: .\home\views.py:8
+#: .\home\views.py:10
 msgid "Головна"
 msgstr "Home"
 
-#: .\home\views.py:16 .\templates\_fragments\navbar_hero.html:19
+#: .\home\views.py:18 .\templates\_fragments\navbar_hero.html:19
 msgid "Пізнання"
 msgstr "Cognition"
 
-#: .\home\views.py:22 .\templates\_fragments\navbar_hero.html:17
+#: .\home\views.py:24 .\templates\_fragments\navbar_hero.html:17
 #: .\templates\_fragments\team.html:8
 msgid "Команда"
 msgstr "Team"
 
-#: .\home\views.py:30 .\templates\_fragments\copyright.html:13
+#: .\home\views.py:32 .\templates\_fragments\copyright.html:13
 msgid "Політика конфіденційності"
 msgstr "Privacy Policy"
 
-#: .\home\views.py:39
+#: .\home\views.py:41
 msgid "Презентація проєкту"
 msgstr "Presentation of the project"
+
+#: .\myenv_ds\Lib\site-packages\click\_termui_impl.py:518
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\_termui_impl.py:522
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1120
+msgid "Aborted!"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1309
+#: .\myenv_ds\Lib\site-packages\click\decorators.py:559
+msgid "Show this message and exit."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1340
+#: .\myenv_ds\Lib\site-packages\click\core.py:1370
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1387
+msgid "Options"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1413
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1429
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1636
+msgid "Commands"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1668
+msgid "Missing command."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:1746
+msgid "No such command {name!r}."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:2310
+msgid "Value must be an iterable."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:2331
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:2778
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:2808
+msgid "(dynamic)"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:2821
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\core.py:2834
+msgid "required"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\decorators.py:528
+msgid "Show the version and exit."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:44
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:80
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:72
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:121
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:123
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:179
+msgid "Missing argument"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:181
+msgid "Missing option"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:183
+msgid "Missing parameter"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:185
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:192
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:212
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:224
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:262
+msgid "unknown error"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\parser.py:474
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\myenv_ds\Lib\site-packages\click\shell_completion.py:319
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\termui.py:176
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:266
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:298
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:392
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:470
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:822
+msgid "file"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:824
+msgid "directory"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:826
+msgid "path"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:894
+#, python-brace-format
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:903
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\click\types.py:988
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
 
 #: .\myenv_ds\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
@@ -1316,7 +1614,7 @@ msgid "Грати зараз"
 msgstr "Play now"
 
 #: .\templates\_fragments\chat.html:7
-#: .\templates\_fragments\navbar_hero.html:21
+#: .\templates\_fragments\navbar_hero.html:26
 msgid "Чат"
 msgstr "Chat"
 
@@ -1351,23 +1649,15 @@ msgstr "Documentation"
 msgid "Початок"
 msgstr "Home"
 
-#: .\templates\_fragments\navbar_hero.html:25
+#: .\templates\_fragments\navbar_hero.html:30
 msgid "Вийти"
 msgstr "Logout"
 
-#: .\templates\_fragments\navbar_hero.html:27
-msgid "Реєстрація"
-msgstr "SignUp"
-
-#: .\templates\_fragments\navbar_hero.html:29
-msgid "Логін"
-msgstr "Login"
-
-#: .\templates\_fragments\navbar_hero.html:36
+#: .\templates\_fragments\navbar_hero.html:44
 msgid "УКР"
 msgstr "UK"
 
-#: .\templates\_fragments\navbar_hero.html:37
+#: .\templates\_fragments\navbar_hero.html:45
 msgid "АНГ"
 msgstr "EN"
 
@@ -1663,6 +1953,26 @@ msgid ""
 msgstr ""
 "A platform for developing and collaborating on projects using the Git "
 "version control system."
+
+#: .\templates\accounts\login.html:13
+msgid "Сторінка входу"
+msgstr "Login page"
+
+#: .\templates\accounts\signup.html:16
+msgid "Зробіть знімок"
+msgstr "Take a picture"
+
+#: .\templates\accounts\signup.html:23
+msgid "Зареєструватися"
+msgstr "Sign up"
+
+#: .\templates\accounts\signup.html:24
+msgid "Вже маєте акаунт?"
+msgstr "Already have an account?"
+
+#: .\templates\accounts\signup.html:25
+msgid "...Увійти..."
+msgstr "...Sign in..."
 
 #: .\templates\game2\game.html:15
 msgid "Виберіть клас зображення"

@@ -167,3 +167,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGOUT_REDIRECT_URL = "/"
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # або 'cache'
+SESSION_COOKIE_SECURE = False  # Якщо тестуєте локально
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+

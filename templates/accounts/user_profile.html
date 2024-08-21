@@ -1,0 +1,25 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+{% include '_fragments/navbar_hero.html' %}
+{% include '_fragments/header.html' %}
+
+<div class="container">
+    <h1>Профіль користувача: {{ user.username }}</h1>
+    <p>Ім'я: {{ user.first_name }}</p>
+    <p>Прізвище: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    
+    {% if user_photo %}
+        <img src="data:image/jpeg;base64,{{ user_photo }}" alt="Фото користувача" style="width: 200px; height: auto;">
+    {% else %}
+        <p>Фото користувача відсутнє.</p>
+    {% endif %}
+    
+    <p>Кількість перемог над cifar10 keras: {{ victories }}</p>
+</div>
+
+{% endblock %}

@@ -1,5 +1,7 @@
 from django.utils.translation import gettext as _
 import os
+from django.contrib.auth.models import User
+from faceid.models import UserProfile
 
 # Вимкнення GPU
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
@@ -46,8 +48,14 @@ def play_game(request):
 
     # Перевірка, чи хтось вже набрав 7 балів
     if request.session["user_score"] >= 7 or request.session["model_score"] >= 7:
-        # Визначаємо переможця гри
         winner = _("Користувач") if request.session["user_score"] >= 7 else _("Модель cifar10.keras")
+
+        # Якщо користувач виграв і він авторизований, оновлюємо кількість перемог у UserProfile
+        if request.session["user_score"] >= 7 and request.user.is_authenticated:
+            user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+            user_profile.victories += 1
+            user_profile.save()
+
         return render(request, "game2/game_over.html", {"winner": winner, "title": _("Гра завершена")})
 
     # Вибір випадкового зображення для гри, якщо ще не було вибрано
@@ -56,9 +64,7 @@ def play_game(request):
         if not images.exists():
             return render(request, "game2/no_images.html")  # Якщо зображень немає
         random_image = random.choice(images)
-        request.session["current_image_id"] = (
-            random_image.id
-        )  # Зберігаємо ID зображення у сесії
+        request.session["current_image_id"] = random_image.id  # Зберігаємо ID зображення у сесії
     else:
         random_image = ImageForGame.objects.get(id=request.session["current_image_id"])
 
