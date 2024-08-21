@@ -1,3 +1,43 @@
+/*Глобальні стилі*/
+
+/* Контейнер для всього контенту між хедером і футером */
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    overflow: hidden;
+    /* Запобігає виходу за межі */
+}
+
+body, h1, h2, h3, p, ul, li {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+input[type="text"],
+button {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+/*custom styles*/
+.background-opacity-dark {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.background-opacity-dark::after {
+         content: '';
+         position: absolute;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(22, 35, 44, 0.6);
+}
+
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -977,8 +1017,6 @@ input[type="text"] {
 }
 
 button {
-    width: 50px;
-    padding: 10px;
     background-color: #007bff;
     border: none;
     color: white;
@@ -989,37 +1027,6 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
-/* Контейнер для всього контенту між хедером і футером */
-main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
-    overflow: hidden;
-    /* Запобігає виходу за межі */
-}
-
-input[type="text"],
-button {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-
-body, h1, h2, h3, p, ul, li {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
-
-
-
-
 
 
 
