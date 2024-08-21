@@ -1,7 +1,6 @@
 {% extends '_layouts/base.html' %}
 {% load static %}
 
-
 {% block content %}
 
 {% include '_fragments/navbar_hero.html' %}
@@ -13,30 +12,21 @@
                 <h2 class="text-black py-3">Реєстрація</h2>
                 <video id="video" width="440" height="280" autoplay></video>
                 <br>
-                <button onclick="capture()">Take snapshot</button>
+                <button onclick="capture()">Зробіть знімок</button>
                 <br>
                 <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
                 <br>
                 <input placeholder="Username" type="text" id="name" required>
                 <br>
-
-                <br>
                 <button onclick="register()"
                     class="btn btn-outline-primary rounded-pill py-3 px-5 mt-3 mb-2">Зареєструватися</button>
-                <p class="mb-0 font-weight-bold">Вже маєте акаунт? <a href="" class="ml-3">...Увійти...</a></p>
+                <p class="mb-0 font-weight-bold">Вже маєте акаунт? <a href="{% url 'accounts:login' %}"
+                        class="ml-3">...Увійти...</a></p>
             </div>
         </div>
     </div>
 </div>
 
-
-
 <script src="{% static 'js/script.js' %}"></script>
-
-
-
-
-
-
 
 {% endblock content %}

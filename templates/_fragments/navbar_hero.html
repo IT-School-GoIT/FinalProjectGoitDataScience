@@ -4,7 +4,7 @@
 <!-- Navbar & Hero Start -->
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-        <a href="" class="navbar-brand p-0">
+        <a href="/" class="navbar-brand p-0">
             <h1 class="text-primary"><i class="fas fa-brain me-3"></i>Cognition.Creators</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -21,13 +21,19 @@
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'chat_page' %}active{% endif %}">{% trans "Чат" %}</a>
                 <a href="{% url 'game2:play_game' %}"
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'play_game' %}active{% endif %}">{% trans "Гра" %}</a>
-                <a href="{% url 'accounts:logout' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}">{% trans "Вийти" %}</a>
-                <a href="{% url 'accounts:signup' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'signup' %}active{% endif %}">{% trans "Реєстрація" %}</a>
-                <a href="{% url 'accounts:login' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}">{% trans "Логін" %}</a>
+
+                {% if request.user.is_authenticated %}
+                    <span class="nav-item nav-link">Привіт, {{ request.user.username }}</span>
+                    <a href="{% url 'accounts:logout' %}"
+                        class="nav-item nav-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}">{% trans "Вийти" %}</a>
+                {% else %}
+                    <a href="{% url 'accounts:signup' %}"
+                        class="nav-item nav-link {% if request.resolver_match.url_name == 'signup' %}active{% endif %}">{% trans "Реєстрація" %}</a>
+                    <a href="{% url 'accounts:login' %}"
+                        class="nav-item nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}">{% trans "Логін" %}</a>
+                {% endif %}
             </div>
+
             <div class="language-switcher">
                 <form action="{% url 'home:set_language' %}" method="post">
                     {% csrf_token %}
@@ -45,5 +51,4 @@
         </div>
     </nav>
 </div>
-
 <!-- Navbar & Hero End -->
