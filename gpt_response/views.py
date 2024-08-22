@@ -2,6 +2,7 @@ from django.utils.translation import gettext as _
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 import requests
 import environ
 import os
@@ -21,6 +22,7 @@ API_KEY = env("API_KEY", default=None)
 if not API_KEY:
     raise ValueError("API_KEY не знайдений. Перевірте файл .env")
 
+@login_required
 def chat_page(request):
     """
     Відображає сторінку чату.

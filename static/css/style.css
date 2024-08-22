@@ -1127,3 +1127,53 @@ button:hover {
 }
 
 
+#video, #canvas {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Максимальна ширина для ПК */
+    aspect-ratio: 4 / 3; /* Співвідношення сторін 4:3 */
+}
+
+
+
+
+
+
+
+.language-switcher select {
+    background: none;
+    border: none;
+    font-size: inherit;
+    color: #18CAE0;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: inherit;
+    appearance: none; /* Прибирає стандартний стиль браузера для select */
+}
+
+.language-switcher select:focus {
+    outline: none;
+}
+
+.language-switcher {
+    display: inline-block;
+    position: relative;
+}
+
+.language-switcher::after {
+    content: '\25BC'; /* Стрілочка вниз */
+    font-size: 10px;
+    color: #18CAE0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.language-switcher select option {
+    background-color: black; /* Чорний фон при виборі */
+    color: #18CAE0; /* Синій текст */
+}
+
