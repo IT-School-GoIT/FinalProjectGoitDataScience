@@ -8,18 +8,18 @@
 {% include '_fragments/header.html' %}
 
 <div class="container">
-    <h1>Профіль користувача: {{ user.username }}</h1>
-    <p>Ім'я: {{ user.first_name }}</p>
-    <p>Прізвище: {{ user.last_name }}</p>
-    <p>Email: {{ user.email }}</p>
+    <h1>{% trans "Профіль користувача:" %} {{ user.username }}</h1>
+    <p>{% trans "Ім'я:" %} {{ user.first_name }}</p>
+    <p>{% trans "Прізвище:" %} {{ user.last_name }}</p>
+    <p>{% trans "Email:" %} {{ user.email }}</p>
     
     {% if user_photo %}
         <img src="data:image/jpeg;base64,{{ user_photo }}" alt="Фото користувача" style="width: 200px; height: auto;">
     {% else %}
-        <p>Фото користувача відсутнє.</p>
+        <p>{% trans "Фото користувача відсутнє." %}</p>
     {% endif %}
     
-    <p>Кількість перемог над cifar10 keras: {{ victories }}</p>
+    <p>{% trans "Кількість перемог над cifar10 keras:" %} {{ victories }}</p>
 </div>
 
 {% endblock %}

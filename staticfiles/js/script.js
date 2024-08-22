@@ -18,11 +18,27 @@ function init() {
 }
 
 function capture() {
-    const context = canvas.getContext("2d");
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+
+    const maxWidth = 400; // Максимальна ширина зображення
+    const scaleFactor = maxWidth / video.videoWidth;
+    
+    canvas.width = maxWidth;
+    canvas.height = video.videoHeight * scaleFactor;
+
+    // Малюємо зображення з відео на canvas
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    canvas.style.display = "block";
-    video.style.display = "none";
+
+    // Відображаємо canvas (зроблене зображення)
+    canvas.style.display = 'block';
+
+    // Ви можете додатково зберегти зображення у форматі base64 для відправки на сервер
+    const imageData = canvas.toDataURL('image/png');
+    console.log("Captured Image:", imageData); 
 }
+
 
 function register() {
     console.log("Register function called");
@@ -71,7 +87,7 @@ function login() {
         .then(data => {
             if (data.success) {
                 alert("Login successful.");
-                window.location.href = `/success?user_name=${nameInput.value}`;
+                window.location.href = "/";
             } else {
                 alert("Login failed.");
             }

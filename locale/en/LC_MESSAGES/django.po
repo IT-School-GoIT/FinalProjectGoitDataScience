@@ -1,63 +1,52 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-22 01:35+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2024-08-23 00:34+0300\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\accounts\views.py:10 .\templates\_fragments\navbar_hero.html:35
+#: .\accounts\views.py:12 .\templates\_fragments\navbar_hero.html:35
 #: .\templates\accounts\login.html:19
 msgid "Логін"
 msgstr "Login"
 
-#: .\accounts\views.py:15
+#: .\accounts\views.py:17
 msgid "Вихід"
 msgstr ""
 
-#: .\accounts\views.py:20 .\templates\_fragments\navbar_hero.html:34
+#: .\accounts\views.py:22 .\templates\_fragments\navbar_hero.html:34
 #: .\templates\accounts\signup.html:13
 msgid "Реєстрація"
 msgstr "Registration"
 
-#: .\accounts\views.py:26
+#: .\accounts\views.py:43
 msgid "Профіль"
 msgstr "Profile"
 
-#: .\game2\views.py:50
+#: .\game2\views.py:51
 msgid "Користувач"
 msgstr "User"
 
-#: .\game2\views.py:50
+#: .\game2\views.py:51
 msgid "Модель cifar10.keras"
 msgstr "Model cifar10.keras"
 
-#: .\game2\views.py:51
+#: .\game2\views.py:59
 msgid "Гра завершена"
 msgstr "Game overм"
 
-#: .\game2\views.py:103
+#: .\game2\views.py:109
 msgid "Результат"
 msgstr "Result"
 
-#: .\game2\views.py:113 .\templates\_fragments\navbar_hero.html:22
+#: .\game2\views.py:119 .\templates\_fragments\navbar_hero.html:22
 #: .\templates\game2\game.html:14 .\templates\game2\result.html:13
 msgid "Гра"
 msgstr "Game"
 
-#: .\gpt_response\views.py:35
+#: .\gpt_response\views.py:37
 msgid "Чат Бот"
 msgstr "Chat Bot"
 
@@ -1601,17 +1590,33 @@ msgstr "Network test"
 msgid "Чат на базі GPT-4o-mini"
 msgstr "Chat based on GPT-4o-mini"
 
-#: .\templates\_fragments\carousel.html:25
+#: .\templates\_fragments\carousel.html:26
+#: .\templates\_fragments\carousel.html:28
 msgid "Спробувати чат"
 msgstr "Try chat"
 
-#: .\templates\_fragments\carousel.html:28
+#: .\templates\_fragments\carousel.html:31
+#: .\templates\_fragments\products.html:56
 msgid "Гра з нейронною мережею"
 msgstr "A game with a neural network"
 
-#: .\templates\_fragments\carousel.html:30
+#: .\templates\_fragments\carousel.html:33
 msgid "Грати зараз"
 msgstr "Play now"
+
+#: .\templates\_fragments\carousel.html:42
+#: .\templates\_fragments\products.html:85
+msgid "Авторизація потрібна"
+msgstr "Authorization is required"
+
+#: .\templates\_fragments\carousel.html:46
+msgid "Щоб скористатися чатом, вам необхідно увійти в систему."
+msgstr "You must be logged in to use the chat."
+
+#: .\templates\_fragments\carousel.html:49
+#: .\templates\_fragments\products.html:92
+msgid "Увійти"
+msgstr "...Sign in..."
 
 #: .\templates\_fragments\chat.html:7
 #: .\templates\_fragments\navbar_hero.html:26
@@ -1619,10 +1624,8 @@ msgid "Чат"
 msgstr "Chat"
 
 #: .\templates\_fragments\chat.html:14
-#, fuzzy
-#| msgid "Перевірка зображення"
 msgid "Введіть повідомлення"
-msgstr "Image check"
+msgstr "Enter a message"
 
 #: .\templates\_fragments\chat.html:16
 msgid "Надіслати"
@@ -1653,11 +1656,15 @@ msgstr "Home"
 msgid "Вийти"
 msgstr "Logout"
 
-#: .\templates\_fragments\navbar_hero.html:44
+#: .\templates\_fragments\navbar_hero.html:46
+msgid "МОВА"
+msgstr "LANG"
+
+#: .\templates\_fragments\navbar_hero.html:47
 msgid "УКР"
 msgstr "UK"
 
-#: .\templates\_fragments\navbar_hero.html:45
+#: .\templates\_fragments\navbar_hero.html:48
 msgid "АНГ"
 msgstr "EN"
 
@@ -1669,61 +1676,113 @@ msgstr "Products"
 msgid "Ми пропонуємо:"
 msgstr "We offer:"
 
-#: .\templates\_fragments\products.html:14
+#: .\templates\_fragments\products.html:15
 msgid "Upload Image"
 msgstr ""
 
-#: .\templates\_fragments\products.html:16
+#: .\templates\_fragments\products.html:17
 #: .\templates\_fragments\service.html:18
 msgid "Завантажте зображення"
 msgstr "Upload an image"
 
-#: .\templates\_fragments\products.html:17
+#: .\templates\_fragments\products.html:18
 msgid "Просте завантаження"
 msgstr "Simple download"
 
-#: .\templates\_fragments\products.html:18
+#: .\templates\_fragments\products.html:19
 msgid "Безкоштовно"
 msgstr "Free"
 
-#: .\templates\_fragments\products.html:19
-#: .\templates\_fragments\products.html:30
-#: .\templates\_fragments\products.html:41
+#: .\templates\_fragments\products.html:20
+#: .\templates\_fragments\products.html:33
+#: .\templates\_fragments\products.html:46
+#: .\templates\_fragments\products.html:59
+#: .\templates\_fragments\products.html:73
+#: .\templates\_fragments\products.html:75
+#: .\templates\_fragments\products.html:106
 msgid "Дізнатися більше"
 msgstr "Learn more"
 
-#: .\templates\_fragments\products.html:25
+#: .\templates\_fragments\products.html:28
 msgid "Train Model"
 msgstr ""
 
-#: .\templates\_fragments\products.html:27
+#: .\templates\_fragments\products.html:30
 msgid "Навчання моделі"
 msgstr "Model training"
 
-#: .\templates\_fragments\products.html:28
+#: .\templates\_fragments\products.html:31
 msgid "Ефективне навчання"
 msgstr "Effective learning"
 
-#: .\templates\_fragments\products.html:29
+#: .\templates\_fragments\products.html:32
 msgid "Висока точність"
 msgstr "High accuracy"
 
-#: .\templates\_fragments\products.html:36
+#: .\templates\_fragments\products.html:41
 msgid "Check Image"
 msgstr ""
 
-#: .\templates\_fragments\products.html:38
+#: .\templates\_fragments\products.html:43
 #: .\templates\_fragments\service.html:33
 msgid "Перевірка зображення"
 msgstr "Image check"
 
-#: .\templates\_fragments\products.html:39
+#: .\templates\_fragments\products.html:44
 msgid "Миттєві результати"
 msgstr "Instant results"
 
-#: .\templates\_fragments\products.html:40
+#: .\templates\_fragments\products.html:45
 msgid "Точність понад 95"
 msgstr "Accuracy over 95"
+
+#: .\templates\_fragments\products.html:54
+msgid "Game"
+msgstr ""
+
+#: .\templates\_fragments\products.html:57
+msgid "Змагайтесь з AI"
+msgstr "Compete against the AI"
+
+#: .\templates\_fragments\products.html:58
+msgid "Захоплюючий досвід"
+msgstr "Fascinating experience"
+
+#: .\templates\_fragments\products.html:67
+msgid "Chat"
+msgstr ""
+
+#: .\templates\_fragments\products.html:69
+msgid "Чат на базі GPT_v4"
+msgstr "Chat based on GPT_v4"
+
+#: .\templates\_fragments\products.html:70
+msgid "Інтерактивний чат"
+msgstr "Interactive chat"
+
+#: .\templates\_fragments\products.html:71
+msgid "Штучний інтелект у чаті"
+msgstr "Artificial intelligence in chat"
+
+#: .\templates\_fragments\products.html:89
+msgid "Для доступу до чату, будь ласка, увійдіть у свій акаунт."
+msgstr "To access the chat, please log in to your account."
+
+#: .\templates\_fragments\products.html:101
+msgid "Face ID Registration and Login"
+msgstr ""
+
+#: .\templates\_fragments\products.html:103
+msgid "Реєстрація та авторизація"
+msgstr "Registration and authorization"
+
+#: .\templates\_fragments\products.html:104
+msgid "Face ID доступ"
+msgstr "Face ID access"
+
+#: .\templates\_fragments\products.html:105
+msgid "Безпечно та зручно"
+msgstr "Safe and convenient"
 
 #: .\templates\_fragments\service.html:8
 msgid "Сервіс"
@@ -1958,21 +2017,45 @@ msgstr ""
 msgid "Сторінка входу"
 msgstr "Login page"
 
-#: .\templates\accounts\signup.html:16
+#: .\templates\accounts\signup.html:22
 msgid "Зробіть знімок"
 msgstr "Take a picture"
 
-#: .\templates\accounts\signup.html:23
+#: .\templates\accounts\signup.html:35
 msgid "Зареєструватися"
 msgstr "Sign up"
 
-#: .\templates\accounts\signup.html:24
+#: .\templates\accounts\signup.html:40
 msgid "Вже маєте акаунт?"
 msgstr "Already have an account?"
 
-#: .\templates\accounts\signup.html:25
+#: .\templates\accounts\signup.html:41
 msgid "...Увійти..."
 msgstr "...Sign in..."
+
+#: .\templates\accounts\user_profile.html:11
+msgid "Профіль користувача:"
+msgstr "User profileer:"
+
+#: .\templates\accounts\user_profile.html:12
+msgid "Ім'я:"
+msgstr "Name:"
+
+#: .\templates\accounts\user_profile.html:13
+msgid "Прізвище:"
+msgstr "Surname:"
+
+#: .\templates\accounts\user_profile.html:14
+msgid "Email:"
+msgstr "Email:"
+
+#: .\templates\accounts\user_profile.html:19
+msgid "Фото користувача відсутнє."
+msgstr "There is no user photo."
+
+#: .\templates\accounts\user_profile.html:22
+msgid "Кількість перемог над cifar10 keras:"
+msgstr "Number of wins against cifar10 keras:"
 
 #: .\templates\game2\game.html:15
 msgid "Виберіть клас зображення"

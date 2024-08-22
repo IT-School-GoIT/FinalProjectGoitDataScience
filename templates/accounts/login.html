@@ -11,9 +11,9 @@
     <div class="container">
         <div class="text-center">
             <h2 class="text-black py-3">{% trans "Сторінка входу" %}</h2>
-            <video id="video" width="440" height="280" autoplay></video>
+            <video id="video" autoplay></video>
             <br>
-            <canvas id="canvas" width="440" height="280" style="display: none;"></canvas>
+            <canvas id="canvas" style="display: none;"></canvas>
             <br>
             <button type="button" onclick="login()"
                 class="btn btn-outline-primary rounded-pill py-3 px-5 mt-3 mb-2">{% trans "Логін" %}</button>
@@ -23,5 +23,6 @@
 </div>
 
 <script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 {% endblock content %}
