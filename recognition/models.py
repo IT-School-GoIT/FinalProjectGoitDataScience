@@ -10,4 +10,3 @@ class UploadedImage(models.Model):
     ])
     confidence_threshold = models.FloatField(default=0.5)
     result = models.TextField(blank=True, null=True)
-
