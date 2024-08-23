@@ -1,4 +1,4 @@
-
+from django.utils.translation import gettext as _
 import io
 import os
 import gdown
@@ -39,7 +39,7 @@ def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
 
 def result(request, image_id):
     uploaded_image = UploadedImage.objects.get(id=image_id)
-    return render(request, 'recognition/recognition.html', {'uploaded_image': uploaded_image})
+    return render(request, 'recognition/recognition.html', {'uploaded_image': uploaded_image, "title": _("Пізнання")})
 
 def index(request):
     if request.method == 'POST':
@@ -68,7 +68,7 @@ def index(request):
 
     else:
         form = UploadImageForm(initial={'recognition_type': 'vgg16'})
-    return render(request, 'recognition/cognition.html', {'form': form})
+    return render(request, 'recognition/cognition.html', {'form': form, "title": _("Пізнання"), "page": "cognition", "app": "home"})
 
 
 
