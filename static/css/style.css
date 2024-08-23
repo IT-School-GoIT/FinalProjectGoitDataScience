@@ -1177,3 +1177,15 @@ button:hover {
     color: #18CAE0; /* Синій текст */
 }
 
+
+
+
+.about-exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(32, 68, 162, 0.8); /* синій колір з прозорістю */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}

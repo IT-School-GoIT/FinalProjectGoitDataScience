@@ -32,6 +32,7 @@ DEBUG = env("DEBUG")
 ENV = env("ENV")
 ENV_d = env("ENV_d")
 
+
 if ENV == 'production':
     if ENV_d == 'development':
         ALLOWED_HOSTS = ["*"]
@@ -39,6 +40,17 @@ if ENV == 'production':
         ALLOWED_HOSTS = ["distinct-rozalin-antonbabenko-72e10d6e.koyeb.app"]
 elif ENV == 'development':
     ALLOWED_HOSTS = ["*"]
+
+
+
+if ENV == 'production':
+    if ENV_d == 'development':
+        ALLOWED_HOSTS = ["*"]
+    else:
+        ALLOWED_HOSTS = ["distinct-rozalin-antonbabenko-72e10d6e.koyeb.app"]
+elif ENV == 'development':
+    ALLOWED_HOSTS = ["*"]
+
 
 
 # Application definition
