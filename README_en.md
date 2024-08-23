@@ -31,9 +31,8 @@ The service is intended for researchers, developers, and AI enthusiasts, as well
 - **Agile:** Project development methodology.
 - **HTML/CSS/JavaScript:** For building the frontend, including interactive elements like modals and the language switcher.
 - **Bootstrap:** Framework for creating responsive web design.
-- **Mediapipe:** Technology for processing camera images and implementing Face ID.
+- **face_recognition:** A library for recognizing faces and implementing Face ID based on camera images.
 - **Pillow (PIL):** Python library for image processing, including resizing and formatting.
-- **JWT (JSON Web Tokens):** Technology for secure user authentication.
 - **GPT-4 API:** Used to implement the interactive chat with artificial intelligence.
 - **Koyeb:** Platform for hosting and deploying the application.
 

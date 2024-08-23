@@ -20,23 +20,23 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", include("home.urls")),
-    path('accounts/', include('accounts.urls')),
-    path('gpt_response/', include('gpt_response.urls')),
-    path('game2/', include('game2.urls')),
-    path('faceid/', include('faceid.urls')),
-]
-
-# urlpatterns = i18n_patterns(
+# urlpatterns = [
 #     path('admin/', admin.site.urls),
 #     path("", include("home.urls")),
 #     path('accounts/', include('accounts.urls')),
 #     path('gpt_response/', include('gpt_response.urls')),
 #     path('game2/', include('game2.urls')),
 #     path('faceid/', include('faceid.urls')),
-# )
+# ]
+# Для перекладування вибраної мови
+urlpatterns = i18n_patterns(
+    path('admin/', admin.site.urls),
+    path("", include("home.urls")),
+    path('accounts/', include('accounts.urls')),
+    path('gpt_response/', include('gpt_response.urls')),
+    path('game2/', include('game2.urls')),
+    path('faceid/', include('faceid.urls')),
+)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
