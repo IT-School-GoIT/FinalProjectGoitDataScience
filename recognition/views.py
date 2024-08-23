@@ -41,36 +41,6 @@ def result(request, image_id):
     uploaded_image = UploadedImage.objects.get(id=image_id)
     return render(request, 'recognition/recognition.html', {'uploaded_image': uploaded_image})
 
-
-# def index(request):
-#     if request.method == 'POST':
-#         form = UploadImageForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             image = form.cleaned_data['image']
-#             recognition_type = form.cleaned_data['recognition_type']
-#             confidence_threshold = form.cleaned_data['confidence_threshold']
-#             img = Image.open(image)
-#
-#             if recognition_type == 'vgg16':
-#                 result = recognize_with_vgg16(img)
-#                 annotated_image = None
-#             elif recognition_type == 'faster_rcnn':
-#                 result, annotated_image = recognize_with_faster_rcnn(img, confidence_threshold)
-#             elif recognition_type == 'mask_rcnn':
-#                 result, annotated_image = recognize_with_mask_rcnn(img, confidence_threshold)
-#
-#             uploaded_image = form.save(commit=False)
-#             uploaded_image.result = result
-#             if annotated_image:
-#                 uploaded_image.annotated_image.save(annotated_image.name, annotated_image)
-#             uploaded_image.save()
-#
-#             return redirect('recognition:result', uploaded_image.id)
-#
-#     else:
-#         form = UploadImageForm()
-#     return render(request, 'recognition/cognition.html', {'form': form})
-
 def index(request):
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
@@ -101,8 +71,11 @@ def index(request):
     return render(request, 'recognition/cognition.html', {'form': form})
 
 
+
 def recognize_with_vgg16(img):
     img = img.convert('RGB')  # Переконайтеся, що зображення має 3 канали (RGB)
+    img = img.resize((32, 32))  # Масштабування до розміру, який використовувався під час тренування
+
     img_tensor = transform(img).unsqueeze(0)
     with torch.no_grad():
         output = vgg16(img_tensor)
