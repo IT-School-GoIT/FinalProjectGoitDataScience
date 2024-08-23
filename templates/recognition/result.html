@@ -4,60 +4,48 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="about-img rounded h-100">
-                    <img src="{% static 'img/search.jpg' %}" class="img-fluid rounded h-100 w-100"
-                        style="object-fit: cover;" alt="">
-                    <div class="about-exp"><span>??????</span></div>
+                <div class="about-img rounded h-100 position-relative"> <!-- Позиціонування відносне -->
+                    <!-- Зменшене зображення -->
+                    <img src="{{ uploaded_image.image.url }}" class="img-fluid rounded" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;" alt="Uploaded Image">
+                    
+                    <!-- Перевірка на наявність анотованого зображення -->
+                    {% if uploaded_image.annotated_image %}
+                        <img src="{{ uploaded_image.annotated_image.url }}" alt="Annotated Image" class="img-fluid rounded mb-3" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                    {% endif %}
+                    
+                    <!-- Блок результатів з позиціонуванням -->
+                    <div class="about-exp position-absolute" style="top: 0; left: 0;  color: white; padding: 10px; font-size: 14px;">
+                        <span>{{ uploaded_image.result }}</span>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="about-item">
                     <h4 class="text-primary text-uppercase">Cognition</h4>
                     <h1 class="display-3 mb-3">Результати розпізнавання</h1>
-                    <p class="mb-4">Ось результати розпізнавання вашого зображення:</p>
-
                     <div class="bg-light rounded p-4 mb-4">
                         <div class="row">
                             <div class="col-12">
-                                <div class="d-flex">
+                                <div class="d-flex align-items-center">
                                     <div class="pe-4">
                                         <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center"
                                             style="width: 80px; height: 80px;"><i
                                                 class="fas fa-image text-white fa-2x"></i></div>
                                     </div>
                                     <div class="">
-                                        <a class="h4 d-inline-block mb-3">Завантажене зображення:</a>
-                                        <img src="{{ uploaded_image.image.url }}" alt="Uploaded Image" class="img-fluid rounded mb-3">
-                                        {% if uploaded_image.annotated_image %}
-                                            <img src="{{ uploaded_image.annotated_image.url }}" alt="Annotated Image" class="img-fluid rounded mb-3">
-                                        {% endif %}
+                                        <a class="h4 d-inline-block mb-3">Тип розпізнавання:</a>
+                                        <p class="mb-0">{{ uploaded_image.get_recognition_type_display }}</p>
+                                        <a class="h4 d-inline-block mb-3">Результат:</a>
+                                        <p class="mb-0">{{ uploaded_image.result }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="bg-light rounded p-4 mb-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex">
-                                    <div class="pe-4">
-                                        <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center"
-                                            style="width: 80px; height: 80px;"><i
-                                                class="fas fa-chart-bar text-white fa-2x"></i></div>
-                                    </div>
-                                    <div class="">
-                                        <a class="h4 d-inline-block mb-3">Результати класифікації:</a>
-                                        <p class="mb-0">Тип розпізнавання: {{ uploaded_image.get_recognition_type_display }}</p>
-                                        <p class="mb-0">Результат: {{ uploaded_image.result }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-3 px-5">Інше зображення</a>
+                        <a href="/" class="btn btn-secondary rounded-pill py-3 px-5">На початок</a>
                     </div>
-
-                    <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-3 px-5">Інше зображення</a>
-                    <a href="/" class="btn btn-secondary rounded-pill py-3 px-5">Повернутися на головну</a>
                 </div>
             </div>
         </div>

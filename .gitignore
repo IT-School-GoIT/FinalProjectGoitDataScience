@@ -165,3 +165,5 @@ cython_debug/
 media/annotated_images/
 media/images/
 media/models/
+
+migrations/

@@ -32,7 +32,7 @@ DEBUG = env("DEBUG")
 ENV = env("ENV")
 
 if ENV == 'production':
-    ALLOWED_HOSTS = ['distinct-rozalin-antonbabenko-72e10d6e.koyeb.app']
+    ALLOWED_HOSTS = ['*']
 elif ENV == 'development':
     ALLOWED_HOSTS = ["*"]
 
