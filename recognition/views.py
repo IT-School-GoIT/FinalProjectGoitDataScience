@@ -1,6 +1,13 @@
+
+"""
+views.py
+=========
+
+This module contains views and helper functions for image classification and recognition using models like VGG16, Faster R-CNN, and Mask R-CNN.
+"""
+from django.utils.translation import gettext as _
 import os
 import io
-
 import gdown
 import torch
 import numpy as np
@@ -26,6 +33,7 @@ from .classes import class_names
 
 def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
     """
+
     Downloads a model file from Google Drive and loads it into memory using PyTorch.
 
     Args:
@@ -33,13 +41,29 @@ def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
         model_name (str): The name of the model file to save on the local disk.
         download_if_exists (bool): If True, the model will be re-downloaded even if it already exists locally.
                                     If False, the model will be loaded from the local disk if it exists.
-
+    
+    Parameters:
+    file_id (str): Google Drive file ID for the model.
+    model_name (str): Name for saving the model locally.
+    download_if_exists (bool): Whether to download the model if it already exists locally.
+    
     Returns:
         torch.nn.Module: The PyTorch model loaded from the specified file.
 
     Raises:
         RuntimeError: If the model file cannot be loaded.
     """
+    
+    Downloads and loads a model from Google Drive.
+
+    Parameters:
+    file_id (str): Google Drive file ID for the model.
+    model_name (str): Name for saving the model locally.
+    download_if_exists (bool): Whether to download the model if it already exists locally.
+
+    Returns:
+    torch.nn.Module: The loaded PyTorch model.
+    # Створення папки, якщо вона не існує
     model_dir = 'media/models'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
@@ -69,6 +93,7 @@ def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
 
 def result(request, image_id):
     """
+
     Retrieves an uploaded image from the database using its ID and renders a template to display the image.
 
     Args:
@@ -104,6 +129,30 @@ def index(request):
     Raises:
         ValueError: If the recognition type is invalid or any other processing issue occurs.
     """
+
+    Render the result page for a specific image.
+
+    Parameters:
+    request (HttpRequest): The request object.
+    image_id (int): The ID of the uploaded image.
+
+    Returns:
+    HttpResponse: The rendered result page.
+
+    uploaded_image = UploadedImage.objects.get(id=image_id)
+    return render(request, 'recognition/recognition.html', {'uploaded_image': uploaded_image, "title": _("Пізнання")})
+
+def index(request):
+    """
+    The main view for image uploading and recognition selection.
+
+    Parameters:
+    request (HttpRequest): The request object.
+
+    Returns:
+    HttpResponse: The rendered index page.
+    """    
+
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
@@ -144,8 +193,22 @@ def index(request):
 
 
 def recognize_with_vgg16(img):
+
     """
-    Recognizes the class of an image using a pre-trained VGG16 model fine-tuned on the CIFAR-10 dataset.
+    Recognize the image using the VGG16 model.
+
+    This function preprocesses the input image, passes it through the VGG16
+    model, and returns the classification result.
+
+    Parameters:
+    img (PIL.Image.Image): The input image to be recognized.
+
+    Returns:
+    str: The classification result as a string with class name and probability.
+    """    
+    img = img.convert('RGB')  # Переконайтеся, що зображення має 3 канали (RGB)
+    img = img.resize((32, 32))  # Масштабування до розміру, який використовувався під час тренування
+
 
     Args:
         img (PIL.Image.Image): The input image to be recognized.
@@ -153,13 +216,58 @@ def recognize_with_vgg16(img):
     Returns:
         str: The name of the predicted class and its probability as a percentage.
 
+
     Raises:
         ValueError: If the image is not in RGB mode or if any error occurs during processing.
-    """
+    
     try:
         # Ensure the image is in RGB mode
         if img.mode != 'RGB':
             img = img.convert('RGB')
+
+def recognize_with_faster_rcnn(img, confidence_threshold):
+    """
+    Recognize objects in the image using the Faster R-CNN model.
+
+    This function detects objects in the input image and draws bounding boxes
+    around them. It also crops the detected objects and classifies them using VGG16.
+
+    Parameters:
+    img (PIL.Image.Image): The input image for object detection and recognition.
+    confidence_threshold (float): The confidence threshold for object detection.
+
+    Returns:
+    tuple: A tuple containing the classification results as a string and the annotated image.
+    """    
+    img_tensor = TF.to_tensor(img).unsqueeze(0)
+    with torch.no_grad():
+        predictions = faster_rcnn(img_tensor)
+    boxes = predictions[0]['boxes']
+    scores = predictions[0]['scores']
+
+    fig, ax = plt.subplots()
+    ax.imshow(img)
+
+    recognition_results = []
+
+    for box, score in zip(boxes, scores):
+        if score > confidence_threshold:  # використання порогового значення
+            box = box.tolist()
+            cropped_img = img.crop(box)
+            recognition_result = recognize_with_vgg16(cropped_img)
+            recognition_results.append(recognition_result)
+
+            rect = patches.Rectangle((box[0], box[1]), box[2] - box[0], box[3] - box[1], linewidth=1, edgecolor='r',
+                                     facecolor='none')
+            ax.add_patch(rect)
+            ax.text(box[0], box[1], recognition_result, color='k', fontsize=12, verticalalignment='top',
+                    bbox=dict(facecolor='yellow', edgecolor='red', boxstyle='round,pad=0.2'))
+
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', bbox_inches='tight')
+    buf.seek(0)
+    plt.close(fig)
+
 
         # Resize the image to match the input size used during training
         img = img.resize((32, 32))
@@ -167,9 +275,37 @@ def recognize_with_vgg16(img):
         # Transform the image to a tensor and add a batch dimension
         img_tensor = transform(img).unsqueeze(0)
 
+
         # Perform inference without tracking gradients
         with torch.no_grad():
             output = vgg16(img_tensor)
+
+def recognize_with_mask_rcnn(img, confidence_threshold):
+    """
+    Recognize objects and segment them using the Mask R-CNN model.
+
+    This function detects objects and their masks in the input image. The objects
+    are then classified using VGG16, and the masks are drawn on the image.
+
+    Parameters:
+    img (PIL.Image.Image): The input image for object detection and segmentation.
+    confidence_threshold (float): The confidence threshold for object detection.
+
+    Returns:
+    tuple: A tuple containing the classification results as a string and the annotated image.
+    """    
+    img_tensor = TF.to_tensor(img).unsqueeze(0)
+    with torch.no_grad():
+        predictions = mask_rcnn(img_tensor)
+    boxes = predictions[0]['boxes']
+    masks = predictions[0]['masks']
+    scores = predictions[0]['scores']
+
+    fig, ax = plt.subplots()
+    ax.imshow(img)
+
+    recognition_results = []
+
 
         # Apply softmax to get probabilities and find the top prediction
         probabilities = torch.nn.functional.softmax(output[0], dim=0)

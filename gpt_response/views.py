@@ -1,3 +1,36 @@
+"""
+views.py
+--------
+
+This module handles the views for the GPT-4 interaction page, including rendering the chat interface 
+and processing requests to the OpenAI API to generate responses.
+
+Functions:
+----------
+
+- `chat_page(request)`:
+    Renders the chat page where users can interact with the GPT-4 model. This view is protected by the 
+    `login_required` decorator to ensure that only authenticated users can access it.
+
+- `chat_view(request)`:
+    Handles POST requests from the chat interface, sends user input to the GPT-4 model via the OpenAI API, 
+    and returns the AI-generated response as a JSON object.
+
+Dependencies:
+-------------
+- `requests`: Used to interact with external APIs (OpenAI GPT-4 API).
+- `environ`: For handling environment variables, particularly loading the API key from a `.env` file.
+- `os`: To work with file paths and environment settings.
+- `csrf_exempt`: To allow the chat interaction view to bypass CSRF validation.
+- `login_required`: Ensures that only logged-in users can access the chat page.
+
+Variables:
+----------
+
+- `API_KEY`: The API key required to interact with the OpenAI GPT-4 model. Loaded from the `.env` file.
+
+"""
+
 from django.utils.translation import gettext as _
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -25,13 +58,16 @@ if not API_KEY:
 @login_required
 def chat_page(request):
     """
-    Відображає сторінку чату.
+    Renders the chat page where users can interact with the GPT-4 model.
     
-    Аргументи:
-    request (HttpRequest): Об'єкт HTTP запиту.
-    
-    Повертає:
-    HttpResponse: Відрендерена HTML сторінка для чату.
+    Args:
+        request (HttpRequest): The HTTP request object.
+        
+    Returns:
+        HttpResponse: The rendered HTML page for the chat interface.
+        
+    This function uses the 'gpt_response/chat.html' template and injects the page title, page id, and app name.
+    It is protected by the `login_required` decorator, so only authenticated users can access the page.
     """
     return render(request, 'gpt_response/chat.html',
         {"title": _("Чат Бот"), "page": "chat_page", "app": "gpt_response"},)  # Рендеримо HTML-шаблон сторінки чату
@@ -39,13 +75,17 @@ def chat_page(request):
 @csrf_exempt
 def chat_view(request):
     """
-    Обробляє POST-запити до чату і взаємодіє з OpenAI API для генерації відповіді.
+    Processes POST requests for interacting with the OpenAI GPT API to generate responses.
     
-    Аргументи:
-    request (HttpRequest): Об'єкт HTTP запиту, очікується метод POST з полем 'input'.
+    Args:
+        request (HttpRequest): The HTTP request object. The function expects a POST request containing
+                               user input via the 'input' field.
     
-    Повертає:
-    JsonResponse: JSON відповідь з згенерованим текстом або помилкою.
+    Returns:
+        JsonResponse: A JSON response containing the AI-generated text or an error message.
+        
+    This view handles requests to interact with the GPT model using the OpenAI API. It receives user input, 
+    sends it to the OpenAI API, and returns the generated response as a JSON object.
     """
     if request.method == 'POST':
         # Отримання тексту запиту від користувача

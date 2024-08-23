@@ -9,7 +9,7 @@
         <div class="game-over-container">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-uppercase text-primary">{% trans "Гра завершена!" %}</h4>
-                <p>{% trans "Переможець:" %} {{ winner }}</p>
+                <p>{% trans "Переможець:" %} {{ request.user.username }}</p>
                 <p>{% trans "Натисніть кнопку нижче, щоб почати нову гру." %}</p>
                 <form method="post" action="{% url 'game2:reset_game' %}">
                     {% csrf_token %}

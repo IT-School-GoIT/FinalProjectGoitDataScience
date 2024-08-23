@@ -9,7 +9,6 @@
     <div class="container pb-5">
         <div class="result-container">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-
                 <h4 class="text-uppercase text-primary">{% trans "Гра" %}</h4>
                 <h2 class="display-3 text-capitalize mb-3">{% trans "Результат Гри" %}</h2>
                 <p>{% trans "Зображення:" %} {{ image.title }}</p>
@@ -30,9 +29,7 @@
                 <p>{% trans "Модель не вгадала." %}</p>
                 {% endif %}
 
-
                 <a href="{% url 'game2:play_game' %}" class="btn btn-primary">Victory by seven</a>
-
             </div>
         </div>
     </div>

@@ -17,10 +17,8 @@
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Команда" %}</a>
                 <a href="{% url 'recognition:index' %}"
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'recognize' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Пізнання" %}</a>
-                
                 <a href="{% url 'game2:play_game' %}"
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'play_game' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Гра" %}</a>
-
                 {% if request.user.is_authenticated %}
                 <a href="{% url 'chat_page' %}"
                 class="nav-item nav-link {% if request.resolver_match.url_name == 'chat_page' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Чат" %}</a>
@@ -29,18 +27,15 @@
                         {% csrf_token %}
                         <button type="submit" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Вийти" %}</button>
                     </form>
-                    
                 {% else %}
                     <a href="{% url 'accounts:signup' %}" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Реєстрація" %}</a>
                     <a href="{% url 'accounts:login' %}" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Логін" %}</a>
                 {% endif %}
             </div>
-
             <div class="language-switcher">
                 <form action="{% url 'home:set_language' %}" method="post">
                     {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ request.path }}">
-                    
+                    <input name="next" type="hidden" value="{{ request.path }}"> 
                     <!-- Перемикач мови у стилі кнопки -->
                     <select name="language" onchange="this.form.submit()">
                         <option>{% trans "МОВА" %}</option>
@@ -49,7 +44,6 @@
                     </select>
                 </form>
             </div>
-
             <a href="https://github.com/IT-School-GoIT/final_data_science_goit"
                 class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4" target="_blank">GitHub</a>
         </div>

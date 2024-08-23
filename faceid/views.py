@@ -1,3 +1,13 @@
+"""
+views.py
+--------
+
+This module defines views for user registration, login, and image resizing functionality using face recognition. 
+It also handles the logic for user session management, including automatic login after registration 
+and facial recognition-based login.
+
+"""
+
 import io
 import face_recognition
 from PIL import Image
@@ -14,10 +24,29 @@ from django.contrib.sessions.models import Session
 
 
 def index(request):
+    """
+    Renders the signup page.
+    
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: Rendered signup page.
+    """    
     return render(request, "accounts/signup.html")
 
 
 def resize_image(image_content, size=(400, 300)):
+    """
+    Resizes the uploaded image to the specified dimensions.
+
+    Args:
+        image_content (bytes): The image content in bytes.
+        size (tuple): Desired dimensions (width, height).
+
+    Returns:
+        bytes: Resized image content in JPEG format.
+    """    
     image = Image.open(io.BytesIO(image_content))
 
     # Перевірка на альфа-канал і перетворення в RGB, якщо необхідно
@@ -31,6 +60,15 @@ def resize_image(image_content, size=(400, 300)):
 
 @csrf_exempt
 def register(request):
+    """
+    Handles user registration, image upload, and auto-login.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        JsonResponse: Success or failure status of the registration process.
+    """    
     if request.method == "POST":
         name = request.POST.get("name")
         photo = request.FILES.get("photo")
@@ -57,6 +95,15 @@ def register(request):
 
 @csrf_exempt
 def login(request):
+    """
+    Handles user login through face recognition.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        JsonResponse: Success or failure status of the login process.
+    """    
     if request.method == "POST":
         photo = request.FILES.get("photo")
 
@@ -89,11 +136,29 @@ def login(request):
 
 
 def success(request):
+    """
+    Redirects the user to the game after successful login.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: Redirect to the game page.
+    """    
     user_name = request.GET.get("user_name")
     return redirect("game2:play_game")
 
 
 def user_logout(request):
+    """
+    Logs out the user and deletes their session.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: Redirects to the home page.
+    """    
     logout(request)
     Session.objects.filter(session_key=request.session.session_key).delete()
     return redirect('home:index')
