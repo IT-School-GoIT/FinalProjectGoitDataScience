@@ -1,3 +1,9 @@
+"""
+views.py
+=========
+
+This module contains views and helper functions for image classification and recognition using models like VGG16, Faster R-CNN, and Mask R-CNN.
+"""
 from django.utils.translation import gettext as _
 import io
 import os
@@ -18,6 +24,17 @@ from .classes import class_names
 
 
 def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
+    """
+    Downloads and loads a model from Google Drive.
+
+    Parameters:
+    file_id (str): Google Drive file ID for the model.
+    model_name (str): Name for saving the model locally.
+    download_if_exists (bool): Whether to download the model if it already exists locally.
+
+    Returns:
+    torch.nn.Module: The loaded PyTorch model.
+    """    
     # Створення папки, якщо вона не існує
     model_dir = 'media/models'
     if not os.path.exists(model_dir):
@@ -38,10 +55,29 @@ def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
 
 
 def result(request, image_id):
+    """
+    Render the result page for a specific image.
+
+    Parameters:
+    request (HttpRequest): The request object.
+    image_id (int): The ID of the uploaded image.
+
+    Returns:
+    HttpResponse: The rendered result page.
+    """    
     uploaded_image = UploadedImage.objects.get(id=image_id)
     return render(request, 'recognition/recognition.html', {'uploaded_image': uploaded_image, "title": _("Пізнання")})
 
 def index(request):
+    """
+    The main view for image uploading and recognition selection.
+
+    Parameters:
+    request (HttpRequest): The request object.
+
+    Returns:
+    HttpResponse: The rendered index page.
+    """    
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
@@ -73,6 +109,18 @@ def index(request):
 
 
 def recognize_with_vgg16(img):
+    """
+    Recognize the image using the VGG16 model.
+
+    This function preprocesses the input image, passes it through the VGG16
+    model, and returns the classification result.
+
+    Parameters:
+    img (PIL.Image.Image): The input image to be recognized.
+
+    Returns:
+    str: The classification result as a string with class name and probability.
+    """    
     img = img.convert('RGB')  # Переконайтеся, що зображення має 3 канали (RGB)
     img = img.resize((32, 32))  # Масштабування до розміру, який використовувався під час тренування
 
@@ -86,6 +134,19 @@ def recognize_with_vgg16(img):
 
 
 def recognize_with_faster_rcnn(img, confidence_threshold):
+    """
+    Recognize objects in the image using the Faster R-CNN model.
+
+    This function detects objects in the input image and draws bounding boxes
+    around them. It also crops the detected objects and classifies them using VGG16.
+
+    Parameters:
+    img (PIL.Image.Image): The input image for object detection and recognition.
+    confidence_threshold (float): The confidence threshold for object detection.
+
+    Returns:
+    tuple: A tuple containing the classification results as a string and the annotated image.
+    """    
     img_tensor = TF.to_tensor(img).unsqueeze(0)
     with torch.no_grad():
         predictions = faster_rcnn(img_tensor)
@@ -119,6 +180,19 @@ def recognize_with_faster_rcnn(img, confidence_threshold):
 
 
 def recognize_with_mask_rcnn(img, confidence_threshold):
+    """
+    Recognize objects and segment them using the Mask R-CNN model.
+
+    This function detects objects and their masks in the input image. The objects
+    are then classified using VGG16, and the masks are drawn on the image.
+
+    Parameters:
+    img (PIL.Image.Image): The input image for object detection and segmentation.
+    confidence_threshold (float): The confidence threshold for object detection.
+
+    Returns:
+    tuple: A tuple containing the classification results as a string and the annotated image.
+    """    
     img_tensor = TF.to_tensor(img).unsqueeze(0)
     with torch.no_grad():
         predictions = mask_rcnn(img_tensor)

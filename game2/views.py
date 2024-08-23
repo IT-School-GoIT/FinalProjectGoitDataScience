@@ -1,3 +1,41 @@
+"""
+views.py
+--------
+
+This module contains the view functions for the image classification game based on the CIFAR-10 model.
+It includes functionalities such as playing the game, processing user inputs, generating predictions 
+from the model, and handling game sessions.
+
+Functions:
+----------
+
+- `play_game(request)`:
+    Main function for the game. It handles random image selection, model prediction processing,
+    compares the results with the user's input, and updates the score.
+    The function also determines the winner once either the user or the model reaches 7 points.
+
+- `reset_game(request)`:
+    Resets the game by clearing the session data and redirects the user to the start of the game.
+
+Dependencies:
+-------------
+- `tensorflow.keras.models`: Used to load the pre-trained CIFAR-10 model for image classification.
+- `PIL.Image`: For loading and processing the images.
+- `numpy`: Used for handling image arrays and model predictions.
+
+Variables:
+----------
+
+- `CLASSES`: A list of class names corresponding to the CIFAR-10 dataset categories.
+- `model`: The pre-trained CIFAR-10 model loaded from a saved Keras model file.
+
+Session Data:
+-------------
+- `user_score`: Tracks the user's score during the game.
+- `model_score`: Tracks the model's score during the game.
+- `current_image_id`: Stores the ID of the current image being classified.
+"""
+
 from django.utils.translation import gettext as _
 import os
 from django.contrib.auth.models import User
@@ -35,9 +73,9 @@ CLASSES = [
 
 def play_game(request):
     """
-    Основна функція для гри.
-    Вона відповідає за вибір випадкового зображення, обробку прогнозів моделі,
-    порівняння результатів з відповіддю користувача та оновлення рахунку.
+    Main function for the game.
+    It handles random image selection, model prediction processing,
+    compares the results with the user's input, and updates the score.
     """
 
     # Ініціалізація рахунку для користувача та моделі, якщо їх ще немає у сесії
@@ -122,8 +160,8 @@ def play_game(request):
 
 def reset_game(request):
     """
-    Функція для скидання гри.
-    Скидає всі сесійні дані та перенаправляє на початкову сторінку гри.
+    Function to reset the game.
+    Clears all session data and redirects to the start of the game.
     """
     request.session.flush()  # Видаляє всі дані сесії
     return redirect("game2:play_game")  # Переходить на головну сторінку гри

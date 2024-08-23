@@ -3,13 +3,12 @@ from django.db import models
 
 class ImageForGame(models.Model):
     """
-    Клас ImageForGame представляє модель для зберігання зображень,
-    що використовуються в грі, та їхніх правильних відповідей (correct_label).
+    Represents an image used in the game and the correct label associated with it.
 
-    Поля:
-    - title: Назва зображення (рядок до 255 символів), за замовчуванням "Untitled".
-    - image: Зображення, яке завантажується у папку 'game_images/'.
-    - correct_label: Правильний клас для цього зображення (рядок до 50 символів).
+    Fields:
+    - title: The name of the image (max 255 characters), defaults to 'Untitled'.
+    - image: The image file uploaded to the 'game_images/' folder.
+    - correct_label: The correct label or class for this image (max 50 characters).
     """
 
     title = models.CharField(max_length=255, default="Untitled")
@@ -18,6 +17,6 @@ class ImageForGame(models.Model):
 
     def __str__(self):
         """
-        Метод для повернення назви зображення при його представленні у вигляді рядка.
+        Returns the title of the image when represented as a string.
         """
         return self.title
