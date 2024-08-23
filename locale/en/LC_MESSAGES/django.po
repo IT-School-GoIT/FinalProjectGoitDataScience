@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 00:34+0300\n"
+"POT-Creation-Date: 2024-08-23 13:40+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1940,78 +1940,125 @@ msgstr ""
 "is also responsible for the development of the interface for viewing history "
 "of classifications and saving personal results of users."
 
-#: .\templates\_fragments\technologies.html:9
+#: .\templates\_fragments\technologies.html:8
 msgid "Технології"
 msgstr "Technologies"
 
-#: .\templates\_fragments\technologies.html:10
+#: .\templates\_fragments\technologies.html:9
 msgid "Технології які використовувалися:"
 msgstr "Technologies used:"
 
-#: .\templates\_fragments\technologies.html:17
-msgid ""
-"Мова програмування Python, що використовується для розробки алгоритмів "
-"класифікації\n"
-"                        зображень."
+#: .\templates\_fragments\technologies.html:16
+msgid "Python"
 msgstr ""
-"Python programming language used to develop image classification algorithms."
+
+#: .\templates\_fragments\technologies.html:17
+msgid "Мова програмування Python, що використовується для розробки алгоритмів класифікації зображень."
+msgstr "Python programming language used to develop image classification algorithms."
+
+#: .\templates\_fragments\technologies.html:24
+msgid "Convolutional Neural Networks (CNN)"
+msgstr ""
 
 #: .\templates\_fragments\technologies.html:25
 msgid ""
-"Згорткові нейронні мережі, що використовуються для класифікації зображень з "
-"високою\n"
-"                        точністю."
+"Згорткові нейронні мережі, що використовуються для класифікації зображень."
+msgstr "Convolutional neural networks used for image classification."
+
+#: .\templates\_fragments\technologies.html:32
+msgid "Docker"
 msgstr ""
-"Convolutional neural networks used for image classification with high "
-"accuracy."
 
 #: .\templates\_fragments\technologies.html:33
 msgid ""
-"Використання Docker для контейнеризації та розгортання проекту у "
-"стабільному\n"
-"                        середовищі."
+"Використання Docker для контейнеризації та розгортання проекту у стабільному "
+"середовищі."
 msgstr ""
 "Using Docker to containerize and deploy a project in a stable environment."
 
-#: .\templates\_fragments\technologies.html:41
-msgid ""
-"Веб-фреймворк Django, що використовується для створення надійних та "
-"масштабованих\n"
-"                        веб-додатків."
+#: .\templates\_fragments\technologies.html:40
+msgid "Django"
 msgstr ""
-"Django is a web framework used to build robust and scalable web applications."
+
+#: .\templates\_fragments\technologies.html:41
+msgid "Веб-фреймворк Django, що використовується для створення надійних та масштабованих веб-додатків."
+msgstr "Django is a web framework used to build robust and scalable web applications."
+
+#: .\templates\_fragments\technologies.html:48
+msgid "PostgreSQL"
+msgstr ""
 
 #: .\templates\_fragments\technologies.html:49
 msgid ""
 "Система управління базами даних PostgreSQL для надійного зберігання та "
-"управління\n"
-"                        даними."
+"управління даними."
 msgstr ""
 "PostgreSQL database management system for reliable data storage and "
 "management."
 
+#: .\templates\_fragments\technologies.html:56
+msgid "HTML/CSS/JavaScript"
+msgstr ""
+
 #: .\templates\_fragments\technologies.html:57
 msgid ""
-"Використання JavaScript для створення інтерактивних елементів на веб-"
-"сторінках."
-msgstr "Using JavaScript to create interactive elements on web pages."
+"Використання для створення інтерактивних елементів на веб-сторінках, таких "
+"як модальні вікна та перемикач мови."
+msgstr ""
+"Use to create interactive elements on web pages, such as modal windows and "
+"language switcher."
 
 #: .\templates\_fragments\technologies.html:64
-msgid ""
-"Використання Agile методології для гнучкого управління проектами та швидкої\n"
-"                        адаптації до змін."
+msgid "Agile"
 msgstr ""
-"Using Agile methodology for flexible project management and quick adaptation "
-"to changes."
+
+#: .\templates\_fragments\technologies.html:65
+msgid "Використання методології Agile для гнучкого управління проектами."
+msgstr "Using Agile methodology for flexible project management."
 
 #: .\templates\_fragments\technologies.html:72
-msgid ""
-"Платформа для розробки та спільної роботи над проектами з використанням "
-"системи\n"
-"                        контролю версій Git."
+msgid "GitHub"
 msgstr ""
-"A platform for developing and collaborating on projects using the Git "
-"version control system."
+
+#: .\templates\_fragments\technologies.html:73
+msgid "Платформа для розробки та спільної роботи над проектами з використанням Git."
+msgstr "A platform for developing and collaborating on projects using Git."
+
+#: .\templates\_fragments\technologies.html:80
+msgid "Mediapipe"
+msgstr ""
+
+#: .\templates\_fragments\technologies.html:81
+msgid "Бібліотека для розпізнавання облич та реалізації Face ID на основі зображень з камери."
+msgstr ""
+"A library for recognizing faces and implementing Face ID based on camera images."
+
+#: .\templates\_fragments\technologies.html:88
+msgid "Pillow (PIL)"
+msgstr ""
+
+#: .\templates\_fragments\technologies.html:89
+msgid ""
+"Бібліотека Python для обробки зображень, включаючи масштабування та "
+"форматування."
+msgstr ""
+"A Python library for image manipulation, including scaling and formatting."
+
+#: .\templates\_fragments\technologies.html:96
+msgid "JWT (JSON Web Tokens)"
+msgstr ""
+
+#: .\templates\_fragments\technologies.html:97
+msgid "Платформа для хостингу та розгортання додатку."
+msgstr "A platform for hosting and deploying the application."
+
+#: .\templates\_fragments\technologies.html:104
+msgid "GPT-4 API"
+msgstr ""
+
+#: .\templates\_fragments\technologies.html:105
+msgid "API для реалізації інтерактивного чату з штучним інтелектом."
+msgstr "API for implementing interactive chat with artificial intelligence."
 
 #: .\templates\accounts\login.html:13
 msgid "Сторінка входу"

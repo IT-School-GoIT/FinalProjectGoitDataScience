@@ -29,7 +29,7 @@ urlpatterns = [
     path('faceid/', include('faceid.urls')),
 	path('recognize', include('recognition.urls')),
 ]
-
+# Для перекладування вибраної мови
 # urlpatterns = i18n_patterns(
 #     path('admin/', admin.site.urls),
 #     path("", include("home.urls")),
