@@ -1,16 +1,18 @@
 {% load static %}
+{% load i18n %}
+
 <!-- About Start -->
 <div class="container-fluid about overflow-hidden py-5">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="about-img rounded h-100 position-relative"> <!-- Позиціонування відносне -->
+                <div class="about-img rounded h-100 position-relative">
                     <!-- Зменшене зображення -->
-                    <img src="{{ uploaded_image.image.url }}" class="img-fluid rounded" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;" alt="Uploaded Image">
+                    <img src="{{ uploaded_image.image.url }}" class="img-fluid rounded" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;" alt="{% trans 'Uploaded Image' %}">
                     
                     <!-- Перевірка на наявність анотованого зображення -->
                     {% if uploaded_image.annotated_image %}
-                        <img src="{{ uploaded_image.annotated_image.url }}" alt="Annotated Image" class="img-fluid rounded mb-3" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                        <img src="{{ uploaded_image.annotated_image.url }}" alt="{% trans 'Annotated Image' %}" class="img-fluid rounded mb-3" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
                     {% endif %}
                     
                     <!-- Блок результатів з позиціонуванням -->
@@ -21,8 +23,8 @@
             </div>
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="about-item">
-                    <h4 class="text-primary text-uppercase">Cognition</h4>
-                    <h1 class="display-3 mb-3">Результати розпізнавання</h1>
+                    <h4 class="text-primary text-uppercase">{% trans 'Cognition' %}</h4>
+                    <h1 class="display-3 mb-3">{% trans 'Результати розпізнавання' %}</h1>
                     <div class="bg-light rounded p-4 mb-4">
                         <div class="row">
                             <div class="col-12">
@@ -33,9 +35,9 @@
                                                 class="fas fa-image text-white fa-2x"></i></div>
                                     </div>
                                     <div class="">
-                                        <a class="h4 d-inline-block mb-3">Тип розпізнавання:</a>
+                                        <a class="h4 d-inline-block mb-3">{% trans 'Тип розпізнавання' %}:</a>
                                         <p class="mb-0">{{ uploaded_image.get_recognition_type_display }}</p>
-                                        <a class="h4 d-inline-block mb-3">Результат:</a>
+                                        <a class="h4 d-inline-block mb-3">{% trans 'Результат' %}:</a>
                                         <p class="mb-0">{{ uploaded_image.result }}</p>
                                     </div>
                                 </div>
@@ -43,8 +45,8 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-3 px-5">Інше зображення</a>
-                        <a href="/" class="btn btn-secondary rounded-pill py-3 px-5">На початок</a>
+                        <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-3 px-5">{% trans 'Інше зображення' %}</a>
+                        <a href="/" class="btn btn-secondary rounded-pill py-3 px-5">{% trans 'На початок' %}</a>
                     </div>
                 </div>
             </div>
