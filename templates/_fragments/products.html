@@ -15,59 +15,55 @@
                     <img src="{% static 'img/product-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Upload Image' %}">
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Завантажте зображення" %}</p>
-                        <a href="#" class="h4 d-inline-block mb-3">{% trans "Просте завантаження" %}</a>
+                        <a class="h4 d-inline-block mb-3">{% trans "Просте завантаження" %}</a>
                         <p class="fs-4 text-primary mb-3">{% trans "Безкоштовно" %}</p>
-                        <a href="{% url 'home:cognition' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
+                        <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
                     </div>
                 </div>
             </div>
-            
             <!-- Навчання моделі -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="product-item">
                     <img src="{% static 'img/product-2.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Train Model' %}">
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Навчання моделі" %}</p>
-                        <a href="#" class="h4 d-inline-block mb-3">{% trans "Ефективне навчання" %}</a>
+                        <a class="h4 d-inline-block mb-3">{% trans "Ефективне навчання" %}</a>
                         <p class="fs-4 text-primary mb-3">{% trans "Висока точність" %}</p>
-                        <a href="{% url 'home:cognition' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
+                        <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
                     </div>
                 </div>
-            </div>
-            
+            </div>    
             <!-- Перевірка зображення -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="product-item">
                     <img src="{% static 'img/product-3.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Check Image' %}">
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Перевірка зображення" %}</p>
-                        <a href="#" class="h4 d-inline-block mb-3">{% trans "Миттєві результати" %}</a>
+                        <a class="h4 d-inline-block mb-3">{% trans "Миттєві результати" %}</a>
                         <p class="fs-4 text-primary mb-3">{% trans "Точність понад 95" %}</p>
-                        <a href="{% url 'home:cognition' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
+                        <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
                     </div>
                 </div>
             </div>
-
             <!-- Гра -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.8s">
                 <div class="product-item">
                     <img src="{% static 'img/product-4.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Game' %}">
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Гра з нейронною мережею" %}</p>
-                        <a href="#" class="h4 d-inline-block mb-3">{% trans "Змагайтесь з AI" %}</a>
+                        <a class="h4 d-inline-block mb-3">{% trans "Змагайтесь з AI" %}</a>
                         <p class="fs-4 text-primary mb-3">{% trans "Захоплюючий досвід" %}</p>
                         <a href="{% url 'game2:play_game' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
                     </div>
                 </div>
             </div>
-
             <!-- Чат -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="1.0s">
                 <div class="product-item">
                     <img src="{% static 'img/product-5.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Chat' %}">
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Чат на базі GPT_v4" %}</p>
-                        <a href="#" class="h4 d-inline-block mb-3">{% trans "Інтерактивний чат" %}</a>
+                        <a class="h4 d-inline-block mb-3">{% trans "Інтерактивний чат" %}</a>
                         <p class="fs-4 text-primary mb-3">{% trans "Штучний інтелект у чаті" %}</p>
                         {% if user.is_authenticated %}
                             <a href="{% url 'chat_page' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
@@ -94,14 +90,13 @@
                     </div>
                 </div>
             </div>
-
             <!-- Реєстрація та авторизація Face ID -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="1.2s">
                 <div class="product-item">
                     <img src="{% static 'img/product-6.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Face ID Registration and Login' %}">
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Реєстрація та авторизація" %}</p>
-                        <a href="#" class="h4 d-inline-block mb-3">{% trans "Face ID доступ" %}</a>
+                        <a class="h4 d-inline-block mb-3">{% trans "Face ID доступ" %}</a>
                         <p class="fs-4 text-primary mb-3">{% trans "Безпечно та зручно" %}</p>
                         <a href="{% url 'accounts:login' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
                     </div>

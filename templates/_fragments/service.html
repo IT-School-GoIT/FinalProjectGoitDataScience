@@ -5,8 +5,8 @@
 <div class="container-fluid service bg-light overflow-hidden py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h4 class="text-uppercase text-primary">{% blocktrans %}Сервіс{% endblocktrans %}</h4>
-            <h1 class="display-3 text-capitalize mb-3">{% blocktrans %}Класифікація зображень{% endblocktrans %}</h1>
+            <h4 class="text-uppercase text-primary">{% trans "Сервіс" %}</h4>
+            <h1 class="display-3 text-capitalize mb-3">{% trans "Класифікація зображень" %}</h1>
         </div>
         <div class="row gx-0 gy-4 align-items-center">
             <div class="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
@@ -31,7 +31,7 @@
                             <div class="d-flex">
                                 <div class="service-content text-end">
                                     <a class="h4 d-inline-block mb-3">{% trans "Перевірка зображення" %}</a>
-                                        <p class="mb-0">{% trans "Система автоматично перевіряє завантажене зображення." %}</p>
+                                    <p class="mb-0">{% trans "Система автоматично перевіряє завантажене зображення." %}</p>
                                 </div>
                                 <div class="ps-4">
                                     <div class="service-btn"><i class="fas fa-check-circle text-white fa-2x"></i></div>
@@ -45,16 +45,16 @@
                         <div class="col-12">
                             <div class="d-flex">
                                 <div class="service-content text-end">
-                                    <a class="h4 d-inline-block mb-3">{% trans "Отримайте результати" %}</a>
-                                    <p class="mb-0">{% trans "Отримайте результати класифікації з високою точністю." %}</p>
+                                    <a class="h4 d-inline-block mb-3">{% trans "Вибір моделі" %}</a>
+                                    <p class="mb-0">{% trans "Оберіть одну з наступних моделей: VGG16, Faster R-CNN, Mask R-CNN." %}</p>
                                 </div>
                                 <div class="ps-4">
-                                    <div class="service-btn"><i class="fas fa-chart-line text-white fa-2x"></i></div>
+                                    <div class="service-btn"><i class="fas fa-brain text-white fa-2x"></i></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>   
             </div>
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="bg-transparent">
@@ -82,28 +82,27 @@
                         <div class="col-12">
                             <div class="d-flex">
                                 <div class="pe-4">
-                                    <div class="service-btn"><i class="fas fa-database text-white fa-2x"></i></div>
+                                    <div class="service-btn"><i class="fas fa-chart-line text-white fa-2x"></i></div>
                                 </div>
                                 <div class="service-content">
-                                    <a class="h4 d-inline-block mb-3">{% trans "Аналіз даних" %}</a>
-                                    <p class="mb-0">{% trans "Проаналізуйте результати класифікації та поліпшите модель." %}</p>
+                                    <a class="h4 d-inline-block mb-3">{% trans "Отримайте результати" %}</a>
+                                    <p class="mb-0">{% trans "Отримайте результати класифікації з високою точністю." %}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="service-item rounded p-4 mb-0">
                     <div class="row">
                         <div class="col-12">
                             <div class="d-flex">
                                 <div class="pe-4">
-                                    <div class="service-btn"><i class="fas fa-project-diagram text-white fa-2x"></i>
-                                    </div>
+                                    <div class="service-btn"><i class="fas fa-database text-white fa-2x"></i></div>
                                 </div>
-                                <div class="service-content">
-                                    <a class="h4 d-inline-block mb-3">{% trans "Планування проектів" %}</a>
-                                    <p class="mb-0">{% trans "Сплануйте та реалізуйте нові проекти з використанням CNN." %}</p>
-                                </div>
+                                <div class="service-content text-start">
+                                    <a class="h4 d-inline-block mb-3">{% trans "Аналіз даних" %}</a>
+                                    <p class="mb-0">{% trans "Проаналізуйте результати класифікації та поліпшите модель." %}</p>
+                                </div>                                
                             </div>
                         </div>
                     </div>

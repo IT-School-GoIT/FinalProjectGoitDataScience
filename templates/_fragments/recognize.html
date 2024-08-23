@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 <!-- About Start -->
 <div class="container-fluid about overflow-hidden py-5">
     <div class="container py-5">
@@ -12,10 +14,10 @@
             </div>
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="about-item">
-                    <h4 class="text-primary text-uppercase">Cognition</h4>
-                    <h1 class="display-3 mb-3">Перевірка згорткової нейронної мережі</h1>
-                    <p class="mb-4">Щоб перевірити роботу нашої згорткової нейронної мережі, вам потрібно завантажити зображення. Ось як це зробити крок за кроком:</p>
-                    
+                    <h4 class="text-primary text-uppercase">{% trans "Пізнання" %}</h4>
+                    <h1 class="display-3 mb-3">{% trans "Перевірка згорткової нейронної мережі" %}</h1>
+                    <p class="mb-4">{% trans "Щоб перевірити роботу нашої згорткової нейронної мережі, вам потрібно завантажити зображення. Ось як це зробити крок за кроком:" %}</p>
+
                     <!-- Крок 1: Натисніть на кнопку "Завантажити зображення" -->
                     <div class="bg-light rounded p-4 mb-4">
                         <div class="row">
@@ -27,14 +29,14 @@
                                                 class="fas fa-upload text-white fa-2x"></i></div>
                                     </div>
                                     <div class="">
-                                        <a class="h4 d-inline-block mb-3">Натисніть на кнопку "Завантажити зображення":</a>
-                                        <p class="mb-0">Знайдіть кнопку з написом "Завантажити зображення" або "Upload Image" на головній сторінці та натисніть на неї.</p>
+                                        <a class="h4 d-inline-block mb-3">{% trans "Натисніть на кнопку 'Завантажити зображення':" %}</a>
+                                        <p class="mb-0">{% trans "Знайдіть кнопку з написом 'Завантажити зображення' або 'Upload Image' на головній сторінці та натисніть на неї." %}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Крок 2: Виберіть зображення зі свого комп'ютера -->
                     <div class="bg-light rounded p-4 mb-4">
                         <div class="row">
@@ -46,14 +48,14 @@
                                                 class="fas fa-file-image text-white fa-2x"></i></div>
                                     </div>
                                     <div class="">
-                                        <a class="h4 d-inline-block mb-3">Виберіть зображення зі свого комп'ютера:</a>
-                                        <p class="mb-0">Відкриється вікно для вибору файлу. Оберіть зображення, яке ви хочете перевірити, зі свого комп'ютера. Переконайтеся, що зображення відповідає вимогам формату (наприклад, JPEG, PNG) і розміру.</p>
+                                        <a class="h4 d-inline-block mb-3">{% trans "Виберіть зображення зі свого комп'ютера:" %}</a>
+                                        <p class="mb-0">{% trans "Відкриється вікно для вибору файлу. Оберіть зображення, яке ви хочете перевірити, зі свого комп'ютера. Переконайтеся, що зображення відповідає вимогам формату (наприклад, JPEG, PNG) і розміру." %}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Крок 3: Натисніть "Відправити" -->
                     <div class="bg-light rounded p-4 mb-4">
                         <div class="row">
@@ -65,14 +67,14 @@
                                                 class="fas fa-paper-plane text-white fa-2x"></i></div>
                                     </div>
                                     <div class="">
-                                        <a class="h4 d-inline-block mb-3">Натисніть "Відправити":</a>
-                                        <p class="mb-0">Після вибору зображення натисніть кнопку "Відправити" або "Submit", щоб завантажити зображення на сервер.</p>
+                                        <a class="h4 d-inline-block mb-3">{% trans "Натисніть 'Відправити':" %}</a>
+                                        <p class="mb-0">{% trans "Після вибору зображення натисніть кнопку 'Відправити' або 'Submit', щоб завантажити зображення на сервер." %}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Крок 4: Отримайте результати класифікації -->
                     <div class="bg-light rounded p-4 mb-4">
                         <div class="row">
@@ -84,18 +86,21 @@
                                                 class="fas fa-chart-bar text-white fa-2x"></i></div>
                                     </div>
                                     <div class="">
-                                        <a class="h4 d-inline-block mb-3">Отримайте результати класифікації:</a>
-                                        <p class="mb-0">Після завантаження зображення наша згорткова нейронна мережа обробить його і надасть результати класифікації. Ви побачите назву класу, до якого було віднесено зображення, та відповідну ймовірність.</p>
+                                        <a class="h4 d-inline-block mb-3">{% trans "Отримайте результати класифікації:" %}</a>
+                                        <p class="mb-0">{% trans "Після завантаження зображення наша згорткова нейронна мережа обробить його і надасть результати класифікації. Ви побачите назву класу, до якого було віднесено зображення, та відповідну ймовірність." %}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     
                     <form method="post" enctype="multipart/form-data" class="mb-4">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit" class="btn btn-secondary rounded-pill py-3 px-5">Завантажити зображення</button>
+
+
                     </form>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 13:40+0300\n"
+"POT-Creation-Date: 2024-08-23 19:56+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr "Model cifar10.keras"
 msgid "Гра завершена"
 msgstr "Game overм"
 
-#: .\game2\views.py:109
+#: .\game2\views.py:109 .\templates\recognition\result.html:40
 msgid "Результат"
 msgstr "Result"
 
@@ -55,6 +55,8 @@ msgid "Головна"
 msgstr "Home"
 
 #: .\home\views.py:18 .\templates\_fragments\navbar_hero.html:19
+#: .\templates\_fragments\recognize.html:17
+#: .\templates\recognition\index.html:17
 msgid "Пізнання"
 msgstr "Cognition"
 
@@ -1578,7 +1580,17 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
+#: .\myenv_ds\Lib\site-packages\sympy\solvers\simplex.py:564
+msgid "x"
+msgstr ""
+
+#: .\myenv_ds\Lib\site-packages\sympy\solvers\simplex.py:565
+msgid "y"
+msgstr ""
+
 #: .\templates\_fragments\carousel.html:19
+#: .\templates\_fragments\recognize.html:18
+#: .\templates\recognition\index.html:18
 msgid "Перевірка згорткової нейронної мережі"
 msgstr "Validation of a convolutional neural network"
 
@@ -1596,7 +1608,7 @@ msgid "Спробувати чат"
 msgstr "Try chat"
 
 #: .\templates\_fragments\carousel.html:31
-#: .\templates\_fragments\products.html:56
+#: .\templates\_fragments\products.html:53
 msgid "Гра з нейронною мережею"
 msgstr "A game with a neural network"
 
@@ -1605,7 +1617,7 @@ msgid "Грати зараз"
 msgstr "Play now"
 
 #: .\templates\_fragments\carousel.html:42
-#: .\templates\_fragments\products.html:85
+#: .\templates\_fragments\products.html:81
 msgid "Авторизація потрібна"
 msgstr "Authorization is required"
 
@@ -1614,7 +1626,7 @@ msgid "Щоб скористатися чатом, вам необхідно у�
 msgstr "You must be logged in to use the chat."
 
 #: .\templates\_fragments\carousel.html:49
-#: .\templates\_fragments\products.html:92
+#: .\templates\_fragments\products.html:88
 msgid "Увійти"
 msgstr "...Sign in..."
 
@@ -1694,95 +1706,172 @@ msgid "Безкоштовно"
 msgstr "Free"
 
 #: .\templates\_fragments\products.html:20
-#: .\templates\_fragments\products.html:33
-#: .\templates\_fragments\products.html:46
-#: .\templates\_fragments\products.html:59
-#: .\templates\_fragments\products.html:73
-#: .\templates\_fragments\products.html:75
-#: .\templates\_fragments\products.html:106
+#: .\templates\_fragments\products.html:32
+#: .\templates\_fragments\products.html:44
+#: .\templates\_fragments\products.html:56
+#: .\templates\_fragments\products.html:69
+#: .\templates\_fragments\products.html:71
+#: .\templates\_fragments\products.html:101
 msgid "Дізнатися більше"
 msgstr "Learn more"
 
-#: .\templates\_fragments\products.html:28
+#: .\templates\_fragments\products.html:27
 msgid "Train Model"
 msgstr ""
 
-#: .\templates\_fragments\products.html:30
+#: .\templates\_fragments\products.html:29
 msgid "Навчання моделі"
 msgstr "Model training"
 
-#: .\templates\_fragments\products.html:31
+#: .\templates\_fragments\products.html:30
 msgid "Ефективне навчання"
 msgstr "Effective learning"
 
-#: .\templates\_fragments\products.html:32
+#: .\templates\_fragments\products.html:31
 msgid "Висока точність"
 msgstr "High accuracy"
 
-#: .\templates\_fragments\products.html:41
+#: .\templates\_fragments\products.html:39
 msgid "Check Image"
 msgstr ""
 
-#: .\templates\_fragments\products.html:43
+#: .\templates\_fragments\products.html:41
 #: .\templates\_fragments\service.html:33
 msgid "Перевірка зображення"
 msgstr "Image check"
 
-#: .\templates\_fragments\products.html:44
+#: .\templates\_fragments\products.html:42
 msgid "Миттєві результати"
 msgstr "Instant results"
 
-#: .\templates\_fragments\products.html:45
+#: .\templates\_fragments\products.html:43
 msgid "Точність понад 95"
 msgstr "Accuracy over 95"
 
-#: .\templates\_fragments\products.html:54
+#: .\templates\_fragments\products.html:51
 msgid "Game"
 msgstr ""
 
-#: .\templates\_fragments\products.html:57
+#: .\templates\_fragments\products.html:54
 msgid "Змагайтесь з AI"
 msgstr "Compete against the AI"
 
-#: .\templates\_fragments\products.html:58
+#: .\templates\_fragments\products.html:55
 msgid "Захоплюючий досвід"
 msgstr "Fascinating experience"
 
-#: .\templates\_fragments\products.html:67
+#: .\templates\_fragments\products.html:63
 msgid "Chat"
 msgstr ""
 
-#: .\templates\_fragments\products.html:69
+#: .\templates\_fragments\products.html:65
 msgid "Чат на базі GPT_v4"
 msgstr "Chat based on GPT_v4"
 
-#: .\templates\_fragments\products.html:70
+#: .\templates\_fragments\products.html:66
 msgid "Інтерактивний чат"
 msgstr "Interactive chat"
 
-#: .\templates\_fragments\products.html:71
+#: .\templates\_fragments\products.html:67
 msgid "Штучний інтелект у чаті"
 msgstr "Artificial intelligence in chat"
 
-#: .\templates\_fragments\products.html:89
+#: .\templates\_fragments\products.html:85
 msgid "Для доступу до чату, будь ласка, увійдіть у свій акаунт."
 msgstr "To access the chat, please log in to your account."
 
-#: .\templates\_fragments\products.html:101
+#: .\templates\_fragments\products.html:96
 msgid "Face ID Registration and Login"
 msgstr ""
 
-#: .\templates\_fragments\products.html:103
+#: .\templates\_fragments\products.html:98
 msgid "Реєстрація та авторизація"
 msgstr "Registration and authorization"
 
-#: .\templates\_fragments\products.html:104
+#: .\templates\_fragments\products.html:99
 msgid "Face ID доступ"
 msgstr "Face ID access"
 
-#: .\templates\_fragments\products.html:105
+#: .\templates\_fragments\products.html:100
 msgid "Безпечно та зручно"
 msgstr "Safe and convenient"
+
+#: .\templates\_fragments\recognize.html:19
+#: .\templates\recognition\index.html:19
+msgid ""
+"Щоб перевірити роботу нашої згорткової нейронної мережі, вам потрібно "
+"завантажити зображення. Ось як це зробити крок за кроком:"
+msgstr ""
+"To test our convolutional neural network, you need to upload an image. "
+"Here's how to do it step by step:"
+
+#: .\templates\_fragments\recognize.html:32
+#: .\templates\recognition\index.html:32
+msgid "Натисніть на кнопку 'Завантажити зображення':"
+msgstr "Click on the 'Upload image' button:"
+
+#: .\templates\_fragments\recognize.html:33
+#: .\templates\recognition\index.html:33
+msgid ""
+"Знайдіть кнопку з написом 'Завантажити зображення' або 'Upload Image' на "
+"головній сторінці та натисніть на неї."
+msgstr ""
+"Find the button labeled 'Upload Image' or 'Upload Image' on the main page "
+"and click on it."
+
+#: .\templates\_fragments\recognize.html:51
+#: .\templates\recognition\index.html:51
+msgid "Виберіть зображення зі свого комп'ютера:"
+msgstr "Select an image from your computer:.s"
+
+#: .\templates\_fragments\recognize.html:52
+#: .\templates\recognition\index.html:52
+msgid ""
+"Відкриється вікно для вибору файлу. Оберіть зображення, яке ви хочете "
+"перевірити, зі свого комп'ютера. Переконайтеся, що зображення відповідає "
+"вимогам формату (наприклад, JPEG, PNG) і розміру."
+msgstr ""
+"A file selection window will open. Select the image you want to check from "
+"your computer. Make sure the image meets the format (eg JPEG, PNG) and size "
+"requirements."
+
+#: .\templates\_fragments\recognize.html:70
+#: .\templates\recognition\index.html:70
+msgid "Натисніть 'Відправити':"
+msgstr "Click 'Submit':"
+
+#: .\templates\_fragments\recognize.html:71
+#, fuzzy
+#| msgid ""
+#| "Після вибору зображення натисніть кнопку Відправити або Submit, щоб "
+#| "завантажити зображення на сервер."
+msgid ""
+"Після вибору зображення натисніть кнопку 'Відправити' або 'Submit', щоб "
+"завантажити зображення на сервер."
+msgstr ""
+"After selecting an image, click the Submit button to upload the image to the "
+"server."
+
+#: .\templates\_fragments\recognize.html:89
+#: .\templates\recognition\index.html:89
+msgid "Отримайте результати класифікації:"
+msgstr "Get classification results:"
+
+#: .\templates\_fragments\recognize.html:90
+#: .\templates\recognition\index.html:90
+msgid ""
+"Після завантаження зображення наша згорткова нейронна мережа обробить його і "
+"надасть результати класифікації. Ви побачите назву класу, до якого було "
+"віднесено зображення, та відповідну ймовірність."
+msgstr ""
+"After uploading the image, our convolutional neural network will process it "
+"and provide classification results. You'll see the name of the class the "
+"image was assigned to and the corresponding probability."
+
+#: .\templates\_fragments\recognize.html:100
+#: .\templates\recognition\index.html:100
+msgid "Завантажити зображення"
+msgstr "Download image"
 
 #: .\templates\_fragments\service.html:8
 msgid "Сервіс"
@@ -1801,12 +1890,12 @@ msgid "Система автоматично перевіряє завантаж
 msgstr "The system automatically checks the uploaded image."
 
 #: .\templates\_fragments\service.html:48
-msgid "Отримайте результати"
-msgstr "Get results"
+msgid "Вибір моделі"
+msgstr "Model selection"
 
 #: .\templates\_fragments\service.html:49
-msgid "Отримайте результати класифікації з високою точністю."
-msgstr "Get classification results with high accuracy."
+msgid "Оберіть одну з наступних моделей: VGG16, Faster R-CNN, Mask R-CNN."
+msgstr "Choose one of the following models: VGG16, Faster R-CNN, Mask R-CNN."
 
 #: .\templates\_fragments\service.html:73
 msgid "Налаштування моделі"
@@ -1817,20 +1906,20 @@ msgid "Оптимізуйте модель для досягнення найк�
 msgstr "Optimize the model for best accuracy."
 
 #: .\templates\_fragments\service.html:88
+msgid "Отримайте результати"
+msgstr "Get results"
+
+#: .\templates\_fragments\service.html:89
+msgid "Отримайте результати класифікації з високою точністю."
+msgstr "Get classification results with high accuracy."
+
+#: .\templates\_fragments\service.html:103
 msgid "Аналіз даних"
 msgstr "Data analysis"
 
-#: .\templates\_fragments\service.html:89
+#: .\templates\_fragments\service.html:104
 msgid "Проаналізуйте результати класифікації та поліпшите модель."
 msgstr "Analyze the classification results and improve the model."
-
-#: .\templates\_fragments\service.html:104
-msgid "Планування проектів"
-msgstr "Analyze the classification results and improve the model."
-
-#: .\templates\_fragments\service.html:105
-msgid "Сплануйте та реалізуйте нові проекти з використанням CNN."
-msgstr "Plan and implement new projects using CNN."
 
 #: .\templates\_fragments\team.html:10
 msgid ""
@@ -1953,8 +2042,11 @@ msgid "Python"
 msgstr ""
 
 #: .\templates\_fragments\technologies.html:17
-msgid "Мова програмування Python, що використовується для розробки алгоритмів класифікації зображень."
-msgstr "Python programming language used to develop image classification algorithms."
+msgid ""
+"Мова програмування Python, що використовується для розробки алгоритмів "
+"класифікації зображень."
+msgstr ""
+"Python programming language used to develop image classification algorithms."
 
 #: .\templates\_fragments\technologies.html:24
 msgid "Convolutional Neural Networks (CNN)"
@@ -1981,8 +2073,11 @@ msgid "Django"
 msgstr ""
 
 #: .\templates\_fragments\technologies.html:41
-msgid "Веб-фреймворк Django, що використовується для створення надійних та масштабованих веб-додатків."
-msgstr "Django is a web framework used to build robust and scalable web applications."
+msgid ""
+"Веб-фреймворк Django, що використовується для створення надійних та "
+"масштабованих веб-додатків."
+msgstr ""
+"Django is a web framework used to build robust and scalable web applications."
 
 #: .\templates\_fragments\technologies.html:48
 msgid "PostgreSQL"
@@ -2021,17 +2116,21 @@ msgid "GitHub"
 msgstr ""
 
 #: .\templates\_fragments\technologies.html:73
-msgid "Платформа для розробки та спільної роботи над проектами з використанням Git."
+msgid ""
+"Платформа для розробки та спільної роботи над проектами з використанням Git."
 msgstr "A platform for developing and collaborating on projects using Git."
 
 #: .\templates\_fragments\technologies.html:80
-msgid "Mediapipe"
+msgid "face_recognition"
 msgstr ""
 
 #: .\templates\_fragments\technologies.html:81
-msgid "Бібліотека для розпізнавання облич та реалізації Face ID на основі зображень з камери."
+msgid ""
+"Бібліотека для розпізнавання облич та реалізації Face ID на основі зображень "
+"з камери."
 msgstr ""
-"A library for recognizing faces and implementing Face ID based on camera images."
+"A library for recognizing faces and implementing Face ID based on camera "
+"images."
 
 #: .\templates\_fragments\technologies.html:88
 msgid "Pillow (PIL)"
@@ -2043,10 +2142,6 @@ msgid ""
 "форматування."
 msgstr ""
 "A Python library for image manipulation, including scaling and formatting."
-
-#: .\templates\_fragments\technologies.html:96
-msgid "JWT (JSON Web Tokens)"
-msgstr ""
 
 #: .\templates\_fragments\technologies.html:97
 msgid "Платформа для хостингу та розгортання додатку."
@@ -2207,3 +2302,45 @@ msgstr "The model guessed!"
 #: .\templates\game2\result.html:30
 msgid "Модель не вгадала."
 msgstr "The model did not guess."
+
+#: .\templates\recognition\index.html:71
+msgid ""
+"Після вибору зображення натисніть кнопку Відправити або Submit, щоб "
+"завантажити зображення на сервер."
+msgstr ""
+"After selecting an image, click the Submit button to upload the image to the "
+"server."
+
+#: .\templates\recognition\result.html:11
+msgid "Uploaded Image"
+msgstr ""
+
+#: .\templates\recognition\result.html:15
+msgid "Annotated Image"
+msgstr ""
+
+#: .\templates\recognition\result.html:26
+msgid "Cognition"
+msgstr ""
+
+#: .\templates\recognition\result.html:27
+msgid "Результати розпізнавання"
+msgstr "Recognition results"
+
+#: .\templates\recognition\result.html:38
+msgid "Тип розпізнавання"
+msgstr "Recognition type"
+
+#: .\templates\recognition\result.html:48
+msgid "Інше зображення"
+msgstr "Another image"
+
+#: .\templates\recognition\result.html:49
+msgid "На початок"
+msgstr "Home"
+
+#~ msgid "Планування проектів"
+#~ msgstr "Analyze the classification results and improve the model."
+
+#~ msgid "Сплануйте та реалізуйте нові проекти з використанням CNN."
+#~ msgstr "Plan and implement new projects using CNN."
