@@ -16,9 +16,9 @@
                 <a href="{% url 'home:team' %}"
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Команда" %}</a>
                 <a href="{% url 'home:vgg16' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">CIFAR-10</a>
-                <a href="{% url 'recognition:index' %}"
-                    class="nav-item nav-link {% if request.resolver_match.url_name == 'recognize' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Пізнання" %}</a>
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'vgg16' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">CIFAR-10</a>
+                <a href="{% url 'recognition:index2' %}"
+                    class="nav-item nav-link {% if request.resolver_match.url_name == 'index2' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Пізнання" %}</a>
                 <a href="{% url 'game2:play_game' %}"
                     class="nav-item nav-link {% if request.resolver_match.url_name == 'play_game' %}active{% endif %}" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Гра" %}</a>
                 {% if request.user.is_authenticated %}
