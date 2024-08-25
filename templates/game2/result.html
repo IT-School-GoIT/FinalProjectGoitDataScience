@@ -7,28 +7,50 @@
 {% include '_fragments/header.html' %}
 <div class="container-fluid team pb-5">
     <div class="container pb-5">
-        <div class="result-container">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-uppercase text-primary">{% trans "Гра" %}</h4>
-                <h2 class="display-3 text-capitalize mb-3">{% trans "Результат Гри" %}</h2>
-                <p>{% trans "Зображення:" %} {{ image.title }}</p>
-                <img src="{{ image.image.url }}" alt="Image" class="game-image">
-                <p>{% trans "Ваш рахунок:" %} {{ user_score }}</p>
-                <p>{% trans "Рахунок моделі:" %} {{ model_score }}</p>
-                <p>{% trans "Клас від моделі:" %} {{ predicted_class }} ({% trans "Впевненість:" %}  {{ confidence }}%)</p>
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-uppercase text-primary">{% trans "Гра" %}</h4>
+            <h2 class="display-3 text-capitalize mb-3">{% trans "Результат Гри" %}</h2>
+        </div>
 
-                {% if user_is_correct %}
-                <p>{% trans "Вітаємо, ви вгадали!" %}</p>
-                {% else %}
-                <p>{% trans "На жаль, ви не вгадали. Спробуйте ще раз!" %}</p>
-                {% endif %}
+        <!-- Розміщення блоків на одній горизонтальній лінії -->
+        <div class="row justify-content-center">
+            <!-- Зображення гри -->
+            <div class="col-md-6 text-center">
+                <div class="game-container">
+                    <img src="{{ image.image.url }}" alt="Image" class="game-image img-fluid mb-4">
+                </div>
+            </div>
 
-                {% if model_is_correct %}
-                <p>{% trans "Модель вгадала!" %}</p>
-                {% else %}
-                <p>{% trans "Модель не вгадала." %}</p>
-                {% endif %}
+            <!-- Інформація про результати -->
+            <div class="col-md-6">
+                <div class="result-container text-left">
+                    <p>{% trans "Рахунок:" %} 
+                        {% if user.is_authenticated %}
+                            {{ request.user.username }}
+                        {% else %}
+                            {% trans "Гість" %}
+                        {% endif %}
+                        : {{ user_score }}
+                    </p>
+                    <p>{% trans "Рахунок моделі Cifar10:" %} {{ model_score }}</p>
+                    <p>{% trans "Клас від моделі:" %} {{ predicted_class }} ({% trans "Впевненість:" %}  {{ confidence }}%)</p>
 
+                    {% if user_is_correct %}
+                    <p>{% trans "Вітаємо, ви вгадали!" %}</p>
+                    {% else %}
+                    <p>{% trans "На жаль, ви не вгадали. Спробуйте ще раз!" %}</p>
+                    {% endif %}
+
+                    {% if model_is_correct %}
+                    <p>{% trans "Модель вгадала!" %}</p>
+                    {% else %}
+                    <p>{% trans "Модель не вгадала." %}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Кнопка під результатами -->
+            <div class="col-md-12 text-center mt-4">
                 <a href="{% url 'game2:play_game' %}" class="btn btn-primary">Victory by seven</a>
             </div>
         </div>

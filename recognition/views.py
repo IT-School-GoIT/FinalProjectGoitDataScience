@@ -147,7 +147,7 @@ def index(request):
     else:
         form = UploadImageForm(initial={'recognition_type': 'vgg16'})
 
-    return render(request, 'recognition/cognition.html', {'form': form, "title": _("Recognition"), "page": "cognition", "app": "home"})
+    return render(request, 'recognition/cognition.html', {'form': form, "title": _("Пізнання"), "page": "cognition", "app": "home"})
 
 
 def recognize_with_vgg16(img):

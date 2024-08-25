@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-25 19:15+0300\n"
+"POT-Creation-Date: 2024-08-25 20:32+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +42,7 @@ msgid "Результат"
 msgstr "Result"
 
 #: .\game2\views.py:157 .\templates\_fragments\navbar_hero.html:21
-#: .\templates\game2\game.html:13 .\templates\game2\result.html:12
+#: .\templates\game2\game.html:12 .\templates\game2\result.html:11
 msgid "Гра"
 msgstr "Game"
 
@@ -54,7 +54,7 @@ msgstr "Chat Bot"
 msgid "Головна"
 msgstr "Home"
 
-#: .\home\views.py:59 .\recognition\views.py:96
+#: .\home\views.py:59 .\recognition\views.py:96 .\recognition\views.py:150
 #: .\templates\_fragments\navbar_hero.html:19
 #: .\templates\_fragments\recognize.html:17
 #: .\templates\recognition\index.html:17
@@ -1601,10 +1601,6 @@ msgstr ""
 msgid "Please correct the errors below."
 msgstr ""
 
-#: .\recognition\views.py:150
-msgid "Recognition"
-msgstr "Пізнання"
-
 #: .\templates\_fragments\carousel.html:19
 #: .\templates\_fragments\recognize.html:18
 #: .\templates\recognition\index.html:18
@@ -1927,27 +1923,27 @@ msgstr "Model selection"
 msgid "Оберіть одну з наступних моделей: VGG16, Faster R-CNN, Mask R-CNN."
 msgstr "Choose one of the following models: VGG16, Faster R-CNN, Mask R-CNN."
 
-#: .\templates\_fragments\service.html:73
+#: .\templates\_fragments\service.html:75
 msgid "Налаштування моделі"
 msgstr "Model settings"
 
-#: .\templates\_fragments\service.html:74
+#: .\templates\_fragments\service.html:76
 msgid "Оптимізуйте модель для досягнення найкращої точності."
 msgstr "Optimize the model for best accuracy."
 
-#: .\templates\_fragments\service.html:88
+#: .\templates\_fragments\service.html:90
 msgid "Отримайте результати"
 msgstr "Get results"
 
-#: .\templates\_fragments\service.html:89
+#: .\templates\_fragments\service.html:91
 msgid "Отримайте результати класифікації з високою точністю."
 msgstr "Get classification results with high accuracy."
 
-#: .\templates\_fragments\service.html:103
+#: .\templates\_fragments\service.html:105
 msgid "Аналіз даних"
 msgstr "Data analysis"
 
-#: .\templates\_fragments\service.html:104
+#: .\templates\_fragments\service.html:106
 msgid "Проаналізуйте результати класифікації та поліпшите модель."
 msgstr "Analyze the classification results and improve the model."
 
@@ -2048,9 +2044,14 @@ msgid "Катерина Баcкіна"
 msgstr "Kateryna Baskina"
 
 #: .\templates\_fragments\team.html:136
-msgid "Катерина займається створенням та документуванням архітектури проекту, розробляє аналітичні моделі для підвищення точності класифікації зображень, відповідає за розробку інтерфейсу."
-msgstr "Kateryna is involved in the creation and documentation of the project architecture, develops analytical models to improve the accuracy of image classification, and is responsible for the development of the interface."
-
+msgid ""
+"Катерина займається створенням та документуванням архітектури проекту, "
+"розробляє аналітичні моделі для підвищення точності класифікації зображень, "
+"відповідає за розробку інтерфейсу."
+msgstr ""
+"Kateryna is involved in the creation and documentation of the project "
+"architecture, develops analytical models to improve the accuracy of image "
+"classification, and is responsible for the development of the interface."
 
 #: .\templates\_fragments\technologies.html:8
 msgid "Технології"
@@ -2230,53 +2231,81 @@ msgstr "There is no user photo."
 msgid "Кількість перемог над cifar10 keras:"
 msgstr "Number of wins against cifar10 keras:"
 
-#: .\templates\game2\game.html:14
+#: .\templates\game2\game.html:13
 msgid "Виберіть клас зображення"
 msgstr "Select an image class"
 
-#: .\templates\game2\game.html:21
+#: .\templates\game2\game.html:31
 msgid "Літак"
 msgstr "Plane"
 
-#: .\templates\game2\game.html:22
+#: .\templates\game2\game.html:32
 msgid "Машина"
 msgstr "Car"
 
-#: .\templates\game2\game.html:23
+#: .\templates\game2\game.html:33
 msgid "Птах"
 msgstr "Bird"
 
-#: .\templates\game2\game.html:24
+#: .\templates\game2\game.html:34
 msgid "Кішка"
 msgstr "Cat"
 
-#: .\templates\game2\game.html:25
+#: .\templates\game2\game.html:35
 msgid "Олень"
 msgstr "Deer"
 
-#: .\templates\game2\game.html:26
+#: .\templates\game2\game.html:36
 msgid "Собака"
 msgstr "Dog"
 
-#: .\templates\game2\game.html:27
+#: .\templates\game2\game.html:37
 msgid "Жаба"
 msgstr "Frog"
 
-#: .\templates\game2\game.html:28
+#: .\templates\game2\game.html:38
 msgid "Кінь"
 msgstr "Horse"
 
-#: .\templates\game2\game.html:29
+#: .\templates\game2\game.html:39
 msgid "Корабель"
 msgstr "Ship"
 
-#: .\templates\game2\game.html:30
+#: .\templates\game2\game.html:40
 msgid "Вантажівка"
 msgstr "Truck"
 
-#: .\templates\game2\game.html:32
+#: .\templates\game2\game.html:45
 msgid "Відправити відповідь"
 msgstr "Send a reply"
+
+#: .\templates\game2\game.html:54
+msgid "Правила Гри"
+msgstr "Rules of the Game"
+
+#: .\templates\game2\game.html:55
+msgid "1. Виберіть клас об'єкта на зображенні з представлених варіантів."
+msgstr "1. Select the object class in the image from the presented options."
+
+#: .\templates\game2\game.html:56
+msgid "2. Система зіставить ваш вибір з результатом класифікації моделі."
+msgstr "2. The system will compare your choice with the model classification result."
+
+#: .\templates\game2\game.html:57
+msgid "3. За кожне правильне передбачення ви отримуєте один бал."
+msgstr "3. For each correct prediction you get one point."
+
+#: .\templates\game2\game.html:58
+msgid "4. Гра триває до тих пір, поки один з учасників не досягне 7 балів."
+msgstr "4. The game continues until one of the participants reaches 7 points."
+
+#: .\templates\game2\game.html:59
+msgid "5. Ви зможете бачити результати як свої, так і моделі після кожного раунду."
+msgstr "5. You will be able to see the results of both yourself and the models after each round."
+
+#: .\templates\game2\game.html:60
+msgid "6. Якщо ви залогінені, ваші перемоги будуть збережені у вашому профілі."
+msgstr "6. Якщо ви залогінені, ваші перемоги будуть збережені у вашому профілі."
 
 #: .\templates\game2\game_over.html:11
 msgid "Гра завершена!"
@@ -2286,51 +2315,51 @@ msgstr "Game over!"
 msgid "Переможець:"
 msgstr "Winner"
 
-#: .\templates\game2\game_over.html:13
+#: .\templates\game2\game_over.html:16 .\templates\game2\result.html:31
+msgid "Гість"
+msgstr "Guest"
+
+#: .\templates\game2\game_over.html:19
 msgid "Натисніть кнопку нижче, щоб почати нову гру."
 msgstr "Click the button below to start a new game."
 
-#: .\templates\game2\game_over.html:16
+#: .\templates\game2\game_over.html:22
 msgid "Почати нову гру"
 msgstr "Start a new game"
 
-#: .\templates\game2\result.html:13
+#: .\templates\game2\result.html:12
 msgid "Результат Гри"
 msgstr "Game result"
 
-#: .\templates\game2\result.html:14
-msgid "Зображення:"
-msgstr "Image"
+#: .\templates\game2\result.html:27
+msgid "Рахунок:"
+msgstr "Your Score:"
 
-#: .\templates\game2\result.html:16
-msgid "Ваш рахунок:"
-msgstr "Your account:"
+#: .\templates\game2\result.html:35
+msgid "Рахунок моделі Cifar10:"
+msgstr "Cifar10 model account:"
 
-#: .\templates\game2\result.html:17
-msgid "Рахунок моделі:"
-msgstr "Model account:"
-
-#: .\templates\game2\result.html:18
+#: .\templates\game2\result.html:36
 msgid "Клас від моделі:"
 msgstr "Class from model:"
 
-#: .\templates\game2\result.html:18
+#: .\templates\game2\result.html:36
 msgid "Впевненість:"
 msgstr "Confidence"
 
-#: .\templates\game2\result.html:21
+#: .\templates\game2\result.html:39
 msgid "Вітаємо, ви вгадали!"
 msgstr "Congratulations, you guessed it!"
 
-#: .\templates\game2\result.html:23
+#: .\templates\game2\result.html:41
 msgid "На жаль, ви не вгадали. Спробуйте ще раз!"
 msgstr "Unfortunately, you didn't guess. Try again!"
 
-#: .\templates\game2\result.html:27
+#: .\templates\game2\result.html:45
 msgid "Модель вгадала!"
 msgstr "The model guessed!"
 
-#: .\templates\game2\result.html:29
+#: .\templates\game2\result.html:47
 msgid "Модель не вгадала."
 msgstr "The model did not guess."
 
@@ -2361,6 +2390,12 @@ msgstr "Another image"
 #: .\templates\recognition\result.html:47
 msgid "На початок"
 msgstr "Home"
+
+#~ msgid "Recognition"
+#~ msgstr "Пізнання"
+
+#~ msgid "Зображення:"
+#~ msgstr "Image"
 
 #, fuzzy
 #~| msgid ""
