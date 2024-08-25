@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-25 17:16+0300\n"
+"POT-Creation-Date: 2024-08-25 17:26+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1984,7 +1984,7 @@ msgstr ""
 "provisioning, for all stagesthe project met high quality standards."
 
 #: .\templates\_fragments\team.html:59
-msgid "Даниїл Казаков"
+msgid "Данило Казаков"
 msgstr "Danil Kazakov"
 
 #: .\templates\_fragments\team.html:60
