@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-25 20:32+0300\n"
+"POT-Creation-Date: 2024-08-25 20:46+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1656,6 +1656,34 @@ msgstr "Enter a message"
 msgid "Надіслати"
 msgstr "Send"
 
+#: .\templates\_fragments\chat.html:24
+msgid "Правила користування чатом"
+msgstr "Rules for using the chat"
+
+#: .\templates\_fragments\chat.html:25
+msgid "1. Дотримуйтесь ввічливості та етикету під час спілкування."
+msgstr "1. Observe courtesy and etiquette when communicating."
+
+#: .\templates\_fragments\chat.html:26
+msgid "2. Забороняється використання нецензурної лексики або образ."
+msgstr "2. The use of obscene language or insults is prohibited."
+
+#: .\templates\_fragments\chat.html:27
+msgid "3. Чат призначений лише для інформаційних та розважальних цілей."
+msgstr "3. The chat is intended for informational and entertainment purposes only."
+
+#: .\templates\_fragments\chat.html:28
+msgid "4. Не надсилайте особисту інформацію через чат."
+msgstr "4. Do not send personal information via chat."
+
+#: .\templates\_fragments\chat.html:29
+msgid "5. Усі повідомлення відправляються та обробляються автоматично, без участі людей."
+msgstr "5. All messages are sent and processed automatically, without human intervention."
+
+#: .\templates\_fragments\chat.html:30
+msgid "6. Будь ласка, дотримуйтесь правил спільноти та поважайте інших користувачів."
+msgstr "6. Please follow the community rules and respect other users."
+
 #: .\templates\_fragments\copyright.html:9
 msgid "GoiT"
 msgstr ""
@@ -2289,7 +2317,8 @@ msgstr "1. Select the object class in the image from the presented options."
 
 #: .\templates\game2\game.html:56
 msgid "2. Система зіставить ваш вибір з результатом класифікації моделі."
-msgstr "2. The system will compare your choice with the model classification result."
+msgstr ""
+"2. The system will compare your choice with the model classification result."
 
 #: .\templates\game2\game.html:57
 msgid "3. За кожне правильне передбачення ви отримуєте один бал."
@@ -2300,12 +2329,16 @@ msgid "4. Гра триває до тих пір, поки один з учас�
 msgstr "4. The game continues until one of the participants reaches 7 points."
 
 #: .\templates\game2\game.html:59
-msgid "5. Ви зможете бачити результати як свої, так і моделі після кожного раунду."
-msgstr "5. You will be able to see the results of both yourself and the models after each round."
+msgid ""
+"5. Ви зможете бачити результати як свої, так і моделі після кожного раунду."
+msgstr ""
+"5. You will be able to see the results of both yourself and the models after "
+"each round."
 
 #: .\templates\game2\game.html:60
 msgid "6. Якщо ви залогінені, ваші перемоги будуть збережені у вашому профілі."
-msgstr "6. Якщо ви залогінені, ваші перемоги будуть збережені у вашому профілі."
+msgstr "6. Please follow the community rules and respect other users."
+
 
 #: .\templates\game2\game_over.html:11
 msgid "Гра завершена!"

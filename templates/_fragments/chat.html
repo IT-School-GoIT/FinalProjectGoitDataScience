@@ -18,54 +18,65 @@
                 </div>
             </div>
         </div>
+
+        <!-- Правила користування чатом -->
+        <div class="rules-container text-center mt-5">
+            <h3 class="text-uppercase text-primary">{% trans "Правила користування чатом" %}</h3>
+            <p>{% trans "1. Дотримуйтесь ввічливості та етикету під час спілкування." %}</p>
+            <p>{% trans "2. Забороняється використання нецензурної лексики або образ." %}</p>
+            <p>{% trans "3. Чат призначений лише для інформаційних та розважальних цілей." %}</p>
+            <p>{% trans "4. Не надсилайте особисту інформацію через чат." %}</p>
+            <p>{% trans "5. Усі повідомлення відправляються та обробляються автоматично, без участі людей." %}</p>
+            <p>{% trans "6. Будь ласка, дотримуйтесь правил спільноти та поважайте інших користувачів." %}</p>
+        </div>
     </div>
 </div>
 
-    <script>
-        function sendMessage() {
-            const userInput = document.getElementById('userInput').value;
+<script>
+    function sendMessage() {
+        const userInput = document.getElementById('userInput').value;
 
-            if (!userInput.trim()) {
-                return; // Не відправляти порожні повідомлення
-            }
-
-            fetch("{% url 'chat' %}", {  // Маршрут Django для чату
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': '{{ csrf_token }}'
-                },
-                body: `input=${encodeURIComponent(userInput)}`
-            })
-                .then(response => response.json())
-                .then(data => {
-                    const messages = document.getElementById('messages');
-
-                    // Відображення повідомлення користувача
-                    const userMessage = document.createElement('div');
-                    userMessage.textContent = userInput;
-                    userMessage.className = 'user-message';
-                    messages.appendChild(userMessage);
-
-                    // Відображення повідомлення бота
-                    const botMessage = document.createElement('div');
-                    botMessage.textContent = data.response || 'No response from bot';
-                    botMessage.className = 'bot-message';
-                    messages.appendChild(botMessage);
-
-                    // Очищення поля вводу
-                    document.getElementById('userInput').value = '';
-
-                    // Автоскрол до останнього повідомлення
-                    messages.scrollTop = messages.scrollHeight;
-                })
-                .catch(error => console.error('Error:', error));
+        if (!userInput.trim()) {
+            return; // Не відправляти порожні повідомлення
         }
 
-        // Відправка повідомлення при натисканні Enter
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
+        fetch("{% url 'chat' %}", {  // Маршрут Django для чату
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: `input=${encodeURIComponent(userInput)}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            const messages = document.getElementById('messages');
+
+            // Відображення повідомлення користувача
+            const userMessage = document.createElement('div');
+            userMessage.textContent = userInput;
+            userMessage.className = 'user-message';
+            messages.appendChild(userMessage);
+
+            // Відображення повідомлення бота
+            const botMessage = document.createElement('div');
+            botMessage.textContent = data.response || 'No response from bot';
+            botMessage.className = 'bot-message';
+            messages.appendChild(botMessage);
+
+            // Очищення поля вводу
+            document.getElementById('userInput').value = '';
+
+            // Автоскрол до останнього повідомлення
+            messages.scrollTop = messages.scrollHeight;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    // Відправка повідомлення при натисканні Enter
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
         }
-    </script>
+    }
+</script>
