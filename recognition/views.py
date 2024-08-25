@@ -93,7 +93,7 @@ def result(request, image_id):
     except UploadedImage.DoesNotExist:
         raise Http404(_("Image not found"))
 
-    return render(request, 'recognition/recognition.html', {'uploaded_image': uploaded_image, "title": _("Recognition")})
+    return render(request, 'recognition/recognition.html', {'uploaded_image': uploaded_image, "title": _("Пізнання")})
 
 
 def index(request):
