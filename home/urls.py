@@ -15,5 +15,6 @@ urlpatterns = [
         name="presentation_of_the_project",
     ),
     path('set_language/', set_language, name='set_language'),
+    path('vgg16/', views.vgg16, name='vgg16'),
 ]
 

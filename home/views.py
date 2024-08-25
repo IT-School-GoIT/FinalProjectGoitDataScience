@@ -125,3 +125,13 @@ def set_language(request):
     return redirect(request.POST.get('next', '/'))
 
 
+def vgg16(request):
+    """
+    Render the VGG16 page of the application.
+    
+    :param request: HttpRequest object.
+    :return: Rendered template for the VGG16 page.
+    """    
+    return render(
+        request, "home/vgg16.html", {"title": "VGG16", "page": "vgg16", "app": "home"}
+    )

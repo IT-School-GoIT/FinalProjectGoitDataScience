@@ -12,7 +12,9 @@
             <!-- Завантаження зображення -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="product-item">
-                    <img src="{% static 'img/product-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Upload Image' %}">
+                    <a href="{% url 'recognition:index' %}">
+                        <img src="{% static 'img/product-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Upload Image' %}">
+                    </a>    
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Завантажте зображення" %}</p>
                         <a class="h4 d-inline-block mb-3">{% trans "Просте завантаження" %}</a>
@@ -24,19 +26,23 @@
             <!-- Навчання моделі -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="product-item">
-                    <img src="{% static 'img/product-2.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Train Model' %}">
+                    <a href="{% url 'home:vgg16' %}">
+                        <img src="{% static 'img/product-2.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Train Model' %}">
+                    </a>    
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Навчання моделі" %}</p>
                         <a class="h4 d-inline-block mb-3">{% trans "Ефективне навчання" %}</a>
                         <p class="fs-4 text-primary mb-3">{% trans "Висока точність" %}</p>
-                        <a href="{% url 'recognition:index' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
+                        <a href="{% url 'home:vgg16' %}" class="btn btn-secondary rounded-pill py-2 px-4">{% trans "Дізнатися більше" %}</a>
                     </div>
                 </div>
             </div>    
             <!-- Перевірка зображення -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="product-item">
-                    <img src="{% static 'img/product-3.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Check Image' %}">
+                    <a href="{% url 'recognition:index' %}">
+                        <img src="{% static 'img/product-3.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Check Image' %}">
+                    </a>
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Перевірка зображення" %}</p>
                         <a class="h4 d-inline-block mb-3">{% trans "Миттєві результати" %}</a>
@@ -48,7 +54,9 @@
             <!-- Гра -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.8s">
                 <div class="product-item">
-                    <img src="{% static 'img/product-4.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Game' %}">
+                    <a href="{% url 'game2:play_game' %}">
+                        <img src="{% static 'img/product-4.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Game' %}">
+                    </a>    
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Гра з нейронною мережею" %}</p>
                         <a class="h4 d-inline-block mb-3">{% trans "Змагайтесь з AI" %}</a>
@@ -60,7 +68,9 @@
             <!-- Чат -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="1.0s">
                 <div class="product-item">
-                    <img src="{% static 'img/product-5.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Chat' %}">
+                    <a href="{% url 'chat_page' %}">
+                        <img src="{% static 'img/product-5.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Chat' %}">
+                    </a>    
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Чат на базі GPT_v4" %}</p>
                         <a class="h4 d-inline-block mb-3">{% trans "Інтерактивний чат" %}</a>
@@ -93,7 +103,9 @@
             <!-- Реєстрація та авторизація Face ID -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="1.2s">
                 <div class="product-item">
-                    <img src="{% static 'img/product-6.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Face ID Registration and Login' %}">
+                    <a href="{% url 'accounts:login' %}">
+                        <img src="{% static 'img/product-6.jpg' %}" class="img-fluid w-100 rounded-top" alt="{% trans 'Face ID Registration and Login' %}">
+                    </a>    
                     <div class="product-content bg-light text-center rounded-bottom p-4">
                         <p>{% trans "Реєстрація та авторизація" %}</p>
                         <a class="h4 d-inline-block mb-3">{% trans "Face ID доступ" %}</a>

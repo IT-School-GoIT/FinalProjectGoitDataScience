@@ -1213,3 +1213,10 @@ button:hover {
     padding: 10px;
     border-radius: 10px;
 }
+
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
