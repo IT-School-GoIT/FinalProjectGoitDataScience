@@ -1,0 +1,23 @@
+{% load static %}
+{% load i18n %}
+
+<!-- GitHub Block -->
+<div class="container-fluid github-block bg-light overflow-hidden py-2">
+    <div class="container text-center py-3" style="max-width: 800px;">
+        <div class="row g-3">
+            <div class="col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="github-item">
+                    <div class="github-item-icon mx-auto">
+                        <i class="fab fa-github fa-3x"></i>
+                    </div>
+                    <h4 class="my-3">{% trans "Проєкт на GitHub" %}</h4>
+                    <p>{% trans "Відвідайте наш репозиторій, щоб переглянути код та внести свій вклад у розвиток проекту." %}</p>
+                    <a href="https://github.com/IT-School-GoIT/FinalProjectGoitDataScience" class="btn btn-primary rounded-pill py-2 px-4" target="_blank">
+                        {% trans "Перейти до GitHub" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- GitHub Block -->

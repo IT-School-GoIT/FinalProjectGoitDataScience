@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="">
                                         <a class="h4 d-inline-block mb-3">{% trans "Натисніть 'Відправити':" %}</a>
-                                        <p class="mb-0">{% trans "Після вибору зображення натисніть кнопку 'Відправити' або 'Submit', щоб завантажити зображення на сервер." %}</p>
+                                        <p class="mb-0">{% trans "Після вибору зображення натисніть кнопку Відправити або Submit, щоб завантажити зображення на сервер." %}</p>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                     <form method="post" enctype="multipart/form-data" class="mb-4">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button type="submit" class="btn btn-secondary rounded-pill py-3 px-5">Завантажити зображення</button>
+                        <button type="submit" class="btn btn-secondary rounded-pill py-3 px-5">{% trans "Завантажити зображення" %}</button>
                     </form>
                 </div>
             </div>

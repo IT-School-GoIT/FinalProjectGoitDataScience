@@ -1,75 +1,75 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 19:56+0300\n"
+"POT-Creation-Date: 2024-08-25 14:58+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\accounts\views.py:12 .\templates\_fragments\navbar_hero.html:35
+#: .\accounts\views.py:27 .\templates\_fragments\navbar_hero.html:32
 #: .\templates\accounts\login.html:19
 msgid "Логін"
 msgstr "Login"
 
-#: .\accounts\views.py:17
+#: .\accounts\views.py:38
 msgid "Вихід"
 msgstr ""
 
-#: .\accounts\views.py:22 .\templates\_fragments\navbar_hero.html:34
+#: .\accounts\views.py:49 .\templates\_fragments\navbar_hero.html:31
 #: .\templates\accounts\signup.html:13
 msgid "Реєстрація"
 msgstr "Registration"
 
-#: .\accounts\views.py:43
+#: .\accounts\views.py:77
 msgid "Профіль"
 msgstr "Profile"
 
-#: .\game2\views.py:51
+#: .\game2\views.py:89
 msgid "Користувач"
 msgstr "User"
 
-#: .\game2\views.py:51
+#: .\game2\views.py:89
 msgid "Модель cifar10.keras"
 msgstr "Model cifar10.keras"
 
-#: .\game2\views.py:59
+#: .\game2\views.py:97
 msgid "Гра завершена"
 msgstr "Game overм"
 
-#: .\game2\views.py:109 .\templates\recognition\result.html:40
+#: .\game2\views.py:147 .\templates\recognition\result.html:38
 msgid "Результат"
 msgstr "Result"
 
-#: .\game2\views.py:119 .\templates\_fragments\navbar_hero.html:22
-#: .\templates\game2\game.html:14 .\templates\game2\result.html:13
+#: .\game2\views.py:157 .\templates\_fragments\navbar_hero.html:21
+#: .\templates\game2\game.html:13 .\templates\game2\result.html:12
 msgid "Гра"
 msgstr "Game"
 
-#: .\gpt_response\views.py:37
+#: .\gpt_response\views.py:73
 msgid "Чат Бот"
 msgstr "Chat Bot"
 
-#: .\home\views.py:10
+#: .\home\views.py:45
 msgid "Головна"
 msgstr "Home"
 
-#: .\home\views.py:18 .\templates\_fragments\navbar_hero.html:19
+#: .\home\views.py:59 .\templates\_fragments\navbar_hero.html:19
 #: .\templates\_fragments\recognize.html:17
 #: .\templates\recognition\index.html:17
 msgid "Пізнання"
 msgstr "Cognition"
 
-#: .\home\views.py:24 .\templates\_fragments\navbar_hero.html:17
+#: .\home\views.py:71 .\templates\_fragments\navbar_hero.html:17
 #: .\templates\_fragments\team.html:8
 msgid "Команда"
 msgstr "Team"
 
-#: .\home\views.py:32 .\templates\_fragments\copyright.html:13
+#: .\home\views.py:85 .\templates\_fragments\copyright.html:13
 msgid "Політика конфіденційності"
 msgstr "Privacy Policy"
 
-#: .\home\views.py:41
+#: .\home\views.py:100
 msgid "Презентація проєкту"
 msgstr "Presentation of the project"
 
@@ -778,8 +778,8 @@ msgstr ""
 
 #: .\myenv_ds\Lib\site-packages\django\db\models\fields\files.py:420
 #: .\templates\_fragments\carousel.html:15 .\templates\_fragments\team.html:19
-#: .\templates\_fragments\team.html:47 .\templates\_fragments\team.html:76
-#: .\templates\_fragments\team.html:100
+#: .\templates\_fragments\team.html:47 .\templates\_fragments\team.html:74
+#: .\templates\_fragments\team.html:98
 msgid "Image"
 msgstr ""
 
@@ -1588,6 +1588,22 @@ msgstr ""
 msgid "y"
 msgstr ""
 
+#: .\recognition\views.py:94
+msgid "Image not found"
+msgstr ""
+
+#: .\recognition\views.py:96 .\recognition\views.py:150
+msgid "Recognition"
+msgstr ""
+
+#: .\recognition\views.py:142
+msgid "An error occurred during processing: "
+msgstr ""
+
+#: .\recognition\views.py:145
+msgid "Please correct the errors below."
+msgstr ""
+
 #: .\templates\_fragments\carousel.html:19
 #: .\templates\_fragments\recognize.html:18
 #: .\templates\recognition\index.html:18
@@ -1631,7 +1647,7 @@ msgid "Увійти"
 msgstr "...Sign in..."
 
 #: .\templates\_fragments\chat.html:7
-#: .\templates\_fragments\navbar_hero.html:26
+#: .\templates\_fragments\navbar_hero.html:24
 msgid "Чат"
 msgstr "Chat"
 
@@ -1659,24 +1675,36 @@ msgstr "Presentation of the project"
 msgid "Документація"
 msgstr "Documentation"
 
+#: .\templates\_fragments\github_go.html:13
+msgid "Проєкт на GitHub"
+msgstr "Project on GitHub"
+
+#: .\templates\_fragments\github_go.html:14
+msgid "Відвідайте наш репозиторій, щоб переглянути код та внести свій вклад у розвиток проекту."
+msgstr "Visit our repository to view the code and contribute to the development of the project."
+
+#: .\templates\_fragments\github_go.html:16
+msgid "Перейти до GitHub"
+msgstr "Go to GitHub"
+
 #: .\templates\_fragments\header.html:9
 #: .\templates\_fragments\navbar_hero.html:15
 msgid "Початок"
 msgstr "Home"
 
-#: .\templates\_fragments\navbar_hero.html:30
+#: .\templates\_fragments\navbar_hero.html:28
 msgid "Вийти"
 msgstr "Logout"
 
-#: .\templates\_fragments\navbar_hero.html:46
+#: .\templates\_fragments\navbar_hero.html:41
 msgid "МОВА"
 msgstr "LANG"
 
-#: .\templates\_fragments\navbar_hero.html:47
+#: .\templates\_fragments\navbar_hero.html:42
 msgid "УКР"
 msgstr "UK"
 
-#: .\templates\_fragments\navbar_hero.html:48
+#: .\templates\_fragments\navbar_hero.html:43
 msgid "АНГ"
 msgstr "EN"
 
@@ -1805,13 +1833,13 @@ msgstr ""
 "To test our convolutional neural network, you need to upload an image. "
 "Here's how to do it step by step:"
 
-#: .\templates\_fragments\recognize.html:32
-#: .\templates\recognition\index.html:32
+#: .\templates\_fragments\recognize.html:31
+#: .\templates\recognition\index.html:31
 msgid "Натисніть на кнопку 'Завантажити зображення':"
 msgstr "Click on the 'Upload image' button:"
 
-#: .\templates\_fragments\recognize.html:33
-#: .\templates\recognition\index.html:33
+#: .\templates\_fragments\recognize.html:32
+#: .\templates\recognition\index.html:32
 msgid ""
 "Знайдіть кнопку з написом 'Завантажити зображення' або 'Upload Image' на "
 "головній сторінці та натисніть на неї."
@@ -1819,13 +1847,13 @@ msgstr ""
 "Find the button labeled 'Upload Image' or 'Upload Image' on the main page "
 "and click on it."
 
-#: .\templates\_fragments\recognize.html:51
-#: .\templates\recognition\index.html:51
+#: .\templates\_fragments\recognize.html:49
+#: .\templates\recognition\index.html:49
 msgid "Виберіть зображення зі свого комп'ютера:"
-msgstr "Select an image from your computer:.s"
+msgstr "Select an image from your computer:"
 
-#: .\templates\_fragments\recognize.html:52
-#: .\templates\recognition\index.html:52
+#: .\templates\_fragments\recognize.html:50
+#: .\templates\recognition\index.html:50
 msgid ""
 "Відкриється вікно для вибору файлу. Оберіть зображення, яке ви хочете "
 "перевірити, зі свого комп'ютера. Переконайтеся, що зображення відповідає "
@@ -1835,30 +1863,27 @@ msgstr ""
 "your computer. Make sure the image meets the format (eg JPEG, PNG) and size "
 "requirements."
 
-#: .\templates\_fragments\recognize.html:70
-#: .\templates\recognition\index.html:70
+#: .\templates\_fragments\recognize.html:67
+#: .\templates\recognition\index.html:67
 msgid "Натисніть 'Відправити':"
 msgstr "Click 'Submit':"
 
-#: .\templates\_fragments\recognize.html:71
-#, fuzzy
-#| msgid ""
-#| "Після вибору зображення натисніть кнопку Відправити або Submit, щоб "
-#| "завантажити зображення на сервер."
+#: .\templates\_fragments\recognize.html:68
+#: .\templates\recognition\index.html:68
 msgid ""
-"Після вибору зображення натисніть кнопку 'Відправити' або 'Submit', щоб "
+"Після вибору зображення натисніть кнопку Відправити або Submit, щоб "
 "завантажити зображення на сервер."
 msgstr ""
 "After selecting an image, click the Submit button to upload the image to the "
 "server."
 
-#: .\templates\_fragments\recognize.html:89
-#: .\templates\recognition\index.html:89
+#: .\templates\_fragments\recognize.html:85
+#: .\templates\recognition\index.html:85
 msgid "Отримайте результати класифікації:"
 msgstr "Get classification results:"
 
-#: .\templates\_fragments\recognize.html:90
-#: .\templates\recognition\index.html:90
+#: .\templates\_fragments\recognize.html:86
+#: .\templates\recognition\index.html:86
 msgid ""
 "Після завантаження зображення наша згорткова нейронна мережа обробить його і "
 "надасть результати класифікації. Ви побачите назву класу, до якого було "
@@ -1868,8 +1893,8 @@ msgstr ""
 "and provide classification results. You'll see the name of the class the "
 "image was assigned to and the corresponding probability."
 
-#: .\templates\_fragments\recognize.html:100
-#: .\templates\recognition\index.html:100
+#: .\templates\_fragments\recognize.html:95
+#: .\templates\recognition\index.html:95
 msgid "Завантажити зображення"
 msgstr "Download image"
 
@@ -1974,16 +1999,16 @@ msgstr ""
 "also helps with the development of the authorization system, including Face "
 "ID."
 
-#: .\templates\_fragments\team.html:88
+#: .\templates\_fragments\team.html:86
 msgid "Віталій Бєлімов"
 msgstr "Vitalii Bielimov"
 
-#: .\templates\_fragments\team.html:89 .\templates\_fragments\team.html:113
-#: .\templates\_fragments\team.html:137
+#: .\templates\_fragments\team.html:87 .\templates\_fragments\team.html:111
+#: .\templates\_fragments\team.html:135
 msgid "Розробник Data Science"
 msgstr "Data Science Developer"
 
-#: .\templates\_fragments\team.html:90
+#: .\templates\_fragments\team.html:88
 msgid ""
 "Віталій спеціалізується на обробці та аугментації зображень. Він відповідає "
 "за масштабування зображень, нормалізацію пікселів та їх підготовку для "
@@ -1995,11 +2020,11 @@ msgstr ""
 "His work also includes setting up the interface for display classification "
 "results."
 
-#: .\templates\_fragments\team.html:112
+#: .\templates\_fragments\team.html:110
 msgid "Валерій Єрмак"
 msgstr "Valerii Yermak"
 
-#: .\templates\_fragments\team.html:114
+#: .\templates\_fragments\team.html:112
 msgid ""
 "Валерій відповідає за контейнеризацію проекту. Він створює Dockerfile та "
 "налаштовує Docker Compose для автоматизації розгортання проекту у хмарі, "
@@ -2009,15 +2034,15 @@ msgstr ""
 "the Dockerfile and sets up Docker Compose to automate project deployment to "
 "the cloud,ensuring the reliability and usability of the project."
 
-#: .\templates\_fragments\team.html:124
+#: .\templates\_fragments\team.html:122
 msgid "Kateryna Baskina Image"
 msgstr ""
 
-#: .\templates\_fragments\team.html:136
+#: .\templates\_fragments\team.html:134
 msgid "Катерина Башкіна"
 msgstr "Kateryna Baskina"
 
-#: .\templates\_fragments\team.html:138
+#: .\templates\_fragments\team.html:136
 msgid ""
 "Катерина займається створенням та документуванням архітектури проекту, "
 "розробляючи аналітичні моделі для підвищення точності класифікації "
@@ -2159,6 +2184,14 @@ msgstr "API for implementing interactive chat with artificial intelligence."
 msgid "Сторінка входу"
 msgstr "Login page"
 
+#: .\templates\accounts\login.html:24
+msgid "Вже не маєте акаунт?"
+msgstr "Don't have an account yet?"
+
+#: .\templates\accounts\login.html:25
+msgid "...Реєстрація..."
+msgstr "...Registration..."
+
 #: .\templates\accounts\signup.html:22
 msgid "Зробіть знімок"
 msgstr "Take a picture"
@@ -2199,51 +2232,51 @@ msgstr "There is no user photo."
 msgid "Кількість перемог над cifar10 keras:"
 msgstr "Number of wins against cifar10 keras:"
 
-#: .\templates\game2\game.html:15
+#: .\templates\game2\game.html:14
 msgid "Виберіть клас зображення"
 msgstr "Select an image class"
 
-#: .\templates\game2\game.html:22
+#: .\templates\game2\game.html:21
 msgid "Літак"
 msgstr "Plane"
 
-#: .\templates\game2\game.html:23
+#: .\templates\game2\game.html:22
 msgid "Машина"
 msgstr "Car"
 
-#: .\templates\game2\game.html:24
+#: .\templates\game2\game.html:23
 msgid "Птах"
 msgstr "Bird"
 
-#: .\templates\game2\game.html:25
+#: .\templates\game2\game.html:24
 msgid "Кішка"
 msgstr "Cat"
 
-#: .\templates\game2\game.html:26
+#: .\templates\game2\game.html:25
 msgid "Олень"
 msgstr "Deer"
 
-#: .\templates\game2\game.html:27
+#: .\templates\game2\game.html:26
 msgid "Собака"
 msgstr "Dog"
 
-#: .\templates\game2\game.html:28
+#: .\templates\game2\game.html:27
 msgid "Жаба"
 msgstr "Frog"
 
-#: .\templates\game2\game.html:29
+#: .\templates\game2\game.html:28
 msgid "Кінь"
 msgstr "Horse"
 
-#: .\templates\game2\game.html:30
+#: .\templates\game2\game.html:29
 msgid "Корабель"
 msgstr "Ship"
 
-#: .\templates\game2\game.html:31
+#: .\templates\game2\game.html:30
 msgid "Вантажівка"
 msgstr "Truck"
 
-#: .\templates\game2\game.html:33
+#: .\templates\game2\game.html:32
 msgid "Відправити відповідь"
 msgstr "Send a reply"
 
@@ -2263,81 +2296,84 @@ msgstr "Click the button below to start a new game."
 msgid "Почати нову гру"
 msgstr "Start a new game"
 
-#: .\templates\game2\result.html:14
+#: .\templates\game2\result.html:13
 msgid "Результат Гри"
 msgstr "Game result"
 
-#: .\templates\game2\result.html:15
+#: .\templates\game2\result.html:14
 msgid "Зображення:"
 msgstr "Image"
 
-#: .\templates\game2\result.html:17
+#: .\templates\game2\result.html:16
 msgid "Ваш рахунок:"
 msgstr "Your account:"
 
-#: .\templates\game2\result.html:18
+#: .\templates\game2\result.html:17
 msgid "Рахунок моделі:"
 msgstr "Model account:"
 
-#: .\templates\game2\result.html:19
+#: .\templates\game2\result.html:18
 msgid "Клас від моделі:"
 msgstr "Class from model:"
 
-#: .\templates\game2\result.html:19
+#: .\templates\game2\result.html:18
 msgid "Впевненість:"
 msgstr "Confidence"
 
-#: .\templates\game2\result.html:22
+#: .\templates\game2\result.html:21
 msgid "Вітаємо, ви вгадали!"
 msgstr "Congratulations, you guessed it!"
 
-#: .\templates\game2\result.html:24
+#: .\templates\game2\result.html:23
 msgid "На жаль, ви не вгадали. Спробуйте ще раз!"
 msgstr "Unfortunately, you didn't guess. Try again!"
 
-#: .\templates\game2\result.html:28
+#: .\templates\game2\result.html:27
 msgid "Модель вгадала!"
 msgstr "The model guessed!"
 
-#: .\templates\game2\result.html:30
+#: .\templates\game2\result.html:29
 msgid "Модель не вгадала."
 msgstr "The model did not guess."
-
-#: .\templates\recognition\index.html:71
-msgid ""
-"Після вибору зображення натисніть кнопку Відправити або Submit, щоб "
-"завантажити зображення на сервер."
-msgstr ""
-"After selecting an image, click the Submit button to upload the image to the "
-"server."
 
 #: .\templates\recognition\result.html:11
 msgid "Uploaded Image"
 msgstr ""
 
-#: .\templates\recognition\result.html:15
+#: .\templates\recognition\result.html:14
 msgid "Annotated Image"
 msgstr ""
 
-#: .\templates\recognition\result.html:26
+#: .\templates\recognition\result.html:24
 msgid "Cognition"
 msgstr ""
 
-#: .\templates\recognition\result.html:27
+#: .\templates\recognition\result.html:25
 msgid "Результати розпізнавання"
 msgstr "Recognition results"
 
-#: .\templates\recognition\result.html:38
+#: .\templates\recognition\result.html:36
 msgid "Тип розпізнавання"
 msgstr "Recognition type"
 
-#: .\templates\recognition\result.html:48
+#: .\templates\recognition\result.html:46
 msgid "Інше зображення"
 msgstr "Another image"
 
-#: .\templates\recognition\result.html:49
+#: .\templates\recognition\result.html:47
 msgid "На початок"
 msgstr "Home"
+
+#, fuzzy
+#~| msgid ""
+#~| "Після вибору зображення натисніть кнопку Відправити або Submit, щоб "
+#~| "завантажити зображення на сервер."
+#~ msgid ""
+#~ "Після вибору зображення натисніть кнопку 'Відправити' або 'Submit', щоб "
+#~ "завантажити зображення на сервер."
+#~ msgstr ""
+#~ "After selecting an image, click the Submit button to upload the image to "
+#~ "the server."
 
 #~ msgid "Планування проектів"
 #~ msgstr "Analyze the classification results and improve the model."

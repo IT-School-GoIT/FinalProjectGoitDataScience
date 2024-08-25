@@ -18,6 +18,12 @@
             <button type="button" onclick="login()"
                 class="btn btn-outline-primary rounded-pill py-3 px-5 mt-3 mb-2">{% trans "Логін" %}</button>
             <p id="message"></p>
+
+            <!-- Посилання на реєстрацію -->
+            <p class="mb-0 font-weight-bold">
+                {% trans "Вже не маєте акаунт?" %}
+                <a href="{% url 'accounts:signup' %}" class="ml-3">{% trans "...Реєстрація..." %}</a>
+            </p>
         </div>
     </div>
 </div>
