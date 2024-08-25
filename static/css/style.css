@@ -1034,9 +1034,34 @@ button:hover {
     background-color: #0056b3;
 }
 
+@media (max-width: 1300px) {
+    .text-primary {
+            font-size: 2rem;
+        }
+}
 
 
+@media (max-width: 1240px) {
+    .text-primary {
+            font-size: 1.5rem;
+        }
+}
 
+@media (max-width: 1180px) {
+    .text-primary {
+        span {
+            display: none
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .text-primary {
+        span {
+            display: inline
+        }
+    }
+}
 
 @media (max-width: 1200px) {
     .carousel-caption-1 h1 {
