@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-25 17:26+0300\n"
+"POT-Creation-Date: 2024-08-25 19:15+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2044,20 +2044,13 @@ msgid "Kateryna Baskina Image"
 msgstr ""
 
 #: .\templates\_fragments\team.html:134
-msgid "Катерина Башкіна"
+msgid "Катерина Баcкіна"
 msgstr "Kateryna Baskina"
 
 #: .\templates\_fragments\team.html:136
-msgid ""
-"Катерина займається створенням та документуванням архітектури проекту, "
-"розробляючи аналітичні моделі для підвищення точності класифікації "
-"зображень. Вона також відповідає за розробку інтерфейсу для перегляду "
-"історії класифікацій та збереження персональних результатів користувачів."
-msgstr ""
-"Kateryna is engaged in creating and documenting the project architecture, "
-"developing analytical models to improve classification accuracyimages. She "
-"is also responsible for the development of the interface for viewing history "
-"of classifications and saving personal results of users."
+msgid "Катерина займається створенням та документуванням архітектури проекту, розробляє аналітичні моделі для підвищення точності класифікації зображень, відповідає за розробку інтерфейсу."
+msgstr "Kateryna is involved in the creation and documentation of the project architecture, develops analytical models to improve the accuracy of image classification, and is responsible for the development of the interface."
+
 
 #: .\templates\_fragments\technologies.html:8
 msgid "Технології"
