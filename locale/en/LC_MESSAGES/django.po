@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-25 14:58+0300\n"
+"POT-Creation-Date: 2024-08-25 16:26+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1594,7 +1594,7 @@ msgstr ""
 
 #: .\recognition\views.py:96 .\recognition\views.py:150
 msgid "Recognition"
-msgstr ""
+msgstr "Пізнання"
 
 #: .\recognition\views.py:142
 msgid "An error occurred during processing: "
@@ -1680,8 +1680,12 @@ msgid "Проєкт на GitHub"
 msgstr "Project on GitHub"
 
 #: .\templates\_fragments\github_go.html:14
-msgid "Відвідайте наш репозиторій, щоб переглянути код та внести свій вклад у розвиток проекту."
-msgstr "Visit our repository to view the code and contribute to the development of the project."
+msgid ""
+"Відвідайте наш репозиторій, щоб переглянути код та внести свій вклад у "
+"розвиток проекту."
+msgstr ""
+"Visit our repository to view the code and contribute to the development of "
+"the project."
 
 #: .\templates\_fragments\github_go.html:16
 msgid "Перейти до GitHub"
@@ -1713,8 +1717,8 @@ msgid "Продукти"
 msgstr "Products"
 
 #: .\templates\_fragments\products.html:9
-msgid "Ми пропонуємо:"
-msgstr "We offer:"
+msgid "Ми пропонуємо"
+msgstr "We offer"
 
 #: .\templates\_fragments\products.html:15
 msgid "Upload Image"
@@ -2059,8 +2063,8 @@ msgid "Технології"
 msgstr "Technologies"
 
 #: .\templates\_fragments\technologies.html:9
-msgid "Технології які використовувалися:"
-msgstr "Technologies used:"
+msgid "Технології які використовувалися"
+msgstr "Technologies used"
 
 #: .\templates\_fragments\technologies.html:16
 msgid "Python"
