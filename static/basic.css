@@ -923,3 +923,64 @@ div.math:hover a.headerlink {
         display: none;
     }
 }
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4 {
+    color: #007bff; /* Primary color */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+code, pre {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav.sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 15px;
+}
+
+div.related {
+    margin: 20px 0;
+}
+
+div.related ul {
+    list-style: none;
+    padding: 0;
+}
+
+div.related ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
