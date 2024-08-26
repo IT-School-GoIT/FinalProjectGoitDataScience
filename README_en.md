@@ -1,6 +1,10 @@
 # Cognition Creators - Image Classification Web Service
 - [Читати українською](README_uk.md)
 
+## Документація
+
+- [View documentation online](https://it-school-goit.github.io/FinalProjectGoitDataScience/)
+
 ## Project Description
 
 Cognition Creators is a multifunctional web service that utilizes modern AI technologies for image classification and user interaction. The core of the project is based on convolutional neural networks (CNN), which allow images to be classified based on trained models. The service provides users with the ability to upload images, train models, receive highly accurate classification results, and interact with the service through additional features.

@@ -1,6 +1,11 @@
 # Cognition Creators - Image Classification Web Service
 - [Read in English](README_en.md)
 
+## Документація
+
+- [Дивитися документацію онлайн](https://it-school-goit.github.io/FinalProjectGoitDataScience/)
+
+
 ## Опис проекту
 
 Cognition Creators - це багатофункціональний веб-сервіс, що використовує сучасні технології штучного інтелекту для класифікації зображень та взаємодії з користувачами. Основою проекту є згорткові нейронні мережі (CNN) 🧠, які дозволяють класифікувати зображення на основі тренованих моделей. Сервіс надає користувачам можливість завантажувати зображення 🖼️, тренувати моделі, отримувати результати класифікації з високою точністю 🔍, а також взаємодіяти з сервісом через додаткові функції.
@@ -76,11 +81,3 @@ Cognition Creators - це багатофункціональний веб-сер
 - Release 1.2 - implement feature 11-13
 - Release 2.0 - implement user iteraction interface (replace terminal commands iteraction)
 
-
-## Branch naming
-Use feature / release flow style Example: branch name to work on feature feature/Ticket## branch name for releale releale/release-1.0 major branch always main
-
-1. Keep main always in working condition (No errors,failures allowed) , merge into main releale branches only after PR approves from team members , merged branch should be green .
-2. Never!!!!! rename main branch
-3. To start work on new feature ticket , create new branch from upcoming release branch . When work on feature done , create Pull Request into release branch , add reviewers into your PR. After work on PR comments and final approves from team merge feature branch into release branch.
-4. Do not temper to add comments into your code . Team members will appreciate your work.
