@@ -8,12 +8,10 @@ logout, and profile management. It also handles the display of user photos and v
 """
 
 import base64
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.utils.translation import gettext as _
 from django.contrib.auth.models import User
 from faceid.models import UserPhoto, UserProfile
-
-# Create your views here.
 
 
 def login(request):

@@ -20,6 +20,9 @@ Functions:
 - `privacy_policy(request)`:
     Renders the privacy policy page of the application.
 
+- `documentation(request)`:
+    Renders the documentation page of the application.
+
 - `presentation_of_the_project(request)`:
     Renders the project presentation page of the application.
 
@@ -66,7 +69,7 @@ def team(request):
     
     :param request: HttpRequest object.
     :return: Rendered template for the team page.
-    """    
+    """
     return render(
         request, "home/team.html", {"title": _("Команда"), "page": "team", "app": "home"}
     )
@@ -78,11 +81,25 @@ def privacy_policy(request):
     
     :param request: HttpRequest object.
     :return: Rendered template for the privacy policy page.
-    """    
+    """
     return render(
         request,
         "home/privacy_policy.html",
         {"title": _("Політика конфіденційності"), "page": "privacy_policy", "app": "home"},
+    )
+
+
+def documentation(request):
+    """
+    Render the documentation page of the application.
+
+    :param request: HttpRequest object.
+    :return: Rendered template for the documentation page.
+    """
+    return render(
+        request,
+        "home/documentation.html",
+        {"title": _("Documentation"), "page": "documentation", "app": "home"},
     )
 
 
@@ -92,7 +109,7 @@ def presentation_of_the_project(request):
     
     :param request: HttpRequest object.
     :return: Rendered template for the project presentation page.
-    """    
+    """
     return render(
         request,
         "home/presentation_of_the_project.html",
@@ -114,14 +131,12 @@ def set_language(request):
     
     :param request: HttpRequest object.
     :return: Redirects the user back to the previous page or the home page.
-    """    
+    """
     user_language = request.POST.get('language')
-    
+
     if user_language:
         translation.activate(user_language)
         request.session['django_language'] = user_language
         request.session.modified = True
-    
+
     return redirect(request.POST.get('next', '/'))
-
-
