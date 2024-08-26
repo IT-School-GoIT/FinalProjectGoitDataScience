@@ -4,25 +4,37 @@
 {% block content %}
 {% include '_fragments/navbar_hero.html' %}
 {% include '_fragments/header.html' %}
-<div class="container-fluid team pb-5">
-    <div class="container pb-5">
-        <div class="game-over-container">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-uppercase text-primary">{% trans "Гра завершена!" %}</h4>
-                <p>{% trans "Переможець:" %} 
-                    {% if user.is_authenticated %}
-                        {{ request.user.username }}
-                    {% else %}
-                        {% trans "Гість" %}
-                    {% endif %}
+
+<div class="container pb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+            <h4 class="text-uppercase text-primary">{% trans "Гра завершена!" %}</h4>
+        </div>
+        
+        <!-- Блок завершення гри -->
+        <div class="col-md-6 text-center">
+            <div class="game-over-container bg-light p-4 shadow rounded">
+                <p class="display-5">{% trans "Переможець:" %} 
+                    <strong>
+                        {% if user.is_authenticated %}
+                            {{ request.user.username }}
+                        {% else %}
+                            {% trans "Гість" %}
+                        {% endif %}
+                    </strong>
                 </p>
-                <p>{% trans "Натисніть кнопку нижче, щоб почати нову гру." %}</p>
+                <p class="mb-4">{% trans "Натисніть кнопку нижче, щоб почати нову гру." %}</p>
+                
+                <!-- Кнопка для нової гри -->
                 <form method="post" action="{% url 'game2:reset_game' %}">
                     {% csrf_token %}
-                    <button type="submit">{% trans "Почати нову гру" %}</button>
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
+                        {% trans "Почати нову гру" %}
+                    </button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

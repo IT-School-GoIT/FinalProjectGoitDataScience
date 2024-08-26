@@ -7,19 +7,35 @@
 {% include '_fragments/navbar_hero.html' %}
 {% include '_fragments/header.html' %}
 
-<div class="container">
-    <h1>{% trans "Профіль користувача:" %} {{ user.username }}</h1>
-    <p>{% trans "Ім'я:" %} {{ user.first_name }}</p>
-    <p>{% trans "Прізвище:" %} {{ user.last_name }}</p>
-    <p>{% trans "Email:" %} {{ user.email }}</p>
-    
-    {% if user_photo %}
-        <img src="data:image/jpeg;base64,{{ user_photo }}" alt="Фото користувача" style="width: 200px; height: auto;">
-    {% else %}
-        <p>{% trans "Фото користувача відсутнє." %}</p>
-    {% endif %}
-    
-    <p>{% trans "Кількість перемог над cifar10 keras:" %} {{ victories }}</p>
+<!-- Профіль користувача -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body p-4">
+                    <h1 class="card-title text-primary fw-bold mb-4">{% trans "Профіль користувача" %}: {{ user.username }}</h1>
+
+                    <div class="row">
+                        <div class="col-md-6 text-start">
+                            <p class="text-muted fw-bold">{% trans "Ім'я" %}: <span class="text-dark">{{ user.first_name }}</span></p>
+                            <p class="text-muted fw-bold">{% trans "Прізвище" %}: <span class="text-dark">{{ user.last_name }}</span></p>
+                            <p class="text-muted fw-bold">{% trans "Email" %}: <span class="text-dark">{{ user.email }}</span></p>
+                            <p class="text-muted fw-bold">{% trans "Кількість перемог над cifar10" %}: <span class="text-dark">{{ victories }}</span></p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            {% if user_photo %}
+                                <img src="data:image/jpeg;base64,{{ user_photo }}" alt="{% trans 'Фото користувача' %}" class="rounded-circle shadow-sm" style="width: 150px; height: 150px;">
+                            {% else %}
+                                <div class="alert alert-secondary" role="alert">
+                                    {% trans "Фото користувача відсутнє." %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

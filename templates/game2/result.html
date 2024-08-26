@@ -5,26 +5,24 @@
 {% block content %}
 {% include '_fragments/navbar_hero.html' %}
 {% include '_fragments/header.html' %}
-<div class="container-fluid team pb-5">
-    <div class="container pb-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+
+<div class="container pb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
             <h4 class="text-uppercase text-primary">{% trans "Гра" %}</h4>
-            <h2 class="display-3 text-capitalize mb-3">{% trans "Результат Гри" %}</h2>
+            <h2 class="display-3 text-capitalize mb-5">{% trans "Результат Гри" %}</h2>
         </div>
-
-        <!-- Розміщення блоків на одній горизонтальній лінії -->
-        <div class="row justify-content-center">
-            <!-- Зображення гри -->
-            <div class="col-md-6 text-center">
-                <div class="game-container">
-                    <img src="{{ image.image.url }}" alt="Image" class="game-image img-fluid mb-4">
+        
+        <!-- Блок з результатом гри -->
+        <div class="col-md-6 text-center">
+            <div class="game-result-container bg-light p-4 shadow rounded">
+                <!-- Зображення гри -->
+                <div class="game-image mb-4">
+                    <img src="{{ image.image.url }}" alt="Image" class="img-fluid rounded">
                 </div>
-            </div>
-
-            <!-- Інформація про результати -->
-            <div class="col-md-6">
-                <div class="result-container text-left">
-                    <p>{% trans "Рахунок:" %} 
+                <!-- Інформація про результати -->
+                <div class="result-info text-left">
+                    <p><strong>{% trans "Рахунок:" %}</strong>
                         {% if user.is_authenticated %}
                             {{ request.user.username }}
                         {% else %}
@@ -32,28 +30,31 @@
                         {% endif %}
                         : {{ user_score }}
                     </p>
-                    <p>{% trans "Рахунок моделі Cifar10:" %} {{ model_score }}</p>
-                    <p>{% trans "Клас від моделі:" %} {{ predicted_class }} ({% trans "Впевненість:" %}  {{ confidence }}%)</p>
-
+                    <p><strong>{% trans "Рахунок моделі Cifar10:" %}</strong> {{ model_score }}</p>
+                    <p><strong>{% trans "Клас від моделі:" %}</strong> {{ predicted_class }} 
+                        ({% trans "Впевненість:" %} {{ confidence }}%)
+                    </p>
+                    <!-- Відображення результатів -->
                     {% if user_is_correct %}
-                    <p>{% trans "Вітаємо, ви вгадали!" %}</p>
+                        <p class="text-success">{% trans "Вітаємо, ви вгадали!" %}</p>
                     {% else %}
-                    <p>{% trans "На жаль, ви не вгадали. Спробуйте ще раз!" %}</p>
+                        <p class="text-danger">{% trans "На жаль, ви не вгадали. Спробуйте ще раз!" %}</p>
                     {% endif %}
 
                     {% if model_is_correct %}
-                    <p>{% trans "Модель вгадала!" %}</p>
+                        <p class="text-success">{% trans "Модель вгадала!" %}</p>
                     {% else %}
-                    <p>{% trans "Модель не вгадала." %}</p>
+                        <p class="text-danger">{% trans "Модель не вгадала." %}</p>
                     {% endif %}
                 </div>
-            </div>
-
-            <!-- Кнопка під результатами -->
-            <div class="col-md-12 text-center mt-4">
-                <a href="{% url 'game2:play_game' %}" class="btn btn-primary">Victory by seven</a>
+                
+                <!-- Кнопка для початку нової гри -->
+                <div class="text-center mt-4">
+                    <a href="{% url 'game2:play_game' %}" class="btn btn-primary btn-lg">{% trans "Почати нову гру" %}</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

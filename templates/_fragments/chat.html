@@ -80,3 +80,110 @@
         }
     }
 </script>
+
+<style>
+    .chat-container {
+        background: #f8f9fa; /* Світлий фон контейнера */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        height: auto;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    #chatbox {
+        background: #ffffff; /* Світлий фон для блоку чату */
+        padding: 15px;
+        border-radius: 15px;
+        min-height: 500px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #messages {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .user-message,
+    .bot-message {
+        max-width: 60%;
+        padding: 15px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .user-message {
+        align-self: flex-end;
+        background-color: #ff9800; /* Насичений помаранчевий для повідомлень користувача */
+        color: rgb(7, 7, 7);
+    }
+
+    .bot-message {
+        align-self: flex-start;
+        background-color: #2196f3; /* Насичений синій для повідомлень бота */
+        color: rgb(21, 20, 20);
+    }
+
+    #userInput {
+        width: 80%;
+        padding: 15px;
+        border-radius: 30px;
+        border: 1px solid #ced4da;
+        background-color: #f1f1f1; /* Світлий фон для вводу тексту */
+        color: #333;
+        margin-right: 10px;
+        box-shadow: none;
+    }
+
+    button {
+        padding: 15px 30px;
+        background-color: #4caf50; /* Зелений для кнопки */
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #388e3c; /* Темніший зелений при наведенні */
+    }
+
+    /* Адаптивність */
+    @media (max-width: 768px) {
+        #userInput {
+            width: 70%;
+        }
+
+        .user-message,
+        .bot-message {
+            max-width: 80%;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        #userInput {
+            width: 60%;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        .user-message,
+        .bot-message {
+            max-width: 90%;
+            font-size: 12px;
+        }
+    }
+</style>
+
+
+

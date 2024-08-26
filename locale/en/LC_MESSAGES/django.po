@@ -1,13 +1,13 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-25 22:36+0300\n"
+"POT-Creation-Date: 2024-08-26 18:57+0300\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\accounts\views.py:27 .\templates\_fragments\navbar_hero.html:32
+#: .\accounts\views.py:27 .\templates\_fragments\navbar_hero.html:34
 #: .\templates\accounts\login.html:19
 msgid "Логін"
 msgstr "Login"
@@ -16,7 +16,7 @@ msgstr "Login"
 msgid "Вихід"
 msgstr ""
 
-#: .\accounts\views.py:49 .\templates\_fragments\navbar_hero.html:31
+#: .\accounts\views.py:49 .\templates\_fragments\navbar_hero.html:33
 #: .\templates\accounts\signup.html:13
 msgid "Реєстрація"
 msgstr "Registration"
@@ -41,7 +41,7 @@ msgstr "Game overм"
 msgid "Результат"
 msgstr "Result"
 
-#: .\game2\views.py:157 .\templates\_fragments\navbar_hero.html:21
+#: .\game2\views.py:157 .\templates\_fragments\navbar_hero.html:23
 #: .\templates\game2\game.html:12 .\templates\game2\result.html:11
 msgid "Гра"
 msgstr "Game"
@@ -54,8 +54,9 @@ msgstr "Chat Bot"
 msgid "Головна"
 msgstr "Home"
 
-#: .\home\views.py:59 .\recognition\views.py:96 .\recognition\views.py:150
-#: .\templates\_fragments\navbar_hero.html:19
+#: .\home\views.py:59 .\recognition\views.py:97 .\recognition\views.py:126
+#: .\recognition\views.py:135 .\recognition\views.py:167
+#: .\templates\_fragments\navbar_hero.html:21
 #: .\templates\_fragments\recognize.html:17
 #: .\templates\recognition\index.html:17
 msgid "Пізнання"
@@ -778,9 +779,8 @@ msgid "File"
 msgstr ""
 
 #: .\myenv_ds\Lib\site-packages\django\db\models\fields\files.py:420
-#: .\templates\_fragments\carousel.html:15 .\templates\_fragments\team.html:19
-#: .\templates\_fragments\team.html:47 .\templates\_fragments\team.html:74
-#: .\templates\_fragments\team.html:98
+#: .\templates\_fragments\team.html:19 .\templates\_fragments\team.html:47
+#: .\templates\_fragments\team.html:74 .\templates\_fragments\team.html:98
 msgid "Image"
 msgstr ""
 
@@ -1589,62 +1589,71 @@ msgstr ""
 msgid "y"
 msgstr ""
 
-#: .\recognition\views.py:94
+#: .\recognition\views.py:95
 msgid "Image not found"
 msgstr ""
 
-#: .\recognition\views.py:142
+#: .\recognition\views.py:125
+msgid ""
+"The file is too large and cannot be uploaded. Maximum file size is 10 MB."
+msgstr ""
+
+#: .\recognition\views.py:134
+msgid "The image is too large and cannot be processed."
+msgstr ""
+
+#: .\recognition\views.py:159
 msgid "An error occurred during processing: "
 msgstr ""
 
-#: .\recognition\views.py:145
+#: .\recognition\views.py:162
 msgid "Please correct the errors below."
 msgstr ""
 
-#: .\templates\_fragments\carousel.html:19
+#: .\templates\_fragments\carousel.html:20
 #: .\templates\_fragments\recognize.html:18
 #: .\templates\recognition\index.html:18
 msgid "Перевірка згорткової нейронної мережі"
 msgstr "Validation of a convolutional neural network"
 
-#: .\templates\_fragments\carousel.html:21
+#: .\templates\_fragments\carousel.html:22
 msgid "Тест мережі"
 msgstr "Network test"
 
-#: .\templates\_fragments\carousel.html:23
+#: .\templates\_fragments\carousel.html:24
 msgid "Чат на базі GPT-4o-mini"
 msgstr "Chat based on GPT-4o-mini"
 
-#: .\templates\_fragments\carousel.html:26
-#: .\templates\_fragments\carousel.html:28
+#: .\templates\_fragments\carousel.html:27
+#: .\templates\_fragments\carousel.html:29
 msgid "Спробувати чат"
 msgstr "Try chat"
 
-#: .\templates\_fragments\carousel.html:31
-#: .\templates\_fragments\products.html:55
+#: .\templates\_fragments\carousel.html:33
+#: .\templates\_fragments\products.html:61
 msgid "Гра з нейронною мережею"
 msgstr "A game with a neural network"
 
-#: .\templates\_fragments\carousel.html:33
+#: .\templates\_fragments\carousel.html:35
 msgid "Грати зараз"
 msgstr "Play now"
 
-#: .\templates\_fragments\carousel.html:42
-#: .\templates\_fragments\products.html:83
+#: .\templates\_fragments\carousel.html:45
+#: .\templates\_fragments\products.html:91
 msgid "Авторизація потрібна"
 msgstr "Authorization is required"
 
-#: .\templates\_fragments\carousel.html:46
+#: .\templates\_fragments\carousel.html:49
 msgid "Щоб скористатися чатом, вам необхідно увійти в систему."
 msgstr "You must be logged in to use the chat."
 
-#: .\templates\_fragments\carousel.html:49
-#: .\templates\_fragments\products.html:90
+#: .\templates\_fragments\carousel.html:52
+#: .\templates\_fragments\products.html:98
 msgid "Увійти"
 msgstr "...Sign in..."
 
 #: .\templates\_fragments\chat.html:7
-#: .\templates\_fragments\navbar_hero.html:24
+#: .\templates\_fragments\navbar_hero.html:26
 msgid "Чат"
 msgstr "Chat"
 
@@ -1727,19 +1736,19 @@ msgstr "Go to GitHub"
 msgid "Початок"
 msgstr "Home"
 
-#: .\templates\_fragments\navbar_hero.html:28
+#: .\templates\_fragments\navbar_hero.html:30
 msgid "Вийти"
 msgstr "Logout"
 
-#: .\templates\_fragments\navbar_hero.html:41
+#: .\templates\_fragments\navbar_hero.html:43
 msgid "МОВА"
 msgstr "LANG"
 
-#: .\templates\_fragments\navbar_hero.html:42
+#: .\templates\_fragments\navbar_hero.html:44
 msgid "УКР"
 msgstr "UK"
 
-#: .\templates\_fragments\navbar_hero.html:43
+#: .\templates\_fragments\navbar_hero.html:45
 msgid "АНГ"
 msgstr "EN"
 
@@ -1751,111 +1760,111 @@ msgstr "Products"
 msgid "Ми пропонуємо"
 msgstr "We offer"
 
-#: .\templates\_fragments\products.html:15
+#: .\templates\_fragments\products.html:16
 msgid "Upload Image"
 msgstr ""
 
-#: .\templates\_fragments\products.html:17
+#: .\templates\_fragments\products.html:19
 #: .\templates\_fragments\service.html:18
 msgid "Завантажте зображення"
 msgstr "Upload an image"
 
-#: .\templates\_fragments\products.html:18
+#: .\templates\_fragments\products.html:20
 msgid "Просте завантаження"
 msgstr "Simple download"
 
-#: .\templates\_fragments\products.html:19
+#: .\templates\_fragments\products.html:21
 msgid "Безкоштовно"
 msgstr "Free"
 
-#: .\templates\_fragments\products.html:20
-#: .\templates\_fragments\products.html:34
-#: .\templates\_fragments\products.html:46
-#: .\templates\_fragments\products.html:58
-#: .\templates\_fragments\products.html:71
-#: .\templates\_fragments\products.html:73
-#: .\templates\_fragments\products.html:103
+#: .\templates\_fragments\products.html:22
+#: .\templates\_fragments\products.html:36
+#: .\templates\_fragments\products.html:50
+#: .\templates\_fragments\products.html:64
+#: .\templates\_fragments\products.html:79
+#: .\templates\_fragments\products.html:81
+#: .\templates\_fragments\products.html:113
 msgid "Дізнатися більше"
 msgstr "Learn more"
 
-#: .\templates\_fragments\products.html:28
+#: .\templates\_fragments\products.html:30
 msgid "Train Model"
 msgstr ""
 
-#: .\templates\_fragments\products.html:31
+#: .\templates\_fragments\products.html:33
 msgid "Навчання моделі"
 msgstr "Model training"
 
-#: .\templates\_fragments\products.html:32
+#: .\templates\_fragments\products.html:34
 msgid "Ефективне навчання"
 msgstr "Effective learning"
 
-#: .\templates\_fragments\products.html:33
+#: .\templates\_fragments\products.html:35
 msgid "Висока точність"
 msgstr "High accuracy"
 
-#: .\templates\_fragments\products.html:41
+#: .\templates\_fragments\products.html:44
 msgid "Check Image"
 msgstr ""
 
-#: .\templates\_fragments\products.html:43
+#: .\templates\_fragments\products.html:47
 #: .\templates\_fragments\service.html:33
 msgid "Перевірка зображення"
 msgstr "Image check"
 
-#: .\templates\_fragments\products.html:44
+#: .\templates\_fragments\products.html:48
 msgid "Миттєві результати"
 msgstr "Instant results"
 
-#: .\templates\_fragments\products.html:45
+#: .\templates\_fragments\products.html:49
 msgid "Точність понад 95"
 msgstr "Accuracy over 95"
 
-#: .\templates\_fragments\products.html:53
+#: .\templates\_fragments\products.html:58
 msgid "Game"
 msgstr ""
 
-#: .\templates\_fragments\products.html:56
+#: .\templates\_fragments\products.html:62
 msgid "Змагайтесь з AI"
 msgstr "Compete against the AI"
 
-#: .\templates\_fragments\products.html:57
+#: .\templates\_fragments\products.html:63
 msgid "Захоплюючий досвід"
 msgstr "Fascinating experience"
 
-#: .\templates\_fragments\products.html:65
+#: .\templates\_fragments\products.html:72
 msgid "Chat"
 msgstr ""
 
-#: .\templates\_fragments\products.html:67
+#: .\templates\_fragments\products.html:75
 msgid "Чат на базі GPT_v4"
 msgstr "Chat based on GPT_v4"
 
-#: .\templates\_fragments\products.html:68
+#: .\templates\_fragments\products.html:76
 msgid "Інтерактивний чат"
 msgstr "Interactive chat"
 
-#: .\templates\_fragments\products.html:69
+#: .\templates\_fragments\products.html:77
 msgid "Штучний інтелект у чаті"
 msgstr "Artificial intelligence in chat"
 
-#: .\templates\_fragments\products.html:87
+#: .\templates\_fragments\products.html:95
 msgid "Для доступу до чату, будь ласка, увійдіть у свій акаунт."
 msgstr "To access the chat, please log in to your account."
 
-#: .\templates\_fragments\products.html:98
+#: .\templates\_fragments\products.html:107
 msgid "Face ID Registration and Login"
 msgstr ""
 
-#: .\templates\_fragments\products.html:100
+#: .\templates\_fragments\products.html:110
 msgid "Реєстрація та авторизація"
 msgstr "Registration and authorization"
 
-#: .\templates\_fragments\products.html:101
+#: .\templates\_fragments\products.html:111
 msgid "Face ID доступ"
 msgstr "Face ID access"
 
-#: .\templates\_fragments\products.html:102
+#: .\templates\_fragments\products.html:112
 msgid "Безпечно та зручно"
 msgstr "Safe and convenient"
 
@@ -2213,15 +2222,15 @@ msgstr ""
 msgid "API для реалізації інтерактивного чату з штучним інтелектом."
 msgstr "API for implementing interactive chat with artificial intelligence."
 
-#: .\templates\_fragments\vgg16.html:5
+#: .\templates\_fragments\vgg16.html:6
 msgid "Навчання моделі VGG16 на CIFAR-10"
 msgstr "Training the VGG16 model on CIFAR-10"
 
-#: .\templates\_fragments\vgg16.html:8
+#: .\templates\_fragments\vgg16.html:9
 msgid "1. Опис моделі"
 msgstr "1. Description of the model"
 
-#: .\templates\_fragments\vgg16.html:9
+#: .\templates\_fragments\vgg16.html:10
 msgid ""
 "VGG16 — це популярна архітектура глибокого навчання, що використовує "
 "послідовність згорткових шарів (Convolutional Neural Networks, CNN). Вона "
@@ -2238,15 +2247,15 @@ msgstr ""
 "consists of 60,000 32x32 pixel color images in 10 different classes (e.g. "
 "airplanes, cars, animals)."
 
-#: .\templates\_fragments\vgg16.html:10
+#: .\templates\_fragments\vgg16.html:11
 msgid "Архітектура моделі VGG16"
 msgstr "Architecture of the VGG16 model"
 
-#: .\templates\_fragments\vgg16.html:14
+#: .\templates\_fragments\vgg16.html:15
 msgid "2. Процес тренування"
 msgstr "2. Training process"
 
-#: .\templates\_fragments\vgg16.html:15
+#: .\templates\_fragments\vgg16.html:16
 msgid ""
 "Після налаштування моделі VGG16, ми запустили процес тренування на наборі "
 "даних CIFAR-10. Загалом було проведено 10 епох тренування, під час яких "
@@ -2260,11 +2269,11 @@ msgstr ""
 "For each epoch, the loss and accuracy were calculated on both training and "
 "test data."
 
-#: .\templates\_fragments\vgg16.html:17
+#: .\templates\_fragments\vgg16.html:18
 msgid "Основні етапи тренування:"
 msgstr "The main stages of training:"
 
-#: .\templates\_fragments\vgg16.html:19
+#: .\templates\_fragments\vgg16.html:20
 msgid ""
 "Обнулення градієнтів: Перш ніж виконати новий прохід через модель, всі "
 "градієнти були обнулені, щоб уникнути накопичення помилок від попередніх "
@@ -2273,7 +2282,7 @@ msgstr ""
 "Zero gradients: Before performing a new pass through the model, all "
 "gradients were zeroed to avoid accumulating errors from previous steps."
 
-#: .\templates\_fragments\vgg16.html:20
+#: .\templates\_fragments\vgg16.html:21
 msgid ""
 "Прогноз моделі: На кожному кроці модель передбачала клас для кожного "
 "зображення з батча."
@@ -2281,7 +2290,7 @@ msgstr ""
 "Model prediction: At each step, the model predicted a class for each image "
 "from the batch."
 
-#: .\templates\_fragments\vgg16.html:21
+#: .\templates\_fragments\vgg16.html:22
 msgid ""
 "Обчислення втрат: Функція втрат використовувалася для порівняння передбачень "
 "моделі з реальними класами, а потім обчислювалися градієнти."
@@ -2289,7 +2298,7 @@ msgstr ""
 "Loss calculation: A loss function was used to compare the model predictions "
 "with the actual classes and then the gradients were calculated."
 
-#: .\templates\_fragments\vgg16.html:22
+#: .\templates\_fragments\vgg16.html:23
 msgid ""
 "Оновлення ваг: На основі обчислених градієнтів ваги моделі оновлювалися для "
 "мінімізації втрат у наступних епохах."
@@ -2297,7 +2306,7 @@ msgstr ""
 "Weight update: Based on the calculated weight gradients, the models were "
 "updated to minimize losses in subsequent epochs."
 
-#: .\templates\_fragments\vgg16.html:25
+#: .\templates\_fragments\vgg16.html:26
 msgid ""
 "Нижче наведено приклад результатів тренування для кожної епохи. Ми "
 "спостерігаємо поступове зниження втрат та збільшення точності моделі, що "
@@ -2307,11 +2316,11 @@ msgstr ""
 "decrease in losses and an increase in the accuracy of the model, which "
 "indicates a successful learning process:"
 
-#: .\templates\_fragments\vgg16.html:27
+#: .\templates\_fragments\vgg16.html:28
 msgid "Результати тренування моделі"
 msgstr "Model training results"
 
-#: .\templates\_fragments\vgg16.html:29
+#: .\templates\_fragments\vgg16.html:30
 msgid ""
 "У цьому графіку зображено тренувальні та тестові втрати, а також точність "
 "для кожної з епох. Як видно, модель досягла високої точності (>98) на "
@@ -2321,11 +2330,11 @@ msgstr ""
 "epoch. As can be seen, the model achieved high accuracy (>98) on the "
 "training data and over 91 on the test data."
 
-#: .\templates\_fragments\vgg16.html:33
+#: .\templates\_fragments\vgg16.html:34
 msgid "3. Результати тренування"
 msgstr "3. Training results"
 
-#: .\templates\_fragments\vgg16.html:34
+#: .\templates\_fragments\vgg16.html:35
 msgid ""
 "Після кожної епохи тренування модель оцінювалася на тестовому наборі даних. "
 "На графіках нижче показано зміну втрат та точності моделі протягом епох."
@@ -2333,11 +2342,11 @@ msgstr ""
 "After each training epoch, the model was evaluated on the test data set. The "
 "graphs below show the change in loss and model accuracy over epochs."
 
-#: .\templates\_fragments\vgg16.html:36
+#: .\templates\_fragments\vgg16.html:37
 msgid "Графік втрат"
 msgstr "Loss schedule"
 
-#: .\templates\_fragments\vgg16.html:37
+#: .\templates\_fragments\vgg16.html:38
 msgid ""
 "На цьому графіку відображено втрати під час тренування та тестування моделі. "
 "Втрати на тренувальних даних поступово знижуються, а втрати на тестових "
@@ -2347,15 +2356,15 @@ msgstr ""
 "the training data gradually decreases, while the loss on the test data "
 "remains stable."
 
-#: .\templates\_fragments\vgg16.html:38
+#: .\templates\_fragments\vgg16.html:39
 msgid "Графік тренувальних та тестових втрат"
 msgstr "Schedule of training and test losses"
 
-#: .\templates\_fragments\vgg16.html:40
+#: .\templates\_fragments\vgg16.html:41
 msgid "Графік точності"
 msgstr "Accuracy graph"
 
-#: .\templates\_fragments\vgg16.html:41
+#: .\templates\_fragments\vgg16.html:42
 msgid ""
 "Графік точності показує, як змінювалася точність моделі на тренувальних та "
 "тестових даних протягом епох. Точність на тренувальних даних значно зростає "
@@ -2367,15 +2376,15 @@ msgstr ""
 "increases significantly to almost 98, while the accuracy on the test data is "
 "stable at around 91."
 
-#: .\templates\_fragments\vgg16.html:42
+#: .\templates\_fragments\vgg16.html:43
 msgid "Графік тренувальної та тестової точності"
 msgstr "Graph of training and test accuracy"
 
-#: .\templates\_fragments\vgg16.html:46
+#: .\templates\_fragments\vgg16.html:47
 msgid "4. Завантаження моделі"
 msgstr "4. Loading the model"
 
-#: .\templates\_fragments\vgg16.html:47
+#: .\templates\_fragments\vgg16.html:48
 msgid ""
 "Після успішного тренування моделі VGG16 на наборі даних CIFAR-10, ми "
 "зберегли її на Google Drive. Ви можете завантажити згенеровану модель за "
@@ -2385,22 +2394,22 @@ msgstr ""
 "saved it to Google Drive. You can download the generated model from the link "
 "below:"
 
-#: .\templates\_fragments\vgg16.html:49
+#: .\templates\_fragments\vgg16.html:50
 msgid "Завантажити модель VGG16 (CIFAR-10)"
 msgstr "Завантажити модель VGG16 (CIFAR-10)"
 
-#: .\templates\_fragments\vgg16.html:51
+#: .\templates\_fragments\vgg16.html:52
 msgid ""
 "Ця модель може бути використана для подальшого розгортання або для "
 "класифікації нових зображень."
 msgstr ""
 "This model can be used for further deployment or to classify new images."
 
-#: .\templates\_fragments\vgg16.html:55
+#: .\templates\_fragments\vgg16.html:56
 msgid "5. Випадкові приклади класифікації"
 msgstr "5. Random examples of classification"
 
-#: .\templates\_fragments\vgg16.html:56
+#: .\templates\_fragments\vgg16.html:57
 msgid ""
 "Для демонстрації роботи нашої моделі ми вибрали кілька випадкових зображень "
 "із тестового набору даних. Модель прогнозувала клас для кожного зображення, "
@@ -2410,11 +2419,11 @@ msgstr ""
 "from the test dataset. The model predicted a class for each image, and we "
 "compared these predictions with the actual labels."
 
-#: .\templates\_fragments\vgg16.html:58
+#: .\templates\_fragments\vgg16.html:59
 msgid "Процес вибору та класифікації:"
 msgstr "Selection and classification process:"
 
-#: .\templates\_fragments\vgg16.html:59
+#: .\templates\_fragments\vgg16.html:60
 msgid ""
 "Код нижче показує, як ми вибирали випадкові зображення з тестового набору "
 "даних, і використовували модель для передбачення їх класів. Ми використали "
@@ -2426,11 +2435,11 @@ msgstr ""
 "libraries to select random indices and then used matplotlib to visualize the "
 "results."
 
-#: .\templates\_fragments\vgg16.html:86
+#: .\templates\_fragments\vgg16.html:87
 msgid "6. Випадкові приклади прогнозування"
 msgstr "6. Random examples of forecasting"
 
-#: .\templates\_fragments\vgg16.html:87
+#: .\templates\_fragments\vgg16.html:88
 msgid ""
 "На прикладах нижче показано, як модель VGG16 прогнозує клас об'єктів на "
 "зображеннях з тестового набору CIFAR-10. Ми вибрали випадкові зображення та "
@@ -2442,7 +2451,7 @@ msgstr ""
 "their real classes (True Label) and predicted classes (Predicted) to the "
 "model."
 
-#: .\templates\_fragments\vgg16.html:89
+#: .\templates\_fragments\vgg16.html:90
 msgid ""
 "На першому зображенні модель правильно передбачила клас 'корабель' (True "
 "Label: 8, Predicted: 8)."
@@ -2450,11 +2459,11 @@ msgstr ""
 "In the first image, the model correctly predicted the class 'ship' (True "
 "Label: 8, Predicted: 8)."
 
-#: .\templates\_fragments\vgg16.html:90
+#: .\templates\_fragments\vgg16.html:91
 msgid "Прогнозування класу зображення 1"
 msgstr "Image class prediction 1"
 
-#: .\templates\_fragments\vgg16.html:92
+#: .\templates\_fragments\vgg16.html:93
 msgid ""
 "На другому зображенні модель також передбачила клас 'корабель' (True Label: "
 "8, Predicted: 8), що демонструє стабільність моделі у розпізнаванні цього "
@@ -2464,11 +2473,11 @@ msgstr ""
 "8, Predicted: 8), demonstrating the stability of the model in recognizing "
 "this class."
 
-#: .\templates\_fragments\vgg16.html:93
+#: .\templates\_fragments\vgg16.html:94
 msgid "Прогнозування класу зображення 2"
 msgstr "Image class prediction 2"
 
-#: .\templates\_fragments\vgg16.html:95
+#: .\templates\_fragments\vgg16.html:96
 msgid ""
 "На третьому зображенні модель передбачила клас 'птах' (True Label: 2, "
 "Predicted: 2), підтверджуючи свою ефективність у розпізнаванні різних "
@@ -2477,11 +2486,11 @@ msgstr ""
 "In the third image, the model predicted the class 'birds' (True Label: 2, "
 "Predicted: 2), confirming its effectiveness in recognizing different objects."
 
-#: .\templates\_fragments\vgg16.html:96
+#: .\templates\_fragments\vgg16.html:97
 msgid "Прогнозування класу зображення 3"
 msgstr "Image class prediction 3"
 
-#: .\templates\_fragments\vgg16.html:98
+#: .\templates\_fragments\vgg16.html:99
 msgid ""
 "На четвертому зображенні модель знову передбачила клас 'корабель' (True "
 "Label: 8, Predicted: 8), показуючи свою точність у розпізнаванні цього класу "
@@ -2491,11 +2500,11 @@ msgstr ""
 "8, Predicted: 8), showing its accuracy in recognizing this class across "
 "images."
 
-#: .\templates\_fragments\vgg16.html:99
+#: .\templates\_fragments\vgg16.html:100
 msgid "Прогнозування класу зображення 4"
 msgstr "Image class prediction 4"
 
-#: .\templates\_fragments\vgg16.html:101
+#: .\templates\_fragments\vgg16.html:102
 msgid ""
 "На п'ятому зображенні модель правильно передбачила клас 'собака' (True "
 "Label: 5, Predicted: 5), підтверджуючи свою здатність коректно класифікувати "
@@ -2505,11 +2514,11 @@ msgstr ""
 "Label: 5, Predicted: 5), confirming its ability to correctly classify "
 "different types of objects."
 
-#: .\templates\_fragments\vgg16.html:102
+#: .\templates\_fragments\vgg16.html:103
 msgid "Прогнозування класу зображення 5"
 msgstr "Image class prediction 5"
 
-#: .\templates\_fragments\vgg16.html:104
+#: .\templates\_fragments\vgg16.html:105
 msgid ""
 "Ці приклади показують, що модель VGG16 демонструє хорошу продуктивність на "
 "різних класах зображень з тестового набору даних CIFAR-10."
@@ -2517,22 +2526,56 @@ msgstr ""
 "These examples show that the VGG16 model shows good performance on different "
 "classes of images from the CIFAR-10 test dataset."
 
-#: .\templates\_fragments\vgg16.html:108
+#: .\templates\_fragments\vgg16.html:109
 msgid "7. Висновки"
 msgstr "7. Conclusions"
 
-#: .\templates\_fragments\vgg16.html:109
-#, python-format
-msgid "У цьому проекті ми успішно навчили модель VGG16 на наборі даних CIFAR-10, що дозволило моделі досягти високої точності класифікації зображень. Точність на тренувальному наборі даних склала понад 98%, тоді як на тестових даних модель демонструвала точність у межах 91%. Ці результати показують, що модель добре справляється із завданням класифікації різних класів об'єктів, таких як літаки, автомобілі, птахи та інші."
-msgstr "In this project, we successfully trained the VGG16 model on the CIFAR-10 dataset, which enabled the model to achieve high image classification accuracy. The accuracy on the training data set was more than 98%, while on the test data the model showed accuracy within 91%. These results show that the model copes well with the task of classifying different classes of objects, such as airplanes, cars, birds, and others."
+#: .\templates\_fragments\vgg16.html:110
+#, fuzzy, python-format
+#| msgid ""
+#| "У цьому проекті ми успішно навчили модель VGG16 на наборі даних CIFAR-10, "
+#| "що дозволило моделі досягти високої точності класифікації зображень. "
+#| "Точність на тренувальному наборі даних склала понад 98%, тоді як на "
+#| "тестових даних модель демонструвала точність у межах 91%. Ці результати "
+#| "показують, що модель добре справляється із завданням класифікації різних "
+#| "класів об'єктів, таких як літаки, автомобілі, птахи та інші."
+msgid ""
+"У цьому проекті ми успішно навчили модель VGG16 на наборі даних CIFAR-10, що "
+"дозволило моделі досягти високої точності класифікації зображень. Точність "
+"на тренувальному наборі даних склала понад 98%%, тоді як на тестових даних "
+"модель демонструвала точність у межах 91%%. Ці результати показують, що "
+"модель добре справляється із завданням класифікації різних класів об'єктів, "
+"таких як літаки, автомобілі, птахи та інші."
+msgstr ""
+"In this project, we successfully trained the VGG16 model on the CIFAR-10 "
+"dataset, which enabled the model to achieve high image classification "
+"accuracy. The accuracy on the training data set was more than 98%, while on "
+"the test data the model showed accuracy within 91%. These results show that "
+"the model copes well with the task of classifying different classes of "
+"objects, such as airplanes, cars, birds, and others."
 
-#: .\templates\_fragments\vgg16.html:111
-msgid "Важливо зазначити, що модель демонструє стабільну продуктивність на тестових даних, що свідчить про здатність узагальнювати на невідомі зображення без значного перенавчання. Завдяки використанню попередньо натренованих ваг VGG16 модель змогла швидко навчитися, досягаючи високої точності вже через кілька епох."
-msgstr "It is important to note that the model shows stable performance on test data, indicating the ability to generalize to unknown images without significant overtraining. By using the pre-trained VGG16 weights, the model was able to learn quickly, achieving high accuracy after just a few epochs."
+#: .\templates\_fragments\vgg16.html:112
+msgid ""
+"Важливо зазначити, що модель демонструє стабільну продуктивність на тестових "
+"даних, що свідчить про здатність узагальнювати на невідомі зображення без "
+"значного перенавчання. Завдяки використанню попередньо натренованих ваг "
+"VGG16 модель змогла швидко навчитися, досягаючи високої точності вже через "
+"кілька епох."
+msgstr ""
+"It is important to note that the model shows stable performance on test "
+"data, indicating the ability to generalize to unknown images without "
+"significant overtraining. By using the pre-trained VGG16 weights, the model "
+"was able to learn quickly, achieving high accuracy after just a few epochs."
 
-#: .\templates\_fragments\vgg16.html:113
-msgid "Отримані результати свідчать про успішне застосування моделі VGG16 для класифікації зображень із набору CIFAR-10, що може бути корисним для подальших досліджень і розгортання в реальних додатках."
-msgstr "The obtained results indicate the successful application of the VGG16 model for the classification of images from the CIFAR-10 set, which can be useful for further research and deployment in real applications."
+#: .\templates\_fragments\vgg16.html:114
+msgid ""
+"Отримані результати свідчать про успішне застосування моделі VGG16 для "
+"класифікації зображень із набору CIFAR-10, що може бути корисним для "
+"подальших досліджень і розгортання в реальних додатках."
+msgstr ""
+"The obtained results indicate the successful application of the VGG16 model "
+"for the classification of images from the CIFAR-10 set, which can be useful "
+"for further research and deployment in real applications."
 
 #: .\templates\accounts\login.html:13
 msgid "Сторінка входу"
@@ -2562,29 +2605,33 @@ msgstr "Already have an account?"
 msgid "...Увійти..."
 msgstr "...Sign in..."
 
-#: .\templates\accounts\user_profile.html:11
-msgid "Профіль користувача:"
+#: .\templates\accounts\user_profile.html:16
+msgid "Профіль користувача"
 msgstr "User profileer:"
 
-#: .\templates\accounts\user_profile.html:12
-msgid "Ім'я:"
+#: .\templates\accounts\user_profile.html:20
+msgid "Ім'я"
 msgstr "Name:"
 
-#: .\templates\accounts\user_profile.html:13
-msgid "Прізвище:"
+#: .\templates\accounts\user_profile.html:21
+msgid "Прізвище"
 msgstr "Surname:"
 
-#: .\templates\accounts\user_profile.html:14
-msgid "Email:"
+#: .\templates\accounts\user_profile.html:22
+msgid "Email"
 msgstr "Email:"
 
-#: .\templates\accounts\user_profile.html:19
+#: .\templates\accounts\user_profile.html:23
+msgid "Кількість перемог над cifar10"
+msgstr "Number of wins against cifar10"
+
+#: .\templates\accounts\user_profile.html:27
+msgid "Фото користувача"
+msgstr "User profileer:"
+
+#: .\templates\accounts\user_profile.html:30
 msgid "Фото користувача відсутнє."
 msgstr "There is no user photo."
-
-#: .\templates\accounts\user_profile.html:22
-msgid "Кількість перемог над cifar10 keras:"
-msgstr "Number of wins against cifar10 keras:"
 
 #: .\templates\game2\game.html:13
 msgid "Виберіть клас зображення"

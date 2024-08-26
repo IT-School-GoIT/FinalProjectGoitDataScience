@@ -4,7 +4,7 @@
 <!-- Navbar & Hero Start -->
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-        <a href="/" class="navbar-brand p-0">
+        <a href="https://github.com/IT-School-GoIT/final_data_science_goit" class="navbar-brand p-0" target="_blank">
             <h1 class="text-primary"><i class="fas fa-brain me-3"></i><span>Cognition.Creators</span></h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -33,21 +33,22 @@
                     <a href="{% url 'accounts:signup' %}" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Реєстрація" %}</a>
                     <a href="{% url 'accounts:login' %}" class="nav-item nav-link" style="border: none; background: none; padding: 10px; font-size: inherit; color: #18CAE0; text-decoration: none; cursor: pointer;">{% trans "Логін" %}</a>
                 {% endif %}
+
+                <div class="language-switcher">
+                    <form action="{% url 'home:set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.path }}"> 
+                        <!-- Перемикач мови у стилі кнопки -->
+                        <select name="language" onchange="this.form.submit()">
+                            <option>{% trans "МОВА" %}</option>
+                            <option value="uk" {% if LANGUAGE_CODE == 'uk' %}selected{% endif %}>{% trans "УКР" %}</option>
+                            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>{% trans "АНГ" %}</option>                        
+                        </select>
+                    </form>
+                </div>
             </div>
-            <div class="language-switcher">
-                <form action="{% url 'home:set_language' %}" method="post">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ request.path }}"> 
-                    <!-- Перемикач мови у стилі кнопки -->
-                    <select name="language" onchange="this.form.submit()">
-                        <option>{% trans "МОВА" %}</option>
-                        <option value="uk" {% if LANGUAGE_CODE == 'uk' %}selected{% endif %}>{% trans "УКР" %}</option>
-                        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>{% trans "АНГ" %}</option>                        
-                    </select>
-                </form>
-            </div>
-            <a href="https://github.com/IT-School-GoIT/final_data_science_goit"
-                class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4" target="_blank">GitHub</a>
+            <!-- <a href="https://github.com/IT-School-GoIT/final_data_science_goit"
+                class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4" target="_blank">GitHub</a> -->
         </div>
     </nav>
 </div>
