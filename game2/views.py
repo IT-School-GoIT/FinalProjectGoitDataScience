@@ -35,6 +35,7 @@ Session Data:
 - `model_score`: Tracks the model's score during the game.
 - `current_image_id`: Stores the ID of the current image being classified.
 """
+import sys
 
 from django.utils.translation import gettext as _
 import os
@@ -53,8 +54,9 @@ import random
 import numpy as np
 from PIL import Image
 
-# Завантаження попередньо навченого CIFAR-10 моделі
-model = load_model("game2/cifar10_model.keras")
+if 'sphinx' not in sys.modules:
+    # Завантаження попередньо навченого CIFAR-10 моделі
+    model = load_model("game2/cifar10_model.keras")
 
 # Список класів CIFAR-10, що буде використовуватись для класифікації зображень
 CLASSES = [

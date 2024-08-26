@@ -98,8 +98,8 @@ def documentation(request):
     """
     return render(
         request,
-        "home/documentation.html",
-        {"title": _("Documentation"), "page": "documentation", "app": "home"},
+        "documentation/html/index.html",
+        {"title": _("Documentation"), "page": "documentation", "app": "documentation"},
     )
 
 

@@ -60,11 +60,9 @@ def chat_page(request):
     """
     Renders the chat page where users can interact with the GPT-4 model.
     
-    Args:
-        request (HttpRequest): The HTTP request object.
+    :param request: (HttpRequest): The HTTP request object.
         
-    Returns:
-        HttpResponse: The rendered HTML page for the chat interface.
+    :return HttpResponse: The rendered HTML page for the chat interface.
         
     This function uses the 'gpt_response/chat.html' template and injects the page title, page id, and app name.
     It is protected by the `login_required` decorator, so only authenticated users can access the page.
@@ -77,12 +75,10 @@ def chat_view(request):
     """
     Processes POST requests for interacting with the OpenAI GPT API to generate responses.
     
-    Args:
-        request (HttpRequest): The HTTP request object. The function expects a POST request containing
+    :param request: (HttpRequest): The HTTP request object. The function expects a POST request containing
                                user input via the 'input' field.
     
-    Returns:
-        JsonResponse: A JSON response containing the AI-generated text or an error message.
+    :return JsonResponse: A JSON response containing the AI-generated text or an error message.
         
     This view handles requests to interact with the GPT model using the OpenAI API. It receives user input, 
     sends it to the OpenAI API, and returns the generated response as a JSON object.

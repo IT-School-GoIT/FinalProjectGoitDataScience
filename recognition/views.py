@@ -1,4 +1,3 @@
-
 """
 views.py
 =========
@@ -35,17 +34,12 @@ def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
     """
     Downloads a model file from Google Drive and loads it into memory using PyTorch.
 
-    Args:
-        file_id (str): The unique identifier for the file on Google Drive.
-        model_name (str): The name of the model file to save on the local disk.
-        download_if_exists (bool): If True, the model will be re-downloaded even if it already exists locally.
+    :param file_id: (str): The unique identifier for the file on Google Drive.
+    :param model_name: (str): The name of the model file to save on the local disk.
+    :param download_if_exists: (bool): If True, the model will be re-downloaded even if it already exists locally.
                                     If False, the model will be loaded from the local disk if it exists.
-
-    Returns:
-        torch.nn.Module: The PyTorch model loaded from the specified file.
-
-    Raises:
-        RuntimeError: If the model file cannot be loaded.
+    :return torch.nn.Module: The PyTorch model loaded from the specified file.
+    :raise RuntimeError: If the model file cannot be loaded.
     """
     model_dir = 'media/models'
     if not os.path.exists(model_dir):
@@ -73,20 +67,14 @@ def load_model_from_google_drive(file_id, model_name, download_if_exists=False):
         raise RuntimeError(f"An unexpected error occurred: {e}")
 
 
-
 def result(request, image_id):
     """
     Retrieves an uploaded image from the database using its ID and renders a template to display the image.
 
-    Args:
-        request (HttpRequest): The HTTP request object.
-        image_id (int): The unique identifier of the uploaded image in the database.
-
-    Returns:
-        HttpResponse: The rendered HTML page to display the image.
-
-    Raises:
-        Http404: If no image is found with the given ID.
+    :param request: (HttpRequest): The HTTP request object.
+    :param image_id: (int): The unique identifier of the uploaded image in the database.
+    :return HttpResponse: The rendered HTML page to display the image.
+    :raise Http404: If no image is found with the given ID.
     """
     try:
         uploaded_image = UploadedImage.objects.get(id=image_id)
@@ -101,15 +89,11 @@ def index(request):
     Handles image upload and processing based on the selected recognition type.
     Saves the uploaded image and its processing results in the database.
 
-    Args:
-        request (HttpRequest): The HTTP request object.
+    :param request: (HttpRequest): The HTTP request object.
 
-    Returns:
-        HttpResponse: Redirects to the result page after processing the image if the request is POST.
+    :return HttpResponse: Redirects to the result page after processing the image if the request is POST.
                       Otherwise, renders the upload form.
-
-    Raises:
-        ValueError: If the recognition type is invalid or any other processing issue occurs.
+    :raise ValueError: If the recognition type is invalid or any other processing issue occurs.
     """
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
@@ -147,21 +131,19 @@ def index(request):
     else:
         form = UploadImageForm(initial={'recognition_type': 'vgg16'})
 
-    return render(request, 'recognition/cognition.html', {'form': form, "title": _("Recognition"), "page": "cognition", "app": "home"})
+    return render(request, 'recognition/cognition.html',
+                  {'form': form, "title": _("Recognition"), "page": "cognition", "app": "home"})
 
 
 def recognize_with_vgg16(img):
     """
     Recognizes the class of an image using a pre-trained VGG16 model fine-tuned on the CIFAR-10 dataset.
 
-    Args:
-        img (PIL.Image.Image): The input image to be recognized.
+    :param img: (PIL.Image.Image): The input image to be recognized.
 
-    Returns:
-        str: The name of the predicted class and its probability as a percentage.
+    :return str: The name of the predicted class and its probability as a percentage.
 
-    Raises:
-        ValueError: If the image is not in RGB mode or if any error occurs during processing.
+    :raise ValueError: If the image is not in RGB mode or if any error occurs during processing.
     """
     try:
         # Ensure the image is in RGB mode
@@ -185,7 +167,7 @@ def recognize_with_vgg16(img):
         # Map the predicted class ID to class name
         class_name = class_names[top_catid.item()]
 
-        return f"{class_name}, {top_prob.item()*100:.2f}%"
+        return f"{class_name}, {top_prob.item() * 100:.2f}%"
     except Exception as e:
         # Handle any unexpected errors
         raise ValueError("An error occurred during recognition: " + str(e))
@@ -195,17 +177,14 @@ def recognize_with_faster_rcnn(img, confidence_threshold):
     """
     Recognizes objects in an image using Faster R-CNN and then classifies each detected object using a VGG16 model.
 
-    Args:
-        img (PIL.Image.Image): The input image to be processed.
-        confidence_threshold (float): The minimum confidence score for a detection to be considered.
+    :param img: (PIL.Image.Image): The input image to be processed.
+    :param confidence_threshold: (float): The minimum confidence score for a detection to be considered.
 
-    Returns:
-        tuple: A tuple containing:
+    :return tuple: A tuple containing:
             - str: The recognition results for all detected objects.
             - ContentFile: An image file with bounding boxes and recognition results drawn on it.
 
-    Raises:
-        ValueError: If an error occurs during image processing or model inference.
+    :raise ValueError: If an error occurs during image processing or model inference.
     """
     try:
         # Convert image to tensor and add batch dimension
@@ -274,17 +253,14 @@ def recognize_with_mask_rcnn(img, confidence_threshold):
     Recognizes objects in an image using Mask R-CNN, then classifies each detected object using a VGG16 model,
     and visualizes the segmentation masks with contours.
 
-    Args:
-        img (PIL.Image.Image): The input image to be processed.
-        confidence_threshold (float): The minimum confidence score for a detection to be considered.
+    :param img:  (PIL.Image.Image): The input image to be processed.
+    :param confidence_threshold: (float): The minimum confidence score for a detection to be considered.
 
-    Returns:
-        tuple: A tuple containing:
+    :return tuple: A tuple containing:
             - str: The recognition results for all detected objects.
             - ContentFile: An image file with bounding boxes, segmentation masks, and recognition results drawn on it.
 
-    Raises:
-        ValueError: If an error occurs during image processing or model inference.
+    :raise ValueError: If an error occurs during image processing or model inference.
     """
     try:
         # Convert image to tensor and add batch dimension

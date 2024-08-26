@@ -27,11 +27,9 @@ def index(request):
     """
     Renders the signup page.
     
-    Args:
-        request: The HTTP request object.
+    :param request: The HTTP request object.
 
-    Returns:
-        HttpResponse: Rendered signup page.
+    :return HttpResponse: Rendered signup page.
     """    
     return render(request, "accounts/signup.html")
 
@@ -40,12 +38,10 @@ def resize_image(image_content, size=(400, 300)):
     """
     Resizes the uploaded image to the specified dimensions.
 
-    Args:
-        image_content (bytes): The image content in bytes.
-        size (tuple): Desired dimensions (width, height).
+    :param image_content: (bytes): The image content in bytes.
+    :param size: (tuple): Desired dimensions (width, height).
 
-    Returns:
-        bytes: Resized image content in JPEG format.
+    :return bytes: Resized image content in JPEG format.
     """    
     image = Image.open(io.BytesIO(image_content))
 
@@ -63,11 +59,9 @@ def register(request):
     """
     Handles user registration, image upload, and auto-login.
 
-    Args:
-        request: The HTTP request object.
+    :param request: The HTTP request object.
 
-    Returns:
-        JsonResponse: Success or failure status of the registration process.
+    :return JsonResponse: Success or failure status of the registration process.
     """    
     if request.method == "POST":
         name = request.POST.get("name")
@@ -98,11 +92,9 @@ def login(request):
     """
     Handles user login through face recognition.
 
-    Args:
-        request: The HTTP request object.
+    :param request: The HTTP request object.
 
-    Returns:
-        JsonResponse: Success or failure status of the login process.
+    :return JsonResponse: Success or failure status of the login process.
     """    
     if request.method == "POST":
         photo = request.FILES.get("photo")
@@ -139,11 +131,9 @@ def success(request):
     """
     Redirects the user to the game after successful login.
 
-    Args:
-        request: The HTTP request object.
+    :param request: The HTTP request object.
 
-    Returns:
-        HttpResponse: Redirect to the game page.
+    :return HttpResponse: Redirect to the game page.
     """    
     user_name = request.GET.get("user_name")
     return redirect("game2:play_game")
@@ -153,11 +143,9 @@ def user_logout(request):
     """
     Logs out the user and deletes their session.
 
-    Args:
-        request: The HTTP request object.
+    :param request: The HTTP request object.
 
-    Returns:
-        HttpResponse: Redirects to the home page.
+    :return HttpResponse: Redirects to the home page.
     """    
     logout(request)
     Session.objects.filter(session_key=request.session.session_key).delete()
