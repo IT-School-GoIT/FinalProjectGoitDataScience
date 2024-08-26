@@ -25,6 +25,7 @@ import torchvision.transforms.functional as TF
 from django.shortcuts import render, redirect
 from django.utils.translation import gettext as _
 from django.core.files.base import ContentFile
+from django.core.exceptions import ValidationError
 
 from .forms import UploadImageForm
 from .models import UploadedImage
@@ -117,7 +118,23 @@ def index(request):
             image = form.cleaned_data['image']
             recognition_type = form.cleaned_data['recognition_type']
             confidence_threshold = form.cleaned_data['confidence_threshold']
+
+            # Checking the file size
+            max_file_size = 10 * 1024 * 1024  # Maximum file size in bytes
+            if image.size > max_file_size:
+                form.add_error(None, _("The file is too large and cannot be uploaded. Maximum file size is 10 MB."))
+                return render(request, 'recognition/cognition.html', {'form': form, "title": _("Пізнання"), "page": "cognition", "app": "home"})
+
             img = Image.open(image)
+
+            # Checking the image size
+            max_size = (1000, 1000)  # Maximum image size
+            if img.size[0] > max_size[0] or img.size[1] > max_size[1]:
+                if img.size[0] > 10000 or img.size[1] > 10000:  # The image is too large
+                    form.add_error(None, _("The image is too large and cannot be processed."))
+                    return render(request, 'recognition/cognition.html', {'form': form, "title": _("Пізнання"), "page": "cognition", "app": "home"})
+                else:
+                    img = img.resize((max_size[0], max_size[1]), Image.Resampling.LANCZOS)
 
             try:
                 if recognition_type == 'vgg16':
