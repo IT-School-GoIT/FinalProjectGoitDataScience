@@ -1,0 +1,61 @@
+.. Cognition Creators documentation master file, created by
+   sphinx-quickstart on Sun Aug 25 20:29:38 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Cognition Creators documentation
+================================
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+Home page
+=========
+.. automodule:: home.views
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+Authorization and Profile Page
+==============================
+.. automodule:: accounts.views
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+Feature: Face ID
+================
+.. automodule:: faceid.views
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+Feature: Game
+=============
+.. automodule:: game2.views
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+Feature: Chat
+=============
+.. automodule:: gpt_response.views
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+Feature: Recognition
+====================
+.. automodule:: recognition.views
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+
+Indices and tables
+==================
+
+* :ref:`search`
+

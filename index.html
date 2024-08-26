@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cognition Creators documentation &#8212; Cognition Creators 2.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="static/bizstyle.css?v=658d757c" />
+    
+    <script src="static/documentation_options.js?v=60dbed4a"></script>
+    <script src="static/doctools.js?v=9a2dae69"></script>
+    <script src="static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Cognition Creators 2.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Cognition Creators documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cognition-creators-documentation">
+<h1>Cognition Creators documentation<a class="headerlink" href="#cognition-creators-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-home.views">
+<span id="home-page"></span><h1>Home page<a class="headerlink" href="#module-home.views" title="Link to this heading">¶</a></h1>
+<section id="views-py">
+<h2>views.py<a class="headerlink" href="#views-py" title="Link to this heading">¶</a></h2>
+<p>This module contains the view functions for rendering various pages and handling
+language settings for the web application.</p>
+</section>
+<section id="functions">
+<h2>Functions:<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><cite>index(request)</cite>:</dt><dd><p>Renders the home page of the application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>cognition(request)</cite>:</dt><dd><p>Renders the cognition page of the application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>team(request)</cite>:</dt><dd><p>Renders the team page of the application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>privacy_policy(request)</cite>:</dt><dd><p>Renders the privacy policy page of the application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>documentation(request)</cite>:</dt><dd><p>Renders the documentation page of the application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>presentation_of_the_project(request)</cite>:</dt><dd><p>Renders the project presentation page of the application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>set_language(request)</cite>:</dt><dd><p>Sets the preferred language for the user session and updates the session to remember the language.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="home.views.cognition">
+<span class="sig-prename descclassname"><span class="pre">home.views.</span></span><span class="sig-name descname"><span class="pre">cognition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.cognition" title="Link to this definition">¶</a></dt>
+<dd><p>Render the cognition page of the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – HttpRequest object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered template for the cognition page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="home.views.documentation">
+<span class="sig-prename descclassname"><span class="pre">home.views.</span></span><span class="sig-name descname"><span class="pre">documentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.documentation" title="Link to this definition">¶</a></dt>
+<dd><p>Render the documentation page of the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – HttpRequest object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered template for the documentation page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="home.views.index">
+<span class="sig-prename descclassname"><span class="pre">home.views.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.index" title="Link to this definition">¶</a></dt>
+<dd><p>Render the index (home) page of the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – HttpRequest object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered template for the home page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="home.views.presentation_of_the_project">
+<span class="sig-prename descclassname"><span class="pre">home.views.</span></span><span class="sig-name descname"><span class="pre">presentation_of_the_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.presentation_of_the_project" title="Link to this definition">¶</a></dt>
+<dd><p>Render the project presentation page of the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – HttpRequest object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered template for the project presentation page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="home.views.privacy_policy">
+<span class="sig-prename descclassname"><span class="pre">home.views.</span></span><span class="sig-name descname"><span class="pre">privacy_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.privacy_policy" title="Link to this definition">¶</a></dt>
+<dd><p>Render the privacy policy page of the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – HttpRequest object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered template for the privacy policy page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="home.views.set_language">
+<span class="sig-prename descclassname"><span class="pre">home.views.</span></span><span class="sig-name descname"><span class="pre">set_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.set_language" title="Link to this definition">¶</a></dt>
+<dd><p>Set the preferred language for the user session.</p>
+<p>This function allows users to change the display language of the site. 
+It retrieves the language from the request, activates the language, 
+and updates the session to remember the selected language.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – HttpRequest object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redirects the user back to the previous page or the home page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="home.views.team">
+<span class="sig-prename descclassname"><span class="pre">home.views.</span></span><span class="sig-name descname"><span class="pre">team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.team" title="Link to this definition">¶</a></dt>
+<dd><p>Render the team page of the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – HttpRequest object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered template for the team page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-accounts.views">
+<span id="authorization-and-profile-page"></span><h1>Authorization and Profile Page<a class="headerlink" href="#module-accounts.views" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>views.py<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>This module defines the core views for the <cite>faceid</cite> app, which include user registration, login, 
+logout, and profile management. It also handles the display of user photos and victories in the profile page.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="accounts.views.login">
+<span class="sig-prename descclassname"><span class="pre">accounts.views.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.login" title="Link to this definition">¶</a></dt>
+<dd><p>Handles user login and renders the login page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered HTML page for user login.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="accounts.views.logout">
+<span class="sig-prename descclassname"><span class="pre">accounts.views.</span></span><span class="sig-name descname"><span class="pre">logout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.logout" title="Link to this definition">¶</a></dt>
+<dd><p>Handles user logout and renders the logout page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered HTML page for user logout.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="accounts.views.signup">
+<span class="sig-prename descclassname"><span class="pre">accounts.views.</span></span><span class="sig-name descname"><span class="pre">signup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.signup" title="Link to this definition">¶</a></dt>
+<dd><p>Handles user registration and renders the signup page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered HTML page for user signup.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="accounts.views.user_profile">
+<span class="sig-prename descclassname"><span class="pre">accounts.views.</span></span><span class="sig-name descname"><span class="pre">user_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#accounts.views.user_profile" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves and displays the user’s profile page, including user photo and victories.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – The HTTP request object.</p></li>
+<li><p><strong>username</strong> – The username of the user whose profile is being accessed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered HTML page displaying the user’s profile information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-faceid.views">
+<span id="feature-face-id"></span><h1>Feature: Face ID<a class="headerlink" href="#module-faceid.views" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2>views.py<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>This module defines views for user registration, login, and image resizing functionality using face recognition. 
+It also handles the logic for user session management, including automatic login after registration 
+and facial recognition-based login.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="faceid.views.index">
+<span class="sig-prename descclassname"><span class="pre">faceid.views.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#faceid.views.index" title="Link to this definition">¶</a></dt>
+<dd><p>Renders the signup page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Return HttpResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rendered signup page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="faceid.views.login">
+<span class="sig-prename descclassname"><span class="pre">faceid.views.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#faceid.views.login" title="Link to this definition">¶</a></dt>
+<dd><p>Handles user login through face recognition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Return JsonResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>Success or failure status of the login process.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="faceid.views.register">
+<span class="sig-prename descclassname"><span class="pre">faceid.views.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#faceid.views.register" title="Link to this definition">¶</a></dt>
+<dd><p>Handles user registration, image upload, and auto-login.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Return JsonResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>Success or failure status of the registration process.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="faceid.views.resize_image">
+<span class="sig-prename descclassname"><span class="pre">faceid.views.</span></span><span class="sig-name descname"><span class="pre">resize_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(400,</span> <span class="pre">300)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#faceid.views.resize_image" title="Link to this definition">¶</a></dt>
+<dd><p>Resizes the uploaded image to the specified dimensions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_content</strong> – (bytes): The image content in bytes.</p></li>
+<li><p><strong>size</strong> – (tuple): Desired dimensions (width, height).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return bytes<span class="colon">:</span></dt>
+<dd class="field-even"><p>Resized image content in JPEG format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="faceid.views.success">
+<span class="sig-prename descclassname"><span class="pre">faceid.views.</span></span><span class="sig-name descname"><span class="pre">success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#faceid.views.success" title="Link to this definition">¶</a></dt>
+<dd><p>Redirects the user to the game after successful login.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Return HttpResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redirect to the game page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="faceid.views.user_logout">
+<span class="sig-prename descclassname"><span class="pre">faceid.views.</span></span><span class="sig-name descname"><span class="pre">user_logout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#faceid.views.user_logout" title="Link to this definition">¶</a></dt>
+<dd><p>Logs out the user and deletes their session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Return HttpResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redirects to the home page.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-game2.views">
+<span id="feature-game"></span><h1>Feature: Game<a class="headerlink" href="#module-game2.views" title="Link to this heading">¶</a></h1>
+<section id="id3">
+<h2>views.py<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<p>This module contains the view functions for the image classification game based on the CIFAR-10 model.
+It includes functionalities such as playing the game, processing user inputs, generating predictions 
+from the model, and handling game sessions.</p>
+</section>
+<section id="id4">
+<h2>Functions:<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><cite>play_game(request)</cite>:</dt><dd><p>Main function for the game. It handles random image selection, model prediction processing,
+compares the results with the user’s input, and updates the score.
+The function also determines the winner once either the user or the model reaches 7 points.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>reset_game(request)</cite>:</dt><dd><p>Resets the game by clearing the session data and redirects the user to the start of the game.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="dependencies">
+<h2>Dependencies:<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><cite>tensorflow.keras.models</cite>: Used to load the pre-trained CIFAR-10 model for image classification.</p></li>
+<li><p><cite>PIL.Image</cite>: For loading and processing the images.</p></li>
+<li><p><cite>numpy</cite>: Used for handling image arrays and model predictions.</p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables:<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><cite>CLASSES</cite>: A list of class names corresponding to the CIFAR-10 dataset categories.</p></li>
+<li><p><cite>model</cite>: The pre-trained CIFAR-10 model loaded from a saved Keras model file.</p></li>
+</ul>
+</section>
+<section id="session-data">
+<h2>Session Data:<a class="headerlink" href="#session-data" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><cite>user_score</cite>: Tracks the user’s score during the game.</p></li>
+<li><p><cite>model_score</cite>: Tracks the model’s score during the game.</p></li>
+<li><p><cite>current_image_id</cite>: Stores the ID of the current image being classified.</p></li>
+</ul>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="game2.views.play_game">
+<span class="sig-prename descclassname"><span class="pre">game2.views.</span></span><span class="sig-name descname"><span class="pre">play_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#game2.views.play_game" title="Link to this definition">¶</a></dt>
+<dd><p>Main function for the game.
+It handles random image selection, model prediction processing,
+compares the results with the user’s input, and updates the score.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="game2.views.reset_game">
+<span class="sig-prename descclassname"><span class="pre">game2.views.</span></span><span class="sig-name descname"><span class="pre">reset_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#game2.views.reset_game" title="Link to this definition">¶</a></dt>
+<dd><p>Function to reset the game.
+Clears all session data and redirects to the start of the game.</p>
+</dd></dl>
+
+</section>
+<section id="module-gpt_response.views">
+<span id="feature-chat"></span><h1>Feature: Chat<a class="headerlink" href="#module-gpt_response.views" title="Link to this heading">¶</a></h1>
+<section id="id5">
+<h2>views.py<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<p>This module handles the views for the GPT-4 interaction page, including rendering the chat interface 
+and processing requests to the OpenAI API to generate responses.</p>
+</section>
+<section id="id6">
+<h2>Functions:<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><cite>chat_page(request)</cite>:</dt><dd><p>Renders the chat page where users can interact with the GPT-4 model. This view is protected by the 
+<cite>login_required</cite> decorator to ensure that only authenticated users can access it.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>chat_view(request)</cite>:</dt><dd><p>Handles POST requests from the chat interface, sends user input to the GPT-4 model via the OpenAI API, 
+and returns the AI-generated response as a JSON object.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id7">
+<h2>Dependencies:<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><cite>requests</cite>: Used to interact with external APIs (OpenAI GPT-4 API).</p></li>
+<li><p><cite>environ</cite>: For handling environment variables, particularly loading the API key from a <cite>.env</cite> file.</p></li>
+<li><p><cite>os</cite>: To work with file paths and environment settings.</p></li>
+<li><p><cite>csrf_exempt</cite>: To allow the chat interaction view to bypass CSRF validation.</p></li>
+<li><p><cite>login_required</cite>: Ensures that only logged-in users can access the chat page.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>Variables:<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><cite>API_KEY</cite>: The API key required to interact with the OpenAI GPT-4 model. Loaded from the <cite>.env</cite> file.</p></li>
+</ul>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="gpt_response.views.chat_page">
+<span class="sig-prename descclassname"><span class="pre">gpt_response.views.</span></span><span class="sig-name descname"><span class="pre">chat_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gpt_response.views.chat_page" title="Link to this definition">¶</a></dt>
+<dd><p>Renders the chat page where users can interact with the GPT-4 model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – (HttpRequest): The HTTP request object.</p>
+</dd>
+<dt class="field-even">Return HttpResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered HTML page for the chat interface.</p>
+</dd>
+</dl>
+<p>This function uses the ‘gpt_response/chat.html’ template and injects the page title, page id, and app name.
+It is protected by the <cite>login_required</cite> decorator, so only authenticated users can access the page.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gpt_response.views.chat_view">
+<span class="sig-prename descclassname"><span class="pre">gpt_response.views.</span></span><span class="sig-name descname"><span class="pre">chat_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gpt_response.views.chat_view" title="Link to this definition">¶</a></dt>
+<dd><p>Processes POST requests for interacting with the OpenAI GPT API to generate responses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – (HttpRequest): The HTTP request object. The function expects a POST request containing
+user input via the ‘input’ field.</p>
+</dd>
+<dt class="field-even">Return JsonResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the AI-generated text or an error message.</p>
+</dd>
+</dl>
+<p>This view handles requests to interact with the GPT model using the OpenAI API. It receives user input, 
+sends it to the OpenAI API, and returns the generated response as a JSON object.</p>
+</dd></dl>
+
+</section>
+<section id="module-recognition.views">
+<span id="feature-recognition"></span><h1>Feature: Recognition<a class="headerlink" href="#module-recognition.views" title="Link to this heading">¶</a></h1>
+<section id="id9">
+<h2>views.py<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<p>This module contains views and helper functions for image classification and recognition using models like VGG16, Faster R-CNN, and Mask R-CNN.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="recognition.views.index">
+<span class="sig-prename descclassname"><span class="pre">recognition.views.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recognition.views.index" title="Link to this definition">¶</a></dt>
+<dd><p>Handles image upload and processing based on the selected recognition type.
+Saves the uploaded image and its processing results in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – (HttpRequest): The HTTP request object.</p>
+</dd>
+<dt class="field-even">Return HttpResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redirects to the result page after processing the image if the request is POST.
+Otherwise, renders the upload form.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the recognition type is invalid or any other processing issue occurs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recognition.views.load_model_from_google_drive">
+<span class="sig-prename descclassname"><span class="pre">recognition.views.</span></span><span class="sig-name descname"><span class="pre">load_model_from_google_drive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download_if_exists</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recognition.views.load_model_from_google_drive" title="Link to this definition">¶</a></dt>
+<dd><p>Downloads a model file from Google Drive and loads it into memory using PyTorch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_id</strong> – (str): The unique identifier for the file on Google Drive.</p></li>
+<li><p><strong>model_name</strong> – (str): The name of the model file to save on the local disk.</p></li>
+<li><p><strong>download_if_exists</strong> – (bool): If True, the model will be re-downloaded even if it already exists locally.
+If False, the model will be loaded from the local disk if it exists.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return torch.nn.Module<span class="colon">:</span></dt>
+<dd class="field-even"><p>The PyTorch model loaded from the specified file.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the model file cannot be loaded.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recognition.views.recognize_with_faster_rcnn">
+<span class="sig-prename descclassname"><span class="pre">recognition.views.</span></span><span class="sig-name descname"><span class="pre">recognize_with_faster_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence_threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recognition.views.recognize_with_faster_rcnn" title="Link to this definition">¶</a></dt>
+<dd><p>Recognizes objects in an image using Faster R-CNN and then classifies each detected object using a VGG16 model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> – (PIL.Image.Image): The input image to be processed.</p></li>
+<li><p><strong>confidence_threshold</strong> – (float): The minimum confidence score for a detection to be considered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return tuple<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing:
+- str: The recognition results for all detected objects.
+- ContentFile: An image file with bounding boxes and recognition results drawn on it.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If an error occurs during image processing or model inference.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recognition.views.recognize_with_mask_rcnn">
+<span class="sig-prename descclassname"><span class="pre">recognition.views.</span></span><span class="sig-name descname"><span class="pre">recognize_with_mask_rcnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence_threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recognition.views.recognize_with_mask_rcnn" title="Link to this definition">¶</a></dt>
+<dd><p>Recognizes objects in an image using Mask R-CNN, then classifies each detected object using a VGG16 model,
+and visualizes the segmentation masks with contours.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> – (PIL.Image.Image): The input image to be processed.</p></li>
+<li><p><strong>confidence_threshold</strong> – (float): The minimum confidence score for a detection to be considered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return tuple<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing:
+- str: The recognition results for all detected objects.
+- ContentFile: An image file with bounding boxes, segmentation masks, and recognition results drawn on it.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If an error occurs during image processing or model inference.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recognition.views.recognize_with_vgg16">
+<span class="sig-prename descclassname"><span class="pre">recognition.views.</span></span><span class="sig-name descname"><span class="pre">recognize_with_vgg16</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recognition.views.recognize_with_vgg16" title="Link to this definition">¶</a></dt>
+<dd><p>Recognizes the class of an image using a pre-trained VGG16 model fine-tuned on the CIFAR-10 dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>img</strong> – (PIL.Image.Image): The input image to be recognized.</p>
+</dd>
+<dt class="field-even">Return str<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the predicted class and its probability as a percentage.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the image is not in RGB mode or if any error occurs during processing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recognition.views.result">
+<span class="sig-prename descclassname"><span class="pre">recognition.views.</span></span><span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recognition.views.result" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves an uploaded image from the database using its ID and renders a template to display the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – (HttpRequest): The HTTP request object.</p></li>
+<li><p><strong>image_id</strong> – (int): The unique identifier of the uploaded image in the database.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return HttpResponse<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rendered HTML page to display the image.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Http404</strong> – If no image is found with the given ID.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cognition Creators documentation</a></li>
+<li><a class="reference internal" href="#module-home.views">Home page</a><ul>
+<li><a class="reference internal" href="#views-py">views.py</a></li>
+<li><a class="reference internal" href="#functions">Functions:</a></li>
+<li><a class="reference internal" href="#home.views.cognition"><code class="docutils literal notranslate"><span class="pre">cognition()</span></code></a></li>
+<li><a class="reference internal" href="#home.views.documentation"><code class="docutils literal notranslate"><span class="pre">documentation()</span></code></a></li>
+<li><a class="reference internal" href="#home.views.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li><a class="reference internal" href="#home.views.presentation_of_the_project"><code class="docutils literal notranslate"><span class="pre">presentation_of_the_project()</span></code></a></li>
+<li><a class="reference internal" href="#home.views.privacy_policy"><code class="docutils literal notranslate"><span class="pre">privacy_policy()</span></code></a></li>
+<li><a class="reference internal" href="#home.views.set_language"><code class="docutils literal notranslate"><span class="pre">set_language()</span></code></a></li>
+<li><a class="reference internal" href="#home.views.team"><code class="docutils literal notranslate"><span class="pre">team()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-accounts.views">Authorization and Profile Page</a><ul>
+<li><a class="reference internal" href="#id1">views.py</a></li>
+<li><a class="reference internal" href="#accounts.views.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+<li><a class="reference internal" href="#accounts.views.logout"><code class="docutils literal notranslate"><span class="pre">logout()</span></code></a></li>
+<li><a class="reference internal" href="#accounts.views.signup"><code class="docutils literal notranslate"><span class="pre">signup()</span></code></a></li>
+<li><a class="reference internal" href="#accounts.views.user_profile"><code class="docutils literal notranslate"><span class="pre">user_profile()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-faceid.views">Feature: Face ID</a><ul>
+<li><a class="reference internal" href="#id2">views.py</a></li>
+<li><a class="reference internal" href="#faceid.views.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li><a class="reference internal" href="#faceid.views.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+<li><a class="reference internal" href="#faceid.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li><a class="reference internal" href="#faceid.views.resize_image"><code class="docutils literal notranslate"><span class="pre">resize_image()</span></code></a></li>
+<li><a class="reference internal" href="#faceid.views.success"><code class="docutils literal notranslate"><span class="pre">success()</span></code></a></li>
+<li><a class="reference internal" href="#faceid.views.user_logout"><code class="docutils literal notranslate"><span class="pre">user_logout()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-game2.views">Feature: Game</a><ul>
+<li><a class="reference internal" href="#id3">views.py</a></li>
+<li><a class="reference internal" href="#id4">Functions:</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies:</a></li>
+<li><a class="reference internal" href="#variables">Variables:</a></li>
+<li><a class="reference internal" href="#session-data">Session Data:</a></li>
+<li><a class="reference internal" href="#game2.views.play_game"><code class="docutils literal notranslate"><span class="pre">play_game()</span></code></a></li>
+<li><a class="reference internal" href="#game2.views.reset_game"><code class="docutils literal notranslate"><span class="pre">reset_game()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gpt_response.views">Feature: Chat</a><ul>
+<li><a class="reference internal" href="#id5">views.py</a></li>
+<li><a class="reference internal" href="#id6">Functions:</a></li>
+<li><a class="reference internal" href="#id7">Dependencies:</a></li>
+<li><a class="reference internal" href="#id8">Variables:</a></li>
+<li><a class="reference internal" href="#gpt_response.views.chat_page"><code class="docutils literal notranslate"><span class="pre">chat_page()</span></code></a></li>
+<li><a class="reference internal" href="#gpt_response.views.chat_view"><code class="docutils literal notranslate"><span class="pre">chat_view()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-recognition.views">Feature: Recognition</a><ul>
+<li><a class="reference internal" href="#id9">views.py</a></li>
+<li><a class="reference internal" href="#recognition.views.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li><a class="reference internal" href="#recognition.views.load_model_from_google_drive"><code class="docutils literal notranslate"><span class="pre">load_model_from_google_drive()</span></code></a></li>
+<li><a class="reference internal" href="#recognition.views.recognize_with_faster_rcnn"><code class="docutils literal notranslate"><span class="pre">recognize_with_faster_rcnn()</span></code></a></li>
+<li><a class="reference internal" href="#recognition.views.recognize_with_mask_rcnn"><code class="docutils literal notranslate"><span class="pre">recognize_with_mask_rcnn()</span></code></a></li>
+<li><a class="reference internal" href="#recognition.views.recognize_with_vgg16"><code class="docutils literal notranslate"><span class="pre">recognize_with_vgg16()</span></code></a></li>
+<li><a class="reference internal" href="#recognition.views.result"><code class="docutils literal notranslate"><span class="pre">result()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Cognition Creators 2.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Cognition Creators documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Babenko Anton, Danil Kazakov, Vitalii Bielimov, Valerii Yermak, Kateryna Baskina.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    </div>
+  </body>
+</html>
