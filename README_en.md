@@ -1,7 +1,7 @@
 # Cognition Creators - Image Classification Web Service
 - [Читати українською](README_uk.md)
 
-## Документація
+## Documentation
 
 - [View documentation online](https://it-school-goit.github.io/FinalProjectGoitDataScience/)
 
