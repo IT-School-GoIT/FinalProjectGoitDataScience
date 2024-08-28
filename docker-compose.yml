@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    networks:
+      - app_network
+
+  web:
+    build: .
+    command: gunicorn --worker-class gevent root.wsgi:application --bind 0.0.0.0:8002 --timeout 300
+    volumes:
+      - .:/code
+    ports:
+      - "8002:8002"
+    environment:
+      - DEBUG=${DEBUG}
+      - DJANGO_SETTINGS_MODULE=root.settings
+      - DB_NAME=${DATABASE_NAME}
+      - DB_USER=${DATABASE_USER}
+      - DB_PASSWORD=${DATABASE_PASSWORD}
+      - DB_HOST=${DATABASE_HOST}
+      - DB_PORT=${PORT_DB}
+      - SECRET_KEY=${SECRET_KEY}
+      - API_KEY=${API_KEY}
+    depends_on:
+      - db
+    networks:
+      - app_network
+
+networks:
+  app_network:
+
+volumes:
+  postgres_data:
