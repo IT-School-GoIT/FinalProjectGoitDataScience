@@ -67,3 +67,8 @@ Cognition Creators - це багатофункціональний веб-сер
 6. Запустити сервер розробки:
    ```bash
    python manage.py runserver
+   
+7. Запустити docker-compose проекту:
+   ```bash
+   docker-compose up
+   docker-compose up -d             # Windows фоновий режим

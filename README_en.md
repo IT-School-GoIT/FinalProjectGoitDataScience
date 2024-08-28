@@ -67,3 +67,8 @@ The service is intended for researchers, developers, and AI enthusiasts, as well
 6. Start the development server:
     ```bash
     python manage.py runserver
+   
+7. Start the docker-compose project:
+    ```bash
+    docker-compose up
+    docker-compose up -d # Windows background mode
