@@ -77,6 +77,3 @@ Cognition Creators - це багатофункціональний веб-сер
    ```bash
    docker-compose up                # Потрібно приблизно 45Гб вільного місці 
    docker-compose up -d             # Windows фоновий режим
-
-
-
