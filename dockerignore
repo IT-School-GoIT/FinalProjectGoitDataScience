@@ -2,3 +2,6 @@
 db/
 redis/
 venv/
+myenv_ds/
+.env
+.venv

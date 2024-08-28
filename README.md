@@ -75,14 +75,8 @@ Cognition Creators - це багатофункціональний веб-сер
    
 7. Запустити docker-compose проекту:
    ```bash
-   docker-compose up
+   docker-compose up                # Потрібно приблизно 45Гб вільного місці 
    docker-compose up -d             # Windows фоновий режим
 
 
-## Release plan
-- Release 0.1 - Start
-- Release 1.0 - implement features from 1 to 9
-- Release 1.1 - implement feature 10
-- Release 1.2 - implement feature 11-13
-- Release 2.0 - implement user iteraction interface (replace terminal commands iteraction)
 

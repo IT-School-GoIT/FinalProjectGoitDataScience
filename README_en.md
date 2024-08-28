@@ -70,5 +70,5 @@ The service is intended for researchers, developers, and AI enthusiasts, as well
    
 7. Start the docker-compose project:
     ```bash
-    docker-compose up
+    docker-compose up    # Approximately 45GB of free space is required
     docker-compose up -d # Windows background mode
