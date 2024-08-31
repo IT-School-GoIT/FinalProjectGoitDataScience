@@ -1,7 +1,7 @@
 # gunicorn.conf.py
 
 # Вкажіть кількість воркерів
-workers = 4
+workers = 2
 
 # Вкажіть тип воркерів
 worker_class = 'gunicorn.workers.ggevent.GeventWorker'
